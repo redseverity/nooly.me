@@ -18,6 +18,28 @@
     <h3>Nooly is a powerful platform of tools with everything you need.</h3>
 </div>
 
-
-
 ---
+
+### Develop
+
+To develop all apps and packages, run the following command:
+
+```
+pnpm dev
+```
+
+### Build
+
+To build all apps and packages, run the following command:
+
+```
+pnpm build
+```
+
+### Start
+
+To Start all apps and packages, run the following command:
+
+```
+pnpm start
+```
