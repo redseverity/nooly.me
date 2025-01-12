@@ -14,8 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Nooly.me",
-  description: 
-  `Nooly is a powerful platform for image conversion,
+  description: `Nooly is a powerful platform for image conversion,
    fast music and video downloads and more.`,
 };
 

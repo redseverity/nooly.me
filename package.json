@@ -2,7 +2,7 @@
   "name": "nooly",
   "private": true,
   "scripts": {
-    "build": "turbo build",
+    "build": "turbo build --parallel",
     "dev": "turbo dev --parallel",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""

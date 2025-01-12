@@ -38,8 +38,27 @@ pnpm build
 
 ### Start
 
-To Start all apps and packages, run the following command:
+To start all apps and packages, run the following command:
 
 ```
 pnpm start
 ```
+
+### Test
+
+To test an app, you need to navigate to its respective directory and run the following commands:
+
+```
+cd apps/{directory}
+pnpm test
+```
+
+### Format
+
+To format all files, run the following command:
+
+```
+pnpm format
+```
+
+
