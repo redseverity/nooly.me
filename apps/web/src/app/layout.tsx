@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "../styles/globals.css";
+import "../styles/fonts.css";
 
 export const metadata: Metadata = {
   title: "Nooly.me",
-  description: `Nooly is a powerful platform for image conversion,
-   fast music and video downloads and more.`,
+  description:
+  `Nooly is a powerful platform for image conversion,
+  fast music and video downloads and more.`,
 };
 
 export default function RootLayout({
@@ -25,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`antialiased font-poppins font-normal`}>
         {children}
       </body>
     </html>
