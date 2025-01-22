@@ -16,7 +16,7 @@ export default {
         500: "var(--dark-5)",
         600: "var(--dark-6)",
         700: "var(--dark-7)",
-        800: "var(--dark-8)"
+        800: "var(--dark-8)",
       },
 
       white: {
@@ -27,28 +27,28 @@ export default {
         500: "var(--white-5)",
         600: "var(--white-6)",
         700: "var(--white-7)",
-        800: "var(--white-8)"
+        800: "var(--white-8)",
       },
 
       rose: {
         100: "var(--rose-1)",
         200: "var(--rose-2)",
-        300: "var(--rose-3)"
+        300: "var(--rose-3)",
       },
 
       green: {
-        600: "var(--green-1)"
+        600: "var(--green-1)",
       },
 
       red: {
-        600: "var(--red-1)"
-      }
+        600: "var(--red-1)",
+      },
     },
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        inter: ['Inter', 'sans-serif']
-      }
+        poppins: ["Poppins", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],

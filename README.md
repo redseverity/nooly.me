@@ -60,5 +60,3 @@ To format all files, run the following command:
 ```
 pnpm format
 ```
-
-
