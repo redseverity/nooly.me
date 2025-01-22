@@ -22,7 +22,7 @@
 
 ### Develop
 
-To develop all apps and packages, run the following command:
+To develop all apps, run the following command:
 
 ```
 pnpm dev
@@ -30,7 +30,7 @@ pnpm dev
 
 ### Build
 
-To build all apps and packages, run the following command:
+To build all apps, run the following command:
 
 ```
 pnpm build
@@ -38,7 +38,7 @@ pnpm build
 
 ### Start
 
-To start all apps and packages, run the following command:
+To start all apps, run the following command:
 
 ```
 pnpm start
@@ -46,10 +46,9 @@ pnpm start
 
 ### Test
 
-To test an app, you need to navigate to its respective directory and run the following commands:
+To test all apps, run the following command:
 
 ```
-cd apps/{directory}
 pnpm test
 ```
 
