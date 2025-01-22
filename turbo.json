@@ -16,6 +16,14 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "test":{
+      "cache": true
+    },
+    "start":{
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["build"]
     }
   }
 }

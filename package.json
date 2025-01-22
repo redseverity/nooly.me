@@ -2,8 +2,10 @@
   "name": "nooly",
   "private": true,
   "scripts": {
-    "build": "turbo build --parallel",
     "dev": "turbo dev --parallel",
+    "build": "turbo build --parallel",
+    "start": "turbo start --parallel",
+    "test": "turbo test --parallel",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
