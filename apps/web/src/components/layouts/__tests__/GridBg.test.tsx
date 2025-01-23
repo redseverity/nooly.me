@@ -1,11 +1,45 @@
-import { render } from "@testing-library/react";
+import { render, act } from "@testing-library/react";
 import { GridBg } from "../GridBg";
 import "@testing-library/jest-dom";
 
 describe("GridBg component", () => {
-  it("render canvas", () => {
-    const { container } = render(<GridBg dark={true} />);
+  // Mock
+  beforeAll(() => {
+    Object.defineProperty(HTMLCanvasElement.prototype, "getContext", {
+      value: jest.fn().mockReturnValue({
+        clearRect: jest.fn(),
+        beginPath: jest.fn(),
+        moveTo: jest.fn(),
+        lineTo: jest.fn(),
+        stroke: jest.fn(),
+      }),
+    });
+  });
+
+  const testDrawOnCanvas = (dark: boolean) => {
+    const { container } = render(<GridBg dark={dark} />);
     const canvas = container.querySelector("canvas");
+    const ctx = canvas?.getContext("2d");
+
+    act(() => {
+      const canvasElement = canvas as HTMLCanvasElement;
+      canvasElement.width = window.innerWidth;
+      canvasElement.height = window.innerHeight;
+    });
+
     expect(canvas).toBeInTheDocument();
+    expect(ctx?.clearRect).toHaveBeenCalled();
+    expect(ctx?.beginPath).toHaveBeenCalled();
+    expect(ctx?.moveTo).toHaveBeenCalled();
+    expect(ctx?.lineTo).toHaveBeenCalled();
+    expect(ctx?.stroke).toHaveBeenCalled();
+  };
+
+  it("draw on canvas dark", () => {
+    testDrawOnCanvas(true);
+  });
+
+  it("draw on canvas white", () => {
+    testDrawOnCanvas(false);
   });
 });
