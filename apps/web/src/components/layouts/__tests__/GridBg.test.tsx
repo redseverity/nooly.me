@@ -35,11 +35,11 @@ describe("GridBg component", () => {
     expect(ctx?.stroke).toHaveBeenCalled();
   };
 
-  it("draw on canvas dark", () => {
+  it("Render and draw on dark canvas", () => {
     testDrawOnCanvas(true);
   });
 
-  it("draw on canvas white", () => {
+  it("Render and draw on white canvas", () => {
     testDrawOnCanvas(false);
   });
 });

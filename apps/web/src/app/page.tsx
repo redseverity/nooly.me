@@ -2,8 +2,10 @@ import { GridBg } from "@/components/layouts/GridBg";
 
 export default function App() {
   return (
-    <div>
-      <GridBg dark={true}></GridBg>
-    </div>
+    <>
+      <GridBg dark={true}/>
+      <div className="relative z-[1] h-full">
+      </div>
+    </>
   );
 }
