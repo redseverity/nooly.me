@@ -38,7 +38,7 @@ const Button = ({
         flex flex-row items-center text-nowrap
         ${className}`}
     >
-      <p className="translate-y-[-1px]">{text}</p>
+      <p>{text}</p>
 
       {arrow ? (
         <span className="translate-x-[-1px] w-[15px] h-[24px]">
@@ -76,7 +76,7 @@ const ButtonLink = ({
         flex flex-row justify-center items-center text-nowrap
         ${className}`}
     >
-      <p className="translate-y-[-1px] translate-x-[-1px]">{text}</p>
+      <p>{text}</p>
 
       {arrow ? (
         <span className="translate-x-[-1px] w-[15px] h-[24px]">
