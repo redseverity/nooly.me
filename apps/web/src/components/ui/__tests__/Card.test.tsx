@@ -5,6 +5,8 @@ import { Card } from "../Card";
 describe("Logo component", () => {
   it("Render Component", async () => {
     render(<Card />);
+
+    expect(screen.getByRole("group")).toBeVisible();
     expect(screen.getByRole("group")).toBeInTheDocument();
   });
 });

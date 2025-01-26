@@ -1,35 +1,22 @@
 import Link from "next/link";
+import { ComponentProps } from "react";
 
 interface ButtonProps {
   text: string;
   arrow?: boolean;
   className?: string;
-  ariaLabel?: string;
-  tabIndex?: number;
-  type?: "button" | "reset" | "submit";
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-}
-
-interface ButtonLinkProps extends Omit<ButtonProps, "type" | "onClick"> {
-  link: string;
 }
 
 const Button = ({
   text,
   arrow,
   className,
-  ariaLabel,
-  tabIndex,
-  type,
-  onClick,
-}: ButtonProps) => {
+  ...props
+}: ButtonProps & ComponentProps<"button">) => {
   return (
     <button
+      {...props}
       role="button"
-      aria-label={ariaLabel}
-      tabIndex={tabIndex}
-      type={type ? type : "button"}
-      onClick={onClick}
       className={`
         bg-gradient-to-b from-rose-200 to-rose-300
         hover:from-rose-100 hover:to-rose-200
@@ -57,15 +44,12 @@ const ButtonLink = ({
   text,
   arrow,
   className,
-  link,
-  ariaLabel,
-  tabIndex,
-}: ButtonLinkProps) => {
+  ...props
+}: ButtonProps & ComponentProps<"a">) => {
   return (
     <Link
-      href={link}
-      aria-label={ariaLabel}
-      tabIndex={tabIndex}
+      href={props.href || "/"}
+      {...props}
       role="link"
       className={`
         bg-gradient-to-b from-rose-200 to-rose-300

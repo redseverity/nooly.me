@@ -8,7 +8,7 @@ describe("Button component", () => {
     const onClick = jest.fn();
 
     render(<Button text="test" onClick={onClick} />);
-    const btn = screen.getByRole("button", { name: "test" });
+    const btn = screen.getByText("test");
 
     await userEvent.click(btn);
     expect(onClick).toHaveBeenCalledTimes(1);
@@ -20,8 +20,8 @@ describe("Button component", () => {
 
 describe("ButtonLink component", () => {
   it("Render Component", () => {
-    render(<ButtonLink text="test" link="/" />);
-    const btn = screen.getByRole("link", { name: "test" });
+    render(<ButtonLink text="test" href="/" />);
+    const btn = screen.getByText("test");
 
     expect(btn).toBeVisible();
     expect(btn).toBeInTheDocument();

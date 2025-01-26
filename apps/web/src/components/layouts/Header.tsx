@@ -23,12 +23,13 @@ const Header = ({ className }: HeaderProps) => {
             justify-center items-center
             rounded-full flex overflow-hidden
             [&_*]:h-[2.8rem] [&_*]:w-[120px] [&_*]:bg-none 
-            ">
+            "
+        >
           {["Home", "About", "Tools", "Contacts"].map((e, i) => {
             return (
               <ButtonLink
                 text={`${e}`}
-                link={`#${e}`}
+                href={`#${e}`}
                 key={i}
                 className="hover:bg-gradient-to-b
                 hover:from-rose-200 hover:to-rose-300"
@@ -39,13 +40,13 @@ const Header = ({ className }: HeaderProps) => {
 
         <ButtonLink
           text="My account"
-          link="/"
+          href="/"
           className="!bg-none !font-bold !text-rose-200"
         />
         <ButtonLink
           text="Get Started"
           arrow
-          link="/"
+          href="/"
           className="!font-bold h-[2.6rem]"
         />
       </div>
