@@ -8,7 +8,7 @@ const Card = ({ className, children }: CardProps) => {
     <div
       role="group"
       className={`
-        flex w-min rounded-xl p-4
+        w-min p-4
         border-[1px] border-dark-800
         ${className}`}
     >

@@ -4,8 +4,8 @@ import "../styles/fonts.css";
 
 export const metadata: Metadata = {
   title: "Nooly.me",
-  description: `Nooly is a powerful platform for image conversion,
-  fast music and video downloads and more.`,
+  description:
+    "Nooly is a powerful platform for image conversion, fast music and video downloads and more.",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased font-poppins font-normal bg-dark-200 h-screen`}
+        className={`antialiased font-poppins font-normal bg-dark-200 h-screen w-screen`}
       >
         {children}
       </body>

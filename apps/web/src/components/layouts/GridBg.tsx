@@ -52,7 +52,7 @@ const GridBg: React.FC<GridBgProps> = (dark) => {
 
     window.addEventListener("resize", drawGrid);
     return () => window.removeEventListener("resize", drawGrid);
-  }, []);
+  }, [dark]);
 
   return <canvas ref={canvasRef} className="z-0 fixed text-red-500" />;
 };

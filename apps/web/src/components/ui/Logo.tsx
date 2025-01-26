@@ -7,7 +7,6 @@ const Logo = ({ className, classNameSmile }: LogoProps) => {
   return (
     <span
       role="none"
-      aria-label="Logo nooly.me"
       className={`
             text-white-200 text-2xl font-poppins
             font-bold w-min h-9 block
