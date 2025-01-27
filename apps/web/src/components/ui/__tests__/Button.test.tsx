@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
-import { Button, ButtonLink } from "../Button";
+import { Button } from "../Button";
 
 describe("Button component", () => {
   it("Render Component", async () => {
@@ -15,16 +15,5 @@ describe("Button component", () => {
 
     expect(btn).toBeVisible();
     expect(btn).toBeInTheDocument();
-  });
-});
-
-describe("ButtonLink component", () => {
-  it("Render Component", () => {
-    render(<ButtonLink text="test" href="/" />);
-    const btn = screen.getByText("test");
-
-    expect(btn).toBeVisible();
-    expect(btn).toBeInTheDocument();
-    expect(btn).toHaveAttribute("href", "/");
   });
 });
