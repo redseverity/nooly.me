@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Card } from "../ui/Card";
 import { Logo } from "../ui/Logo";
 import { ChevronRight } from 'lucide-react';
 
