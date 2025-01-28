@@ -6,7 +6,6 @@ describe("Logo component", () => {
   it("Render Component", async () => {
     render(<Logo />);
 
-
     expect(screen.getByRole("none")).toBeVisible();
     expect(screen.getByRole("none")).toBeInTheDocument();
   });

@@ -8,13 +8,13 @@ export default {
   ],
   theme: {
     screens: {
-      "screen-2": '200px',
-      "screen-4": '400px',
-      "screen-6": '600px',
-      "screen-8": '800px',
-      "screen-10": '1000px',
-      "screen-12": '1200px',
-      "screen-14": '1400px',
+      "screen-2": "200px",
+      "screen-4": "400px",
+      "screen-6": "600px",
+      "screen-8": "800px",
+      "screen-10": "1000px",
+      "screen-12": "1200px",
+      "screen-14": "1400px",
     },
     colors: {
       dark: {
