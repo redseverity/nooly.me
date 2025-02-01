@@ -10,6 +10,7 @@ const Logo = ({ className, classNameSmile }: LogoProps) => {
   return (
     <span
       role="none"
+      translate="no"
       className={clsx(
         `
             text-light-2 text-2xl font-poppins

@@ -58,7 +58,7 @@ const GridBg = ({ ...props }: ComponentProps<"canvas">) => {
     <canvas
       ref={canvasRef}
       {...props}
-      className={clsx("z-0 fixed stroke-dark-4", props.className)}
+      className={clsx("fixed", props.className)}
     />
   );
 };

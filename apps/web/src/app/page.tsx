@@ -4,10 +4,8 @@ import { Header } from "@/components/layouts/Header";
 export default function App() {
   return (
     <>
-      <GridBg className="" />
-      <div className="relative z-[1] h-full w-full">
-        <Header />
-      </div>
+      <GridBg className="z-0 stroke-dark-4" />
+      <Header className="z-50" />
     </>
   );
 }

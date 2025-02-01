@@ -17,7 +17,7 @@ describe("GridBg component", () => {
   });
 
   const testDrawOnCanvas = (dark: boolean) => {
-    const { container } = render(<GridBg dark={dark} />);
+    const { container } = render(<GridBg />);
     const canvas = container.querySelector("canvas");
     const ctx = canvas?.getContext("2d");
 

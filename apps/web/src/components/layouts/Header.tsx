@@ -1,8 +1,9 @@
-import Link from "next/link";
 import { ComponentProps } from "react";
-import { Logo } from "../ui/Logo";
-import { ChevronRight, Menu, Moon, ArrowRight } from "lucide-react";
+import { ChevronRight, Moon } from "lucide-react";
 import clsx from "clsx";
+import Link from "next/link";
+import { Logo } from "../ui/Logo";
+import { MenuHeader } from "../ui/MenuHeader";
 
 const Header = ({ ...props }: ComponentProps<"header">) => {
   return (
@@ -18,8 +19,8 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
       <nav
         draggable="false"
         className="
-          min-[1200px]:w-[65rem] min-[1000px]:w-[92%] w-[88%]
-          flex justify-between items-center h-full w
+          min-[1200px]:w-[65rem] min-[1000px]:w-[92vw] w-[90vw]
+          flex justify-between items-center h-full
           "
       >
         <Link href="/" className="h-full flex items-center">
@@ -37,7 +38,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
         >
           <div
             className="
-            max-[1100px]:hidden flex w-[25rem] h-[2.8rem]
+            max-[1100px]:hidden flex w-[24rem] h-[2.5rem]
             border border-dark-8
             rounded-full overflow-hidden
             "
@@ -53,8 +54,8 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
                   title={`Go to the ${e} section`}
                   className="
                   flex flex-grow justify-center items-center
-                  hover:bg-dark-4 text-light-3 text-nowrap
-                  font-inter font-semibold h-full
+                  hover:bg-dark-5 text-light-3 text-nowrap
+                  font-inter font-semibold h-full text-[11pt]
                   "
                 >
                   {e}
@@ -67,7 +68,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
             className="
             min-[800px]:flex hidden overflow-hidden
             bg-dark-2 rounded-full border-[1px]
-            border-dark-8 w-[12.5rem] h-[2.8rem]"
+            border-dark-8 w-[12.5rem] h-[2.5rem]"
           >
             {["Log In", "Sign Up"].map((e, i) => {
               const page = e.replace(" ", "").toLowerCase();
@@ -81,7 +82,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
                   className={clsx(
                     `
                   flex flex-1 font-inter text-light-3
-                  text-[12pt] hover:bg-dark-4
+                  text-[11pt] hover:bg-dark-5
                   font-semibold text-nowrap h-full`,
                     e == "Log In" ? "pl-1" : "pr-1",
                   )}
@@ -98,36 +99,35 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
             aria-label="Navigate to the tools page"
             title="Go to the tools page"
             className="
-              min-[410px]:gap-1 max-[280px]:hidden flex
-              min-[800px]:text-[14pt] min-[410px]:text-[11pt] text-[9pt]
-              min-[800px]:h-[2.7rem] min-[410px]:h-[2.5rem] h-[2.3rem]
-              min-[800px]:w-[10rem] min-[410px]:w-[8rem] w-[6rem]
+              min-[410px]:gap-1 min-[400px]:flex hidden 
+              min-[500px]:text-[12pt] text-[11pt]
+              min-[410px]:h-[2.4rem] h-[2.3rem]
+              min-[500px]:w-[10rem] w-[8rem]
 
               font-inter text-light-1 font-bold
               text-nowrap rounded-full bg-gradient-to-b
               from-rose-2 to-rose-3 hover:from-rose-1
               hover:to-rose-2"
           >
-            <div className="pl-1">Try for Free</div>
-            <ChevronRight
-              size={20}
-              className="min-[410px]:stroke-[3px] stroke-[2px]"
-            />
+            <span lang="en" className="min-[500px]:pl-1 pl-2">
+              Try for free
+            </span>
+            <ChevronRight className="min-[410px]:stroke-[3px] stroke-[2px] size-5" />
           </Link>
 
           <div
             className="
-              min-[800px]:w-[2.6rem] w-[2.2rem]
-              min-[800px]:h-[2.6rem] h-[2.2rem]
-              max-[380px]:hidden flex
+              min-[400px]:w-[2.4rem] w-[2rem]
+              min-[400px]:h-[2.4rem] h-[2rem]
+              flex
               
               justify-center items-center
-              rounded-full border-[1px] border-dark-8 hover:bg-dark-4"
+              rounded-full border-[1px] border-dark-8 hover:bg-dark-5"
           >
-            <Moon className="stroke-none fill-light-1" />
+            <Moon className="stroke-none fill-light-1 w-4" />
           </div>
 
-          <Menu className="hidden max-[1100px]:flex stroke-light-1" />
+          <MenuHeader />
         </div>
       </nav>
     </header>
