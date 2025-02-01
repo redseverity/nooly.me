@@ -29,7 +29,7 @@ const GridBg: React.FC<GridBgProps> = (dark) => {
       const rootStyles = getComputedStyle(document.documentElement);
       ctx.strokeStyle = dark
         ? rootStyles.getPropertyValue("--dark-4").trim()
-        : rootStyles.getPropertyValue("--white-4").trim();
+        : rootStyles.getPropertyValue("--light-4").trim();
       ctx.lineWidth = 1;
 
       // draw lines

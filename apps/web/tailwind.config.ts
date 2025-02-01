@@ -6,6 +6,7 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       "screen-2": "200px",
@@ -28,15 +29,15 @@ export default {
         800: "var(--dark-8)",
       },
 
-      white: {
-        100: "var(--white-1)",
-        200: "var(--white-2)",
-        300: "var(--white-3)",
-        400: "var(--white-4)",
-        500: "var(--white-5)",
-        600: "var(--white-6)",
-        700: "var(--white-7)",
-        800: "var(--white-8)",
+      light: {
+        100: "var(--light-1)",
+        200: "var(--light-2)",
+        300: "var(--light-3)",
+        400: "var(--light-4)",
+        500: "var(--light-5)",
+        600: "var(--light-6)",
+        700: "var(--light-7)",
+        800: "var(--light-8)",
       },
 
       rose: {

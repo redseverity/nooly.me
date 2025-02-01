@@ -8,13 +8,13 @@ const Logo = ({ className, classNameSmile }: LogoProps) => {
     <span
       role="none"
       className={`
-            text-white-200 text-2xl font-poppins
+            text-light-200 text-2xl font-poppins
             font-bold w-min h-9 block
             ${className}`}
     >
       Nooly<span className="text-rose-200 font-poppins">.</span>me
       <svg
-        className={`relative left-[-1px] top-[-35px] w-[39px] fill-white-200 ${classNameSmile}`}
+        className={`relative left-[-1px] top-[-35px] w-[39px] fill-light-200 ${classNameSmile}`}
         viewBox="0 0 40 40"
       >
         <path

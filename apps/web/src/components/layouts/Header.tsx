@@ -52,7 +52,7 @@ const Header = ({ className }: HeaderProps) => {
                   className={`
                   flex flex-grow justify-center items-center
                   hover:bg-dark-400
-                  text-white-300 text-nowrap font-inter 
+                  text-light-300 text-nowrap font-inter 
                   font-semibold h-full
                   `}
                 >
@@ -78,7 +78,7 @@ const Header = ({ className }: HeaderProps) => {
                   title={`Go to the ${page} page`}
                   draggable="false"
                   className={`
-                  flex flex-1 font-inter text-white-300
+                  flex flex-1 font-inter text-light-300
                   text-[12pt] hover:bg-dark-400
                   font-semibold text-nowrap h-full
                   ${e == "Log In" ? "pl-1" : "pr-1"}
@@ -97,7 +97,7 @@ const Header = ({ className }: HeaderProps) => {
             title="Go to the tools page"
             className="
               min-[410px]:gap-1 max-[280px]:hidden flex
-              font-inter text-white-100 font-bold
+              font-inter text-light-100 font-bold
 
               min-[800px]:text-[14pt] min-[410px]:text-[11pt] text-[9pt]
               min-[800px]:h-[2.7rem] min-[410px]:h-[2.5rem] h-[2.3rem]
@@ -120,10 +120,10 @@ const Header = ({ className }: HeaderProps) => {
               max-[380px]:hidden flex justify-center items-center 
               rounded-full border-[1px] border-dark-800 hover:bg-dark-400"
           >
-            <Moon className="stroke-none fill-white-100" />
+            <Moon className="stroke-none fill-light-100" />
           </div>
 
-          <Menu className="hidden max-[1100px]:flex stroke-white-100" />
+          <Menu className="hidden max-[1100px]:flex stroke-light-100" />
         </div>
       </nav>
     </header>

@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --white-1: #fcfbfe;
-  --white-2: #F6F4FC;
-  --white-3: #F3F0FC;
-  --white-4: #EBE8F5;
-  --white-5: #E2DFF0;
-  --white-6: #D6D3E5;
-  --white-7: #C9C5DB;
-  --white-8: #B5AFCC;
+  --light-1: #fcfbfe;
+  --light-2: #F6F4FC;
+  --light-3: #F3F0FC;
+  --light-4: #EBE8F5;
+  --light-5: #E2DFF0;
+  --light-6: #D6D3E5;
+  --light-7: #C9C5DB;
+  --light-8: #B5AFCC;
 
   --dark-1: #0d0c12;
   --dark-2: #1B1A27;

@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased font-poppins font-normal bg-dark-200 h-screen w-screen`}
+        className="antialiased font-poppins font-normal bg-dark-200 h-screen w-screen"
       >
         {children}
       </body>
