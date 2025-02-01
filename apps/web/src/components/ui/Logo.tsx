@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { ComponentProps } from "react";
 
 interface LogoProps extends ComponentProps<"span"> {
@@ -9,14 +10,19 @@ const Logo = ({ className, classNameSmile }: LogoProps) => {
   return (
     <span
       role="none"
-      className={`
-            text-light-200 text-2xl font-poppins
-            font-bold w-min h-9 block
-            ${className}`}
+      className={clsx(
+        `
+            text-light-2 text-2xl font-poppins
+            font-bold w-min h-9 block`,
+        className,
+      )}
     >
-      Nooly<span className="text-rose-200 font-poppins">.</span>me
+      Nooly<span className="text-rose-2 font-poppins">.</span>me
       <svg
-        className={`relative left-[-2px] top-[-36px] w-10 fill-light-200 ${classNameSmile}`}
+        className={clsx(
+          `relative left-[-2px] top-[-36px] w-10 fill-light-2`,
+          classNameSmile,
+        )}
         viewBox="0 0 40 40"
       >
         <path

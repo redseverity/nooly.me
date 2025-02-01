@@ -11,7 +11,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
       className={clsx(
         `
         flex justify-center fixed top-0 select-none overflow-hidden
-        border-b-[1px] border-dark-800 bg-dark-200 w-full h-16 `,
+        border-b-[1px] border-dark-8 bg-dark-2 w-full h-16 `,
         props.className,
       )}
     >
@@ -38,7 +38,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
           <div
             className="
             max-[1100px]:hidden flex w-[25rem] h-[2.8rem]
-            border border-dark-800
+            border border-dark-8
             rounded-full overflow-hidden
             "
           >
@@ -53,7 +53,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
                   title={`Go to the ${e} section`}
                   className="
                   flex flex-grow justify-center items-center
-                  hover:bg-dark-400 text-light-300 text-nowrap
+                  hover:bg-dark-4 text-light-3 text-nowrap
                   font-inter font-semibold h-full
                   "
                 >
@@ -66,8 +66,8 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
           <div
             className="
             min-[800px]:flex hidden overflow-hidden
-            bg-dark-200 rounded-full border-[1px]
-            border-dark-800 w-[12.5rem] h-[2.8rem]"
+            bg-dark-2 rounded-full border-[1px]
+            border-dark-8 w-[12.5rem] h-[2.8rem]"
           >
             {["Log In", "Sign Up"].map((e, i) => {
               const page = e.replace(" ", "").toLowerCase();
@@ -80,8 +80,8 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
                   draggable="false"
                   className={clsx(
                     `
-                  flex flex-1 font-inter text-light-300
-                  text-[12pt] hover:bg-dark-400
+                  flex flex-1 font-inter text-light-3
+                  text-[12pt] hover:bg-dark-4
                   font-semibold text-nowrap h-full`,
                     e == "Log In" ? "pl-1" : "pr-1",
                   )}
@@ -103,10 +103,10 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
               min-[800px]:h-[2.7rem] min-[410px]:h-[2.5rem] h-[2.3rem]
               min-[800px]:w-[10rem] min-[410px]:w-[8rem] w-[6rem]
 
-              font-inter text-light-100 font-bold
+              font-inter text-light-1 font-bold
               text-nowrap rounded-full bg-gradient-to-b
-              from-rose-200 to-rose-300 hover:from-rose-100
-              hover:to-rose-200"
+              from-rose-2 to-rose-3 hover:from-rose-1
+              hover:to-rose-2"
           >
             <div className="pl-1">Try for Free</div>
             <ChevronRight
@@ -122,12 +122,12 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
               max-[380px]:hidden flex
               
               justify-center items-center
-              rounded-full border-[1px] border-dark-800 hover:bg-dark-400"
+              rounded-full border-[1px] border-dark-8 hover:bg-dark-4"
           >
-            <Moon className="stroke-none fill-light-100" />
+            <Moon className="stroke-none fill-light-1" />
           </div>
 
-          <Menu className="hidden max-[1100px]:flex stroke-light-100" />
+          <Menu className="hidden max-[1100px]:flex stroke-light-1" />
         </div>
       </nav>
     </header>

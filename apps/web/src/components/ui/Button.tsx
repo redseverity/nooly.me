@@ -9,10 +9,10 @@ const Button = ({ ...props }: ComponentPropsWithRef<"button">) => {
       role="button"
       className={clsx(
         `
-        bg-gradient-to-b from-rose-200 to-rose-300
-        hover:from-rose-100 hover:to-rose-200
+        bg-gradient-to-b from-rose-2 to-rose-3
+        hover:from-rose-1 hover:to-rose-2
         font-inter text-[13pt] w-min px-4 py-2
-        font-semibold text-light-300 rounded-full
+        font-semibold text-light-3 rounded-full
         flex flex-row items-center text-nowrap`,
         props.className,
       )}

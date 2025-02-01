@@ -1,12 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import clsx from "clsx";
+import { ComponentProps, useEffect, useRef } from "react";
 
-interface GridBgProps {
-  dark: boolean;
-}
-
-const GridBg: React.FC<GridBgProps> = (dark) => {
+const GridBg = ({ ...props }: ComponentProps<"canvas">) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -27,12 +24,15 @@ const GridBg: React.FC<GridBgProps> = (dark) => {
       ctx.clearRect(0, 0, width, height);
 
       const rootStyles = getComputedStyle(document.documentElement);
-      ctx.strokeStyle = dark
-        ? rootStyles.getPropertyValue("--dark-4").trim()
-        : rootStyles.getPropertyValue("--light-4").trim();
+      let strokeClass = canvas.classList.value
+        .split(" ")
+        .filter((e) => e.includes("stroke"));
+
+      ctx.strokeStyle = rootStyles
+        .getPropertyValue(`--${strokeClass.toString().replace("stroke-", "")}`)
+        .trim();
       ctx.lineWidth = 1;
 
-      // draw lines
       for (let x = -height; x < width; x += spacing) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -52,9 +52,15 @@ const GridBg: React.FC<GridBgProps> = (dark) => {
 
     window.addEventListener("resize", drawGrid);
     return () => window.removeEventListener("resize", drawGrid);
-  }, [dark]);
+  }, []);
 
-  return <canvas ref={canvasRef} className="z-0 fixed text-red-500" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      {...props}
+      className={clsx("z-0 fixed stroke-dark-4", props.className)}
+    />
+  );
 };
 
 export { GridBg };
