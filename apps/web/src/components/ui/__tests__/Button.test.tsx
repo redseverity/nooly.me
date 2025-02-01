@@ -7,7 +7,7 @@ describe("Button component", () => {
   it("Render Component", async () => {
     const onClick = jest.fn();
 
-    render(<Button text="test" onClick={onClick} />);
+    render(<Button children="test" onClick={onClick} />);
     const btn = screen.getByText("test");
 
     await userEvent.click(btn);

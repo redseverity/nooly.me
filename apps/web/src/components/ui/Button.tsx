@@ -1,40 +1,23 @@
-import { ComponentProps } from "react";
+import clsx from "clsx";
 
-interface ButtonProps {
-  text?: string;
-  arrow?: boolean;
-  className?: string;
-}
+import { ComponentPropsWithRef } from "react";
 
-const Button = ({
-  text,
-  arrow,
-  className,
-  ...props
-}: ButtonProps & ComponentProps<"button">) => {
+const Button = ({ ...props }: ComponentPropsWithRef<"button">) => {
   return (
     <button
       {...props}
       role="button"
-      className={`
+      className={clsx(
+        `
         bg-gradient-to-b from-rose-200 to-rose-300
         hover:from-rose-100 hover:to-rose-200
-        font-inter text-[13pt] w-min
-        font-normal text-light-300 px-4 py-2 rounded-full
-        flex flex-row items-center text-nowrap
-        ${className}`}
+        font-inter text-[13pt] w-min px-4 py-2
+        font-semibold text-light-300 rounded-full
+        flex flex-row items-center text-nowrap`,
+        props.className,
+      )}
     >
-      {text}
-      {arrow ? (
-        <span className="translate-x-[-1px] w-[15px] h-[24px]">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="stroke-light-300 stroke-2 fill-none w-0 h-0"
-          >
-            <path d="m9 18 6-6-6-6" />
-          </svg>
-        </span>
-      ) : null}
+      {props.children}
     </button>
   );
 };

@@ -1,18 +1,19 @@
-interface CardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+import clsx from "clsx";
+import { ComponentPropsWithRef } from "react";
 
-const Card = ({ className, children }: CardProps) => {
+const Card = ({ ...props }: ComponentPropsWithRef<"div">) => {
   return (
     <div
+      {...props}
       role="group"
-      className={`
-        w-min p-4
-        border-[1px] border-dark-800
-        ${className}`}
+      className={clsx(
+        `
+        w-min p-4 border-[1px]
+        border-dark-800`,
+        props.className,
+      )}
     >
-      {children}
+      {props.children}
     </div>
   );
 };

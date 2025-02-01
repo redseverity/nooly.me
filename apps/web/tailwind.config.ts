@@ -6,17 +6,8 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
-    screens: {
-      "screen-2": "200px",
-      "screen-4": "400px",
-      "screen-6": "600px",
-      "screen-8": "800px",
-      "screen-10": "1000px",
-      "screen-12": "1200px",
-      "screen-14": "1400px",
-    },
     colors: {
       dark: {
         100: "var(--dark-1)",

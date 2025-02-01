@@ -1,4 +1,6 @@
-interface LogoProps {
+import { ComponentProps } from "react";
+
+interface LogoProps extends ComponentProps<"span"> {
   className?: string;
   classNameSmile?: string;
 }
@@ -14,7 +16,7 @@ const Logo = ({ className, classNameSmile }: LogoProps) => {
     >
       Nooly<span className="text-rose-200 font-poppins">.</span>me
       <svg
-        className={`relative left-[-1px] top-[-35px] w-[39px] fill-light-200 ${classNameSmile}`}
+        className={`relative left-[-2px] top-[-36px] w-10 fill-light-200 ${classNameSmile}`}
         viewBox="0 0 40 40"
       >
         <path
