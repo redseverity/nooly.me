@@ -6,7 +6,10 @@ const Card = ({ ...props }: ComponentProps<"div">) => {
     <div
       {...props}
       role="group"
-      className={clsx(`w-min p-4 border-[1px] border-dark-8`, props.className)}
+      className={clsx(
+        `w-min p-4 border-[1px] border-light-8 dark:border-dark-8`,
+        props.className,
+      )}
     >
       {props.children}
     </div>

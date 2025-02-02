@@ -19,18 +19,21 @@ const ThemeButton = ({ ...props }: ComponentProps<"button">) => {
     <button
       {...props}
       className="
-              min-[400px]:w-[40px] w-[35px]
-              min-[400px]:h-[40px] h-[35px] 
+              w-[34px]
+              h-[34px] 
               flex justify-center items-center
-              rounded-full border-[1px] border-dark-8 hover:bg-dark-5"
+              rounded-full border-[1px]
+              border-light-8 hover:bg-light-5 bg-light-2
+              dark:border-dark-8 dark:hover:bg-dark-5 dark:bg-dark-2
+              "
       onClick={() => {
         setTheme(theme === "light" ? "dark" : "light");
       }}
     >
-      {theme === "light" ? (
-        <Moon className="stroke-none fill-light-1 size-5" />
+      {theme === "dark" ? (
+        <Moon className="stroke-none fill-light-1 size-[20px]" />
       ) : (
-        <SunDim className="size-6 stroke-light-1" />
+        <SunDim className="size-[22px] stroke-dark-1" />
       )}
     </button>
   );

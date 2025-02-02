@@ -20,7 +20,7 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
       <button {...props} role="button">
         <Menu
           className={clsx(
-            "hidden max-[1100px]:flex stroke-light-1",
+            "hidden max-[1100px]:flex stroke-dark-1 dark:stroke-light-1",
             props.className,
           )}
           onClick={() => setMenuOpen(!$menuOpen)}
@@ -53,8 +53,10 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
               <aside
                 className="
                 hidden max-[1100px]:flex
-                top-[-16rem] z-40 w-full fixed bg-dark-2
-                border-b-[1px] border-dark-8 flex-col gap-4 py-4
+                top-[-16rem] z-40 w-full fixed border-b-[1px]
+                bg-light-2 border-light-8
+                dark:bg-dark-2 dark:border-dark-8
+                flex-col gap-4 py-4
                 items-center justify-center
                 "
                 style={{
@@ -77,10 +79,12 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
                         aria-label={`Navigate to the ${e} section`}
                         title={`Go to the ${e} section`}
                         className="
-                            flex flex-grow justify-between pl-[1.10rem] pr-[0.7rem] items-center
-                            hover:bg-dark-5 text-light-3 text-nowrap text-[11pt]
-                            font-inter font-semibold h-[2.7rem] rounded-full
-                            "
+                        flex flex-grow justify-between pl-[1.10rem] pr-[0.7rem] items-center
+                        hover:bg-light-5 text-dark-3
+                        dark:hover:bg-dark-5 dark:text-light-3
+                        text-nowrap text-[11pt]
+                        font-inter font-semibold h-[2.7rem] rounded-full
+                        "
                       >
                         {e}
 
@@ -92,9 +96,12 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
 
                 <div
                   className="
-            min-[800px]:hidden flex overflow-hidden
-            bg-dark-2 rounded-full border-[1px]
-            border-dark-8 w-[90vw] h-[2.5rem]"
+                  min-[800px]:hidden flex overflow-hidden
+                  rounded-full border-[1px]
+                  bg-light-2 border-light-8
+                  dark:bg-dark-2 dark:border-dark-8
+                  w-[90vw] h-[2.5rem]
+                  "
                 >
                   {["Log In", "Sign Up"].map((e, i) => {
                     const page = e.replace(" ", "").toLowerCase();
@@ -107,9 +114,10 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
                         draggable="false"
                         className={clsx(
                           `
-                  flex flex-1 justify-center items-center  font-inter text-light-3
-                  text-[11pt] hover:bg-dark-5
-                  font-semibold text-nowrap h-full`,
+                        flex flex-1 justify-center items-center text-[11pt]
+                        text-dark-3 hover:bg-light-5
+                        dark:text-light-3 dark:hover:bg-dark-5
+                        font-semibold text-nowrap h-full`,
                           e == "Log In" ? "pl-1" : "pr-1",
                         )}
                       >
@@ -125,20 +133,20 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
                   aria-label="Navigate to the tools page"
                   title="Go to the tools page"
                   className="
-            min-[410px]:gap-1 min-[400px]:hidden flex justify-center items-center
-            min-[500px]:text-[12pt] text-[11pt]
-            min-[410px]:h-[2.4rem] h-[2.3rem]
-            w-[10rem]
+                  min-[410px]:gap-1 min-[400px]:hidden flex justify-center items-center
+                  min-[500px]:text-[12pt] text-[11pt]
+                  h-[38px]
+                  w-min px-4
 
-            font-inter text-light-1 font-bold
-            text-nowrap rounded-full bg-gradient-to-b
-            from-rose-2 to-rose-3 hover:from-rose-1
-            hover:to-rose-2"
+                  font-inter text-light-1 font-bold
+                  text-nowrap rounded-full bg-gradient-to-b
+                  from-rose-2 to-rose-3 hover:from-rose-1
+                  hover:to-rose-2"
                 >
                   <span lang="en" className="pl-1">
                     Try for free
                   </span>
-                  <ChevronRight className="stroke-[2px] size-5" />
+                  <ChevronRight className="stroke-[2px] h-[20px]" />
                 </Link>
               </aside>
             </>,

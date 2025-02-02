@@ -16,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased font-poppins font-normal bg-dark-2 dark:bg-light-2 h-screen w-screen">
+      <body className="antialiased font-poppins font-normal bg-light-2 dark:bg-dark-2 h-screen w-screen">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
