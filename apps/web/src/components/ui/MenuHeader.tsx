@@ -6,32 +6,26 @@ import Link from "next/link";
 import { useEffect, useState, ComponentProps } from "react";
 import { createPortal } from "react-dom";
 
-const MenuHeader = ({...props}: ComponentProps<'button'>) => {
-  const [$isClient, setIsClient] = useState(false);
+const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
+  const [$isClient, setClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    setClient(true);
   }, []);
 
   const [$menuOpen, setMenuOpen] = useState<boolean | undefined>(undefined);
 
-  //logs
-  useEffect(() => {
-    if (process.env.NODE_ENV === "development") {
-      console.log(`variable $menuOpen is: ${$menuOpen}`);
-    }
-  }, [$menuOpen]);
-
   return (
     <>
-    <button
-      {...props}
-      role="button">
-      <Menu
-        className={clsx("hidden max-[1100px]:flex stroke-light-1", props.className)}
-        onClick={() => setMenuOpen(!$menuOpen)}
-      />
-    </button>
+      <button {...props} role="button">
+        <Menu
+          className={clsx(
+            "hidden max-[1100px]:flex stroke-light-1",
+            props.className,
+          )}
+          onClick={() => setMenuOpen(!$menuOpen)}
+        />
+      </button>
 
       {$isClient
         ? createPortal(
@@ -72,9 +66,7 @@ const MenuHeader = ({...props}: ComponentProps<'button'>) => {
                       : "",
                 }}
               >
-                <div
-                  className="w-[90vw] flex flex-col h-auto overflow-hidden"
-                >
+                <div className="w-[90vw] flex flex-col h-auto overflow-hidden">
                   {["Home", "About", "Tools", "Contacts"].map((e, i) => {
                     return (
                       <Link
@@ -99,39 +91,40 @@ const MenuHeader = ({...props}: ComponentProps<'button'>) => {
                 </div>
 
                 <div
-            className="
+                  className="
             min-[800px]:hidden flex overflow-hidden
             bg-dark-2 rounded-full border-[1px]
             border-dark-8 w-[90vw] h-[2.5rem]"
-          >
-            {["Log In", "Sign Up"].map((e, i) => {
-              const page = e.replace(" ", "").toLowerCase();
-              return (
-                <Link
-                  key={i}
-                  href={page}
-                  aria-label={`Navigate to the ${page} page`}
-                  title={`Go to the ${page} page`}
-                  draggable="false"
-                  className={clsx(`
+                >
+                  {["Log In", "Sign Up"].map((e, i) => {
+                    const page = e.replace(" ", "").toLowerCase();
+                    return (
+                      <Link
+                        key={i}
+                        href={page}
+                        aria-label={`Navigate to the ${page} page`}
+                        title={`Go to the ${page} page`}
+                        draggable="false"
+                        className={clsx(
+                          `
                   flex flex-1 justify-center items-center  font-inter text-light-3
                   text-[11pt] hover:bg-dark-5
                   font-semibold text-nowrap h-full`,
-                    e == "Log In" ? "pl-1" : "pr-1",
-                  )}
-                >
-                  {e}
-                </Link>
-              );
-            })}
-          </div>
-          
-          <Link
-            href="/tools"
-            draggable="false"
-            aria-label="Navigate to the tools page"
-            title="Go to the tools page"
-            className="
+                          e == "Log In" ? "pl-1" : "pr-1",
+                        )}
+                      >
+                        {e}
+                      </Link>
+                    );
+                  })}
+                </div>
+
+                <Link
+                  href="/tools"
+                  draggable="false"
+                  aria-label="Navigate to the tools page"
+                  title="Go to the tools page"
+                  className="
             min-[410px]:gap-1 min-[400px]:hidden flex justify-center items-center
             min-[500px]:text-[12pt] text-[11pt]
             min-[410px]:h-[2.4rem] h-[2.3rem]
@@ -141,12 +134,12 @@ const MenuHeader = ({...props}: ComponentProps<'button'>) => {
             text-nowrap rounded-full bg-gradient-to-b
             from-rose-2 to-rose-3 hover:from-rose-1
             hover:to-rose-2"
-          >
-            <span lang="en" className="pl-1">
-              Try for free
-            </span>
-            <ChevronRight className="stroke-[2px] size-5" />
-          </Link>
+                >
+                  <span lang="en" className="pl-1">
+                    Try for free
+                  </span>
+                  <ChevronRight className="stroke-[2px] size-5" />
+                </Link>
               </aside>
             </>,
             document.body,

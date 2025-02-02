@@ -1,9 +1,9 @@
 "use client";
 
 import clsx from "clsx";
-import { ComponentProps, useEffect, useRef } from "react";
+import { ComponentPropsWithRef, useEffect, useRef } from "react";
 
-const GridBg = ({ ...props }: ComponentProps<"canvas">) => {
+const GridBg = ({ ...props }: ComponentPropsWithRef<"canvas">) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -55,11 +55,7 @@ const GridBg = ({ ...props }: ComponentProps<"canvas">) => {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      {...props}
-      className={clsx("fixed", props.className)}
-    />
+    <canvas ref={canvasRef} {...props} className={clsx("", props.className)} />
   );
 };
 

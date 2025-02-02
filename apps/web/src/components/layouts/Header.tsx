@@ -1,9 +1,10 @@
 import { ComponentProps } from "react";
-import { ChevronRight, Moon } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import clsx from "clsx";
 import Link from "next/link";
 import { Logo } from "../ui/Logo";
 import { MenuHeader } from "../ui/MenuHeader";
+import { ThemeButton } from "../ui/ThemeButton";
 
 const Header = ({ ...props }: ComponentProps<"header">) => {
   return (
@@ -115,17 +116,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
             <ChevronRight className="min-[410px]:stroke-[3px] stroke-[2px] size-5" />
           </Link>
 
-          <div
-            className="
-              min-[400px]:w-[2.4rem] w-[2rem]
-              min-[400px]:h-[2.4rem] h-[2rem]
-              flex
-              
-              justify-center items-center
-              rounded-full border-[1px] border-dark-8 hover:bg-dark-5"
-          >
-            <Moon className="stroke-none fill-light-1 w-4" />
-          </div>
+          <ThemeButton />
 
           <MenuHeader />
         </div>

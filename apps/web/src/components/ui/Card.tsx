@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import { ComponentPropsWithRef } from "react";
+import { ComponentProps } from "react";
 
-const Card = ({ ...props }: ComponentPropsWithRef<"div">) => {
+const Card = ({ ...props }: ComponentProps<"div">) => {
   return (
     <div
       {...props}

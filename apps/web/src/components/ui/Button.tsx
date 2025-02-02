@@ -1,8 +1,8 @@
 import clsx from "clsx";
 
-import { ComponentPropsWithRef } from "react";
+import { ComponentProps } from "react";
 
-const Button = ({ ...props }: ComponentPropsWithRef<"button">) => {
+const Button = ({ ...props }: ComponentProps<"button">) => {
   return (
     <button
       {...props}
