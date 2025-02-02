@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { ChevronRight, Menu, Moon } from "lucide-react";
+import { ChevronRight, Menu } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState, ComponentProps } from "react";
 import { createPortal } from "react-dom";
