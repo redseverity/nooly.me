@@ -76,14 +76,14 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
                         key={i}
                         role="link"
                         draggable="false"
-                        aria-label={`Navigate to the ${e} section`}
-                        title={`Go to the ${e} section`}
+                        aria-label={clsx("Navigate to the", e, "section")}
+                        title={clsx("Go to the", e, "section")}
                         className="
                         flex flex-grow justify-between pl-[1.10rem] pr-[0.7rem] items-center
                         hover:bg-light-5 text-dark-3
                         dark:hover:bg-dark-5 dark:text-light-3
                         text-nowrap text-[11pt]
-                        font-inter font-semibold h-[2.7rem] rounded-full
+                        font-semibold h-[2.7rem] rounded-full
                         "
                       >
                         {e}
@@ -109,13 +109,13 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
                       <Link
                         key={i}
                         href={page}
-                        aria-label={`Navigate to the ${page} page`}
-                        title={`Go to the ${page} page`}
+                        aria-label={clsx("Navigate to the", page, "page")}
+                        title={clsx("Go to the", page, "page")}
                         draggable="false"
                         className={clsx(
                           `
                         flex flex-1 justify-center items-center text-[11pt]
-                        text-dark-3 hover:bg-light-5
+                        text-dark-3 hover:bg-light-5 font-inter
                         dark:text-light-3 dark:hover:bg-dark-5
                         font-semibold text-nowrap h-full`,
                           e == "Log In" ? "pl-1" : "pr-1",
@@ -138,7 +138,7 @@ const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
                   h-[38px]
                   w-min px-4
 
-                  font-inter text-light-1 font-bold
+                  font-inter text-light-1 font-semibold
                   text-nowrap rounded-full bg-gradient-to-b
                   from-rose-2 to-rose-3 hover:from-rose-1
                   hover:to-rose-2"

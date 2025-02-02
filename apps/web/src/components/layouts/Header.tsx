@@ -47,12 +47,12 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
             {["Home", "About", "Tools", "Contacts"].map((e, i) => {
               return (
                 <Link
-                  href={`#${e}`}
+                  href={clsx("#"+e)}
                   key={i}
                   role="link"
                   draggable="false"
-                  aria-label={`Navigate to the ${e} section`}
-                  title={`Go to the ${e} section`}
+                  aria-label={clsx("Navigate to the", e, "section")}
+                  title={clsx("Go to the", e, "section")}
                   className="
                   flex flex-grow justify-center items-center
                   hover:bg-light-5 text-dark-3
@@ -80,17 +80,14 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
                 <Link
                   key={i}
                   href={page}
-                  aria-label={`Navigate to the ${page} page`}
-                  title={`Go to the ${page} page`}
+                  aria-label={clsx("Navigate to the", page, "page")}
+                  title={clsx("Go to the", page, "page")}
                   draggable="false"
-                  className={clsx(
-                    `
-                  flex flex-grow font-inter 
+                  className={`flex flex-grow font-inter z-50
                   justify-center items-center text-[11pt]
                   text-dark-3 hover:bg-light-5 px-[28px]
                   dark:text-light-3 dark:hover:bg-dark-5
-                  font-semibold text-nowrap h-full`
-                  )}
+                  font-semibold text-nowrap h-full`}
                 >
                   {e}
                 </Link>
@@ -106,9 +103,11 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
             className="
               min-[500px]:gap-[4px] min-[400px]:flex hidden 
               min-[500px]:text-[12pt] text-[10pt]
+              min-[500px]:font-bold font-semibold
               min-[500px]:pl-[14px] min-[500px]:pr-[10px]
               h-[36px] w-min justify-center items-center
-              font-inter text-light-1 font-bold
+
+              font-inter text-light-1 
               text-nowrap rounded-full bg-gradient-to-b
               from-rose-2 to-rose-3 hover:from-rose-1
               hover:to-rose-2 pl-[8px] pr-[4px]"
@@ -116,7 +115,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
             <span lang="en" className="min-[500px]:pl-1 pl-2">
               Try for free
             </span>
-            <ChevronRight className="min-[500px]:stroke-[2.5px] stroke-[2px]"/>
+            <ChevronRight className="min-[500px]:stroke-[2.3px] stroke-[2px]" />
           </Link>
 
           <ThemeButton />
