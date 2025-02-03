@@ -1,17 +1,33 @@
 import clsx from "clsx";
-import { ComponentProps } from "react"
+import { ComponentProps } from "react";
 
-const Section = ({ children, className, ...props }: ComponentProps<"section">) => {
-    return (
-        <section
-            {...props}
-            className={clsx(`
-            z-10 w-full h-[50vh] sticky
-            flex justify-center items-center`, className)}
-        >
-            {children}
-        </section>
-    )
-}
+const Section = ({
+  children,
+  className,
+  ...props
+}: ComponentProps<"section">) => {
+  return (
+    <section
+      {...props}
+      className={clsx(
+        `
+        z-10
+        w-full
+        flex
+        justify-center
+        items-center
+        flex-col
+        border-b-[1px]
+        border-light-8
+        dark:border-dark-8
+        relative
+        `,
+        className,
+      )}
+    >
+      {children}
+    </section>
+  );
+};
 
 export { Section };

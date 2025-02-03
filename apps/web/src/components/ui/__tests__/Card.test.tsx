@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { Card } from "../Card";
 
 describe("Logo component", () => {
-  it("Render Component", async () => {
+  it("Render Component", () => {
     render(<Card />);
 
     expect(screen.getByRole("group")).toBeVisible();

@@ -28,3 +28,9 @@
   --green-1: #16a34a;
   --red-1: #dc2626;
 }
+
+.gradient-text-rose {
+  background: linear-gradient(to bottom, var(--rose-2), var(--rose-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

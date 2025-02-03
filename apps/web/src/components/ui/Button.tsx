@@ -11,7 +11,7 @@ const Button = ({ ...props }: ComponentProps<"button">) => {
         `
         bg-gradient-to-b from-rose-2 to-rose-3
         hover:from-rose-1 hover:to-rose-2
-        font-inter text-[13pt] w-min px-4 py-2
+        font-inter text-[13pt] w-min
         font-semibold text-dark-3 dark:text-light-3 rounded-full
         flex flex-row items-center text-nowrap`,
         props.className,

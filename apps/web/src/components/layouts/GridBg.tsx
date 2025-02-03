@@ -34,7 +34,7 @@ const GridBg = ({ ...props }: ComponentPropsWithRef<"canvas">) => {
       // get the stroke color based on the current theme
       const rootStyles = getComputedStyle(document.documentElement);
 
-      let strokeClass = canvas.classList.value
+      const strokeClass = canvas.classList.value
         .split(" ")
         .filter((e) =>
           theme == "dark" ? e.includes("dark:stroke") : e.includes("stroke"),

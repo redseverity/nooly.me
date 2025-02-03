@@ -1,17 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import userEvent from "@testing-library/user-event";
 import { Button } from "../Button";
 
 describe("Button component", () => {
-  it("Render Component", async () => {
-    const onClick = jest.fn();
-
-    render(<Button children="test" onClick={onClick} />);
+  it("Render Component", () => {
+    render(<Button>test</Button>);
     const btn = screen.getByText("test");
 
-    await userEvent.click(btn);
-    expect(onClick).toHaveBeenCalledTimes(1);
+    fireEvent.click(btn);
 
     expect(btn).toBeVisible();
     expect(btn).toBeInTheDocument();

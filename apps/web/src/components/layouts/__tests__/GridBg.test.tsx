@@ -16,7 +16,7 @@ describe("GridBg component", () => {
     });
   });
 
-  const testDrawOnCanvas = (dark: boolean) => {
+  const testDrawOnCanvas = () => {
     const { container } = render(<GridBg />);
     const canvas = container.querySelector("canvas");
     const ctx = canvas?.getContext("2d");
@@ -35,11 +35,7 @@ describe("GridBg component", () => {
     expect(ctx?.stroke).toHaveBeenCalled();
   };
 
-  it("Render and draw on dark canvas", () => {
-    testDrawOnCanvas(true);
-  });
-
-  it("Render and draw on white canvas", () => {
-    testDrawOnCanvas(false);
+  it("Render and draw on canvas", () => {
+    testDrawOnCanvas();
   });
 });

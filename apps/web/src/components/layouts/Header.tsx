@@ -47,7 +47,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
             {["Home", "About", "Tools", "Contacts"].map((e, i) => {
               return (
                 <Link
-                  href={clsx("#"+e)}
+                  href={clsx("#" + e)}
                   key={i}
                   role="link"
                   draggable="false"
