@@ -1,10 +1,8 @@
+import {Logo, MenuHeader, ThemeButton} from "../ui"
 import { ComponentProps } from "react";
 import { ChevronRight } from "lucide-react";
 import clsx from "clsx";
 import Link from "next/link";
-import { Logo } from "../ui/Logo";
-import { MenuHeader } from "../ui/MenuHeader";
-import { ThemeButton } from "../ui/ThemeButton";
 
 const Header = ({ ...props }: ComponentProps<"header">) => {
   return (
