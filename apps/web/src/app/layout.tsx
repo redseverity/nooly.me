@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/context/theme-provider";
+import { ThemeProvider } from "@/contexts";
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/fonts.css";
