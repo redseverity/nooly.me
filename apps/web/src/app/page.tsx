@@ -1,5 +1,4 @@
-import { GridBg } from "@/components/layouts/GridBg";
-import { Header } from "@/components/layouts/Header";
+import { GridBg, Header } from "@/components/layouts";
 import { Button, Section } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";

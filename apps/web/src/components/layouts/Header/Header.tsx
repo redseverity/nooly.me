@@ -1,4 +1,5 @@
-import {Logo, MenuHeader, ThemeButton} from "../ui"
+import { Logo, ThemeButton } from "../../ui";
+import { MenuHeader } from "./ui";
 import { ComponentProps } from "react";
 import { ChevronRight } from "lucide-react";
 import clsx from "clsx";
