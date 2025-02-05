@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { Logo, ThemeButton } from "../../ui";
+import { Logo, ThemeButton } from "@/components/ui";
 import { MenuHeader } from "./ui";
 import { ChevronRight } from "lucide-react";
 

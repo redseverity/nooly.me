@@ -1,9 +1,11 @@
+"use server";
+
 import { GridBg, Header } from "@/components/layouts";
 import { Button, Section } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-export default function App() {
+export default async function App() {
   return (
     <>
       <GridBg className="z-0 stroke-light-4 dark:stroke-dark-4 fixed" />

@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/contexts";
 import type { Metadata } from "next";
-import "../styles/globals.css";
-import "../styles/fonts.css";
+import "@/styles/globals.css";
+import "@/styles/fonts.css";
 
 export const metadata: Metadata = {
   title: "Nooly.me",
