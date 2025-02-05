@@ -1,10 +1,13 @@
 "use client";
 
 import clsx from "clsx";
-import { ComponentPropsWithRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 
-const GridBg = ({ ...props }: ComponentPropsWithRef<"canvas">) => {
+const GridBg = ({
+  className,
+  ...props
+}: React.ComponentPropsWithRef<"canvas">) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   // get current theme (dark or light)
@@ -74,9 +77,7 @@ const GridBg = ({ ...props }: ComponentPropsWithRef<"canvas">) => {
     return () => window.removeEventListener("resize", drawGrid);
   }, [theme]); // Re-run effect when the theme changes
 
-  return (
-    <canvas ref={canvasRef} {...props} className={clsx("", props.className)} />
-  );
+  return <canvas ref={canvasRef} {...props} className={clsx("", className)} />;
 };
 
 export { GridBg };

@@ -1,12 +1,12 @@
 "use client";
 
 import clsx from "clsx";
-import { ChevronRight, Menu } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState, ComponentProps } from "react";
+import { ChevronRight, Menu } from "lucide-react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
-const MenuHeader = ({ ...props }: ComponentProps<"button">) => {
+const MenuHeader = ({ ...props }: React.ComponentProps<"button">) => {
   const [$isClient, setClient] = useState(false);
 
   useEffect(() => {

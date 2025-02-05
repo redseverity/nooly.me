@@ -1,11 +1,10 @@
 import clsx from "clsx";
-import { ComponentProps } from "react";
 
 const Section = ({
   children,
   className,
   ...props
-}: ComponentProps<"section">) => {
+}: React.ComponentProps<"section">) => {
   return (
     <section
       {...props}

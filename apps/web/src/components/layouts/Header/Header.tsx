@@ -1,11 +1,10 @@
-import { Logo, ThemeButton } from "../../ui";
-import { MenuHeader } from "./ui";
-import { ComponentProps } from "react";
-import { ChevronRight } from "lucide-react";
 import clsx from "clsx";
 import Link from "next/link";
+import { Logo, ThemeButton } from "../../ui";
+import { MenuHeader } from "./ui";
+import { ChevronRight } from "lucide-react";
 
-const Header = ({ ...props }: ComponentProps<"header">) => {
+const Header = ({ className, ...props }: React.ComponentProps<"header">) => {
   return (
     <header
       {...props}
@@ -13,7 +12,7 @@ const Header = ({ ...props }: ComponentProps<"header">) => {
         `
         flex justify-center fixed top-0 select-none overflow-hidden w-full h-16 
         border-b-[1px] border-light-8 bg-light-2 dark:border-dark-8 dark:bg-dark-2 `,
-        props.className,
+        className,
       )}
     >
       <nav

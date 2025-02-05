@@ -1,8 +1,6 @@
 import clsx from "clsx";
 
-import { ComponentProps } from "react";
-
-const Button = ({ ...props }: ComponentProps<"button">) => {
+const Button = ({ ...props }: React.ComponentProps<"button">) => {
   return (
     <button
       {...props}

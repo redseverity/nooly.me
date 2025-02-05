@@ -1,14 +1,14 @@
 import clsx from "clsx";
-import { ComponentProps } from "react";
 
-interface LogoProps extends ComponentProps<"span"> {
+interface LogoProps extends React.ComponentProps<"span"> {
   className?: string;
   classNameSmile?: string;
 }
 
-const Logo = ({ className, classNameSmile }: LogoProps) => {
+const Logo = ({ className, classNameSmile, ...props }: LogoProps) => {
   return (
     <span
+      {...props}
       role="none"
       translate="no"
       className={clsx(
