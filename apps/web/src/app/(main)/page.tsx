@@ -1,7 +1,7 @@
 "use server";
 
 import { GridBg, Header } from "@/components/layouts";
-import { Button, Section } from "@/components/ui";
+import { Button, NewUsers, Section } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -46,7 +46,7 @@ export default async function App() {
               <span className="gradient-text-rose">Online </span>Tools
             </h1>
 
-            <p
+            <h2
               className="
               min-[750px]:text-[14pt]
               min-[580px]:text-[12pt]
@@ -66,7 +66,7 @@ export default async function App() {
             >
               Nooly is a powerful platform for image conversion, fast music
               video downloads and more.
-            </p>
+            </h2>
           </div>
 
           <Button
@@ -85,7 +85,6 @@ export default async function App() {
             justify-center
             items-center
             h-[34px]
-            mb-14
             px-2"
           >
             <span
@@ -147,6 +146,8 @@ export default async function App() {
               />
             </div>
           </Button>
+
+          <NewUsers className="mb-14 mt-4" />
         </Section>
       </main>
     </>
