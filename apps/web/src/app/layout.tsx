@@ -6,7 +6,7 @@ import "@/styles/fonts.css";
 export const metadata: Metadata = {
   title: "Nooly.me",
   description:
-    "Nooly is a powerful platform for image conversion, fast music and video downloads and more.",
+    "Nooly is a powerful platform for fast image conversion, music and video downloads, and more.",
   icons: "/assets/favicon.ico",
 };
 

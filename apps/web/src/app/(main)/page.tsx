@@ -12,142 +12,214 @@ export default async function App() {
 
       <Header className="z-50" />
 
-      <main>
-        <Section className="h-[30rem] mt-16 scroll-mt-16" id="Home">
+      <main className="px-2">
+        <NewUsers
+          className="
+              min-[750px]:text-[9pt]
+              min-[520px]:text-[8pt]
+              text-[7pt]
+              absolute top-[80px] 
+              right-[20px]
+              "
+        />
+
+        <Section
+          id="Home"
+          className="
+          scroll-mt-16
+          min-[750px]:h-[33rem]
+          min-[580px]:h-[32rem]
+          min-[500px]:h-[32rem]
+          min-[400px]:h-[32rem]
+          min-[340px]:h-[32rem]
+          h-[30rem]
+          min-[750px]:pb-8
+          min-[580px]:pb-12
+          min-[400px]:pb-14
+          min-[330px]:pb-16
+          pb-[4rem]
+          mt-16
+          main-[400px]:gap-8
+          gap-6
+          
+          "
+        >
           <div
             className="
-            min-[750px]:w-[35rem]
-            min-[580px]:w-[30rem]
-            min-[500px]:w-[25rem]
-            min-[400px]:w-[21rem]
-            min-[330px]:w-[18rem]
+            min-[750px]:w-[44rem]
+            min-[610px]:w-[35rem]
+            min-[520px]:w-[30rem]
+            min-[460px]:w-[27rem]
+            min-[400px]:w-[22rem]
+            min-[340px]:w-[19rem]
+            min-[270px]:w-[16rem]
             w-[12rem]
             flex
+            gap-6
             flex-col
             justify-center
             items-center
-            [&_*]:text-center"
+            text-center"
           >
-            <h1
+            <div
               className="
-              min-[750px]:text-[68pt]
-              min-[580px]:text-[55pt]
-              min-[500px]:text-[45pt]
-              min-[400px]:text-[40pt]
-              min-[330px]:text-[35pt]
-              min-[330px]:text-nowrap
-              max-[330px]:leading-[3.3rem]
-              max-[330px]:mb-2
-              text-[40pt]
-              font-bold font-poppins
-              text-dark-1
-              dark:text-light-1"
+              flex
+              flex-col
+              justify-center
+              items-center
+              min-[400px]:gap-4
+              gap-2
+              "
             >
-              <span className="gradient-text-rose">Online </span>Tools
-            </h1>
+              <span
+                className="
+                min-[600px]:size-5
+                min-[400px]:size-4
+                min-[250px]:size-3
+                size-2
+                rounded-full 
+                bg-gradient-to-b 
+                from-rose-2 
+                to-rose-3 
+                block"
+              />
+              <h1
+                className="
+                min-[750px]:text-[45pt]
+                min-[610px]:text-[41pt]
+                min-[520px]:text-[35pt]
+                min-[460px]:text-[30pt]
+                min-[400px]:text-[26pt]
+                min-[340px]:text-[22pt]
+                min-[270px]:text-[18pt]
+                text-[14pt]
+
+                font-bold
+                font-poppins
+                text-dark-1
+                dark:text-light-1
+                leading-tight"
+              >
+                Explore
+                <br />
+                the&nbsp;<span className="gradient-text-rose">Simplicity</span>.
+                <br />
+                <span className="gradient-text-rose min-[340px]:border-b-[4px] border-b-[2px] border-rose-2 pb-[2px]">
+                  Experience
+                </span>
+                &nbsp;the&nbsp;Ease.
+              </h1>
+            </div>
 
             <h2
               className="
-              min-[750px]:text-[14pt]
-              min-[580px]:text-[12pt]
-              min-[500px]:text-[11pt]
-              min-[400px]:text-[9pt]
-              min-[330px]:text-[8pt]
-              min-[750px]:translate-y-[-1.40rem]
-              min-[580px]:translate-y-[-1rem]
-              min-[500px]:translate-y-[-0.6rem]
-              min-[400px]:translate-y-[-0.6rem]
-              min-[330px]:translate-y-[-0.4rem]
-              translate-y-[0.3rem]
-              dark:text-light-3
-              text-dark-3 
-              text-[10pt]
+              min-[750px]:text-[16pt]
+              min-[610px]:text-[14pt]
+              min-[520px]:text-[12pt]
+              min-[460px]:text-[11pt]
+              min-[400px]:text-[10pt]
+              min-[340px]:text-[8pt]
+              min-[270px]:text-[6pt]
+              text-[5pt]
+
+              dark:text-light-4
+              text-dark-4
               font-inter"
             >
-              Nooly is a powerful platform for image conversion, fast music
-              video downloads and more.
+              Nooly is a powerful platform for fast image conversion, music and
+              video downloads, and more.
             </h2>
           </div>
 
-          <Button
+          <div
             className="
-            min-[750px]:h-[46px]
-            min-[580px]:h-[44px]
-            min-[500px]:h-[40px]
-            min-[400px]:h-[36px]
-            min-[750px]:translate-y-[-0.4rem]
-            min-[580px]:translate-y-[-0.2rem]
-            min-[500px]:translate-y-[0.1rem]
-            min-[400px]:translate-y-[0.2rem]
-            min-[330px]:translate-y-[0.4rem]
-            translate-y-[1.5rem]
             flex
             justify-center
             items-center
-            h-[34px]
-            px-2"
+            flex-col
+            gap-4
+            "
           >
-            <span
+            <Button
               className="
+            min-[750px]:h-[48px]
+            min-[610px]:h-[46px]
+            min-[520px]:h-[42px]
+            min-[460px]:h-[38px]
+            min-[400px]:h-[36px]
+            min-[340px]:h-[34px]
+            min-[270px]:h-[32px]
+            h-[30px]
+
+            flex
+            justify-center
+            items-center
+            px-2"
+            >
+              <span
+                className="
               min-[750px]:size-[32px]
-              min-[600px]:size-[30px]
-              min-[500px]:size-[26px]
+              min-[610px]:size-[30px]
+              min-[520px]:size-[26px]
+              min-[460px]:size-[24px]
               min-[400px]:size-[22px]
-              size-[20px]
+              min-[340px]:size-[20px]
+              min-[270px]:size-[18px]
+              size-[16px]
               min-[750px]:mr-[10px]
-              min-[600px]:mr-[9px]
-              min-[500px]:mr-[8px]
+              min-[610px]:mr-[9px]
+              min-[460px]:mr-[8px]
               min-[400px]:mr-[7px]
+              min-[340px]:mr-[6px]
+              min-[270px]:mr-[5px]
+              mr-[4px]
               flex
               justify-center
-              items-center 
-              mr-[6px]"
-            >
-              <Image
-                src="/assets/google-icon.svg"
-                alt="google icon"
-                width={32}
-                height={32}
-              />
-            </span>
-            <p
-              className="
-              text-nowrap
+              items-center"
+              >
+                <Image
+                  src="/assets/google-icon.svg"
+                  alt="google icon"
+                  width={32}
+                  height={32}
+                />
+              </span>
+              <p
+                className="
               font-inter
               min-[750px]:text-[12pt]
-              min-[500px]:text-[10pt]
-              min-[400px]:text-[8pt]
-              min-[330px]:text-[6pt]
-              text-[8pt]
+              min-[610px]:text-[10pt]
+              min-[460px]:text-[9pt]
+              min-[340px]:text-[8pt]
+              min-[270px]:text-[6pt]
+              text-[6pt]
               text-light-1
               font-bold"
-            >
-              Sign with the google
-            </p>
+              >
+                Sign with the google
+              </p>
 
-            <div
-              className="
-              min-[750px]:size-[32px]
-              min-[600px]:size-[28px]
-              min-[500px]:size-[26px]
-              min-[400px]:size-[22px]
-              size-[20px]
-              flex justify-center 
-              items-center"
-            >
-              <ChevronRight
+              <div
                 className="
+                h-full
+                flex justify-center 
+                items-center"
+              >
+                <ChevronRight
+                  className="
                 min-[750px]:size-[28px]
-                min-[600px]:size-[26px]
-                min-[500px]:size-[24px]
-                min-[400px]:size-[22px]
+                min-[610px]:size-[26px]
+                min-[520px]:size-[24px]
+                min-[460px]:size-[22px]
+                min-[400px]:size-[20px]
+                min-[340px]:size-[18px]
+                min-[270px]:size-[16px]
                 stroke-[1.8]
                 stroke-light-1"
-              />
-            </div>
-          </Button>
-
-          <NewUsers className="mb-14 mt-4" />
+                />
+              </div>
+            </Button>
+          </div>
         </Section>
       </main>
     </>
