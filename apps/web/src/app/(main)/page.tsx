@@ -15,12 +15,11 @@ export default async function App() {
       <main className="px-2">
         <NewUsers
           className="
-              min-[750px]:text-[9pt]
-              min-[520px]:text-[8pt]
-              text-[7pt]
-              absolute top-[80px] 
-              right-[20px]
-              "
+          min-[750px]:text-[9pt]
+          min-[520px]:text-[8pt]
+          text-[7pt]
+          absolute top-[80px] 
+          right-[20px]"
         />
 
         <Section
@@ -40,9 +39,7 @@ export default async function App() {
           pb-[4rem]
           mt-16
           main-[400px]:gap-8
-          gap-6
-          
-          "
+          gap-6"
         >
           <div
             className="
@@ -68,8 +65,7 @@ export default async function App() {
               justify-center
               items-center
               min-[400px]:gap-4
-              gap-2
-              "
+              gap-2"
             >
               <span
                 className="
@@ -93,7 +89,6 @@ export default async function App() {
                 min-[340px]:text-[22pt]
                 min-[270px]:text-[18pt]
                 text-[14pt]
-
                 font-bold
                 font-poppins
                 text-dark-1
@@ -104,7 +99,14 @@ export default async function App() {
                 <br />
                 the&nbsp;<span className="gradient-text-rose">Simplicity</span>.
                 <br />
-                <span className="gradient-text-rose min-[340px]:border-b-[4px] border-b-[2px] border-rose-2 pb-[2px]">
+                <span
+                  className="
+                  gradient-text-rose
+                  min-[340px]:border-b-[4px]
+                  border-b-[2px]
+                  border-rose-2
+                  pb-[2px]"
+                >
                   Experience
                 </span>
                 &nbsp;the&nbsp;Ease.
@@ -121,7 +123,6 @@ export default async function App() {
               min-[340px]:text-[8pt]
               min-[270px]:text-[6pt]
               text-[5pt]
-
               dark:text-light-4
               text-dark-4
               font-inter"
@@ -137,45 +138,43 @@ export default async function App() {
             justify-center
             items-center
             flex-col
-            gap-4
-            "
+            gap-4"
           >
             <Button
               className="
-            min-[750px]:h-[48px]
-            min-[610px]:h-[46px]
-            min-[520px]:h-[42px]
-            min-[460px]:h-[38px]
-            min-[400px]:h-[36px]
-            min-[340px]:h-[34px]
-            min-[270px]:h-[32px]
-            h-[30px]
-
-            flex
-            justify-center
-            items-center
-            px-2"
+              min-[750px]:h-[48px]
+              min-[610px]:h-[46px]
+              min-[520px]:h-[42px]
+              min-[460px]:h-[38px]
+              min-[400px]:h-[36px]
+              min-[340px]:h-[34px]
+              min-[270px]:h-[32px]
+              h-[30px]
+              flex
+              justify-center
+              items-center
+              px-2"
             >
               <span
                 className="
-              min-[750px]:size-[32px]
-              min-[610px]:size-[30px]
-              min-[520px]:size-[26px]
-              min-[460px]:size-[24px]
-              min-[400px]:size-[22px]
-              min-[340px]:size-[20px]
-              min-[270px]:size-[18px]
-              size-[16px]
-              min-[750px]:mr-[10px]
-              min-[610px]:mr-[9px]
-              min-[460px]:mr-[8px]
-              min-[400px]:mr-[7px]
-              min-[340px]:mr-[6px]
-              min-[270px]:mr-[5px]
-              mr-[4px]
-              flex
-              justify-center
-              items-center"
+                min-[750px]:size-[32px]
+                min-[610px]:size-[30px]
+                min-[520px]:size-[26px]
+                min-[460px]:size-[24px]
+                min-[400px]:size-[22px]
+                min-[340px]:size-[20px]
+                min-[270px]:size-[18px]
+                size-[16px]
+                min-[750px]:mr-[10px]
+                min-[610px]:mr-[9px]
+                min-[460px]:mr-[8px]
+                min-[400px]:mr-[7px]
+                min-[340px]:mr-[6px]
+                min-[270px]:mr-[5px]
+                mr-[4px]
+                flex
+                justify-center
+                items-center"
               >
                 <Image
                   src="/assets/google-icon.svg"
@@ -186,15 +185,15 @@ export default async function App() {
               </span>
               <p
                 className="
-              font-inter
-              min-[750px]:text-[12pt]
-              min-[610px]:text-[10pt]
-              min-[460px]:text-[9pt]
-              min-[340px]:text-[8pt]
-              min-[270px]:text-[6pt]
-              text-[6pt]
-              text-light-1
-              font-bold"
+                font-inter
+                min-[750px]:text-[12pt]
+                min-[610px]:text-[10pt]
+                min-[460px]:text-[9pt]
+                min-[340px]:text-[8pt]
+                min-[270px]:text-[6pt]
+                text-[6pt]
+                text-light-1
+                font-bold"
               >
                 Sign with the google
               </p>
@@ -207,15 +206,15 @@ export default async function App() {
               >
                 <ChevronRight
                   className="
-                min-[750px]:size-[28px]
-                min-[610px]:size-[26px]
-                min-[520px]:size-[24px]
-                min-[460px]:size-[22px]
-                min-[400px]:size-[20px]
-                min-[340px]:size-[18px]
-                min-[270px]:size-[16px]
-                stroke-[1.8]
-                stroke-light-1"
+                  min-[750px]:size-[28px]
+                  min-[610px]:size-[26px]
+                  min-[520px]:size-[24px]
+                  min-[460px]:size-[22px]
+                  min-[400px]:size-[20px]
+                  min-[340px]:size-[18px]
+                  min-[270px]:size-[16px]
+                  stroke-[1.8]
+                  stroke-light-1"
                 />
               </div>
             </Button>
