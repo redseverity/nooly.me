@@ -2,11 +2,10 @@
 
 import { ThemeProvider as Provider } from "next-themes";
 
-interface ProviderProps extends React.ComponentProps<typeof Provider> {
-  children: React.ReactNode;
-}
-
-const ThemeProvider = ({ children, ...props }: ProviderProps) => {
+const ThemeProvider = ({
+  children,
+  ...props
+}: React.ComponentProps<typeof Provider>) => {
   return <Provider {...props}>{children}</Provider>;
 };
 

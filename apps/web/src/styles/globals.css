@@ -15,7 +15,7 @@
   --dark-1: #0d0c12;
   --dark-2: #1B1A27;
   --dark-3: #1D1B29;
-  --dark-4: #1F1D2E;
+  --dark-4: #221f32;
   --dark-5: #262338;
   --dark-6: #2B2640;
   --dark-7: #2D2942;
@@ -29,8 +29,11 @@
   --red-1: #dc2626;
 }
 
-.gradient-text-rose {
-  background: linear-gradient(to bottom, var(--rose-2), var(--rose-3));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+@layer components {
+  .gradient-text-rose {
+    background: linear-gradient(to bottom, var(--rose-2), var(--rose-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

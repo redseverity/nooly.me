@@ -1,5 +1,5 @@
 import { render, act } from "@testing-library/react";
-import { GridBg } from "../GridBg/GridBg";
+import { GridBg } from "../GridBg";
 import "@testing-library/jest-dom";
 
 describe("GridBg component", () => {
