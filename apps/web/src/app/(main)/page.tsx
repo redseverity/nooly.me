@@ -1,5 +1,5 @@
-import { GridBg, Header, HomeSection } from "@/components/layouts";
-import { NewUsers, Section } from "@/components/ui";
+import { GridBg, Header, Home, About } from "@/components/layouts";
+import { NewUsers } from "@/components/ui";
 
 export default function App() {
   return (
@@ -10,13 +10,8 @@ export default function App() {
 
       <main className="flex flex-col justify-center items-center">
         <NewUsers />
-
-        <HomeSection />
-
-        <Section
-          id="#About"
-          className="w-full h-[20rem] flex justify-center items-center"
-        ></Section>
+        <Home />
+        <About />
       </main>
     </>
   );

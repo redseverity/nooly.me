@@ -56,9 +56,7 @@ export const Header = ({
 
             <ThemeButton />
 
-            <Menu.Root
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
+            <Menu.Root onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? (
                 <Menu.Close className="min-[1000px]:hidden flex" />
               ) : (

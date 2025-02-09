@@ -4,7 +4,7 @@ export const NewUsers = ({
   className,
   ...props
 }: React.ComponentProps<"header">) => {
-  const users = 12635;
+  const users = 1;
 
   return (
     <span
@@ -17,7 +17,7 @@ export const NewUsers = ({
     >
       <p>
         <span className="text-rose-2">+</span>&nbsp;
-        {users.toLocaleString("en-US")} Users
+        {users.toLocaleString("en-US")+"M"} Users
       </p>
     </span>
   );

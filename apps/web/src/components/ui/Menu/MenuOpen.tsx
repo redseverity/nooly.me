@@ -7,7 +7,9 @@ export const MenuOpen = ({
   ...props
 }: React.ComponentProps<typeof MenuOpenIcon>) => {
   return (
-    <MenuOpenIcon { ...props } className={clsx("stroke-dark-1 dark:stroke-light-1", className)}
+    <MenuOpenIcon
+      {...props}
+      className={clsx("stroke-dark-1 dark:stroke-light-1", className)}
     />
   );
 };

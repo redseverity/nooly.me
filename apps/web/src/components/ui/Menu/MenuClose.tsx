@@ -3,9 +3,12 @@ import { X as MenuCloseIcon } from "lucide-react";
 
 export const MenuClose = ({
   className,
-  ...props 
+  ...props
 }: React.ComponentProps<typeof MenuCloseIcon>) => {
   return (
-    <MenuCloseIcon { ...props } className={clsx("stroke-dark-1 dark:stroke-light-1", className)}/>
+    <MenuCloseIcon
+      {...props}
+      className={clsx("stroke-dark-1 dark:stroke-light-1", className)}
+    />
   );
 };

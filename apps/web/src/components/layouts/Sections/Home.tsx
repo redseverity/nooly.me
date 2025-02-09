@@ -2,7 +2,7 @@ import { Button, Section } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-export const HomeSection = () => {
+export const Home = () => {
   return (
     <Section
       id="Home"
@@ -35,8 +35,10 @@ export const HomeSection = () => {
         </h2>
       </div>
 
-      <Button title="Sign with the Google button"
-      className="min-[750px]:h-[48px] min-[610px]:h-[46px] min-[520px]:h-[42px] min-[460px]:h-[38px] min-[400px]:h-[36px] min-[340px]:h-[34px] min-[270px]:h-[32px] h-[30px] flex justify-center items-center px-2">
+      <Button
+        title="Sign with the Google button"
+        className="min-[750px]:h-[48px] min-[610px]:h-[46px] min-[520px]:h-[42px] min-[460px]:h-[38px] min-[400px]:h-[36px] min-[340px]:h-[34px] min-[270px]:h-[32px] h-[30px] flex justify-center items-center px-2"
+      >
         <span className="min-[750px]:size-[32px] min-[610px]:size-[30px] min-[520px]:size-[26px] min-[460px]:size-[24px] min-[400px]:size-[22px] min-[340px]:size-[20px] min-[270px]:size-[18px] size-[16px] min-[750px]:mr-[10px] min-[610px]:mr-[9px] min-[460px]:mr-[8px] min-[400px]:mr-[7px] min-[340px]:mr-[6px] min-[270px]:mr-[5px] mr-[4px] flex justify-center items-center">
           <Image
             draggable="false"
