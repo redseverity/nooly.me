@@ -1,4 +1,4 @@
-import { Button, Section } from "@/components/ui";
+import { Button, Section, NewUsers } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -8,6 +8,8 @@ export const Home = () => {
       id="Home"
       className="min-[600px]:h-[80dvh] h-[60dvh] mt-16 pb-8 min-[400px]:gap-8 gap-4 scroll-mt-16 select-none"
     >
+      <NewUsers className="absolute top-[20px] right-[24px]" />
+
       <div className="min-[700px]:w-[38rem] min-[600px]:w-[32rem] w-[86%] flex gap-4 flex-col justify-center items-center text-center">
         <div className="flex flex-col justify-center items-center min-[400px]:gap-3 gap-2">
           <span
@@ -29,17 +31,17 @@ export const Home = () => {
           </h1>
         </div>
 
-        <h2 className="min-[700px]:text-[14pt] min-[600px]:text-[10pt] text-[3vw] dark:text-light-4 text-dark-4 font-inter">
+        <p className="min-[700px]:text-[14pt] min-[600px]:text-[10pt] text-[3vw] dark:text-light-4 text-dark-4 font-inter">
           Nooly is a powerful platform for fast image conversion, music and
           video downloads, and more.
-        </h2>
+        </p>
       </div>
 
       <Button
         title="Sign with the Google button"
-        className="min-[750px]:h-[48px] min-[610px]:h-[46px] min-[520px]:h-[42px] min-[460px]:h-[38px] min-[400px]:h-[36px] min-[340px]:h-[34px] min-[270px]:h-[32px] h-[30px] flex justify-center items-center px-2"
+        className="min-[600px]:py-6 min-[400px]:py-5 py-4 flex justify-center items-center px-2"
       >
-        <span className="min-[750px]:size-[32px] min-[610px]:size-[30px] min-[520px]:size-[26px] min-[460px]:size-[24px] min-[400px]:size-[22px] min-[340px]:size-[20px] min-[270px]:size-[18px] size-[16px] min-[750px]:mr-[10px] min-[610px]:mr-[9px] min-[460px]:mr-[8px] min-[400px]:mr-[7px] min-[340px]:mr-[6px] min-[270px]:mr-[5px] mr-[4px] flex justify-center items-center">
+        <span className="min-[600px]:size-[32px] min-[400px]:size-[26px] min-[270px]:size-[18px] size-[16px] min-[750px]:mr-[10px] min-[610px]:mr-[9px] min-[460px]:mr-[8px] min-[400px]:mr-[7px] min-[340px]:mr-[6px] min-[270px]:mr-[5px] mr-[4px] flex justify-center items-center">
           <Image
             draggable="false"
             src="/assets/google-icon.svg"
@@ -48,12 +50,12 @@ export const Home = () => {
             height={32}
           />
         </span>
-        <p className="font-inter min-[750px]:text-[12pt] min-[610px]:text-[11pt] min-[460px]:text-[10pt] min-[340px]:text-[9pt] min-[270px]:text-[8pt] text-[7pt] text-light-1 font-bold">
+        <p className="font-inter min-[600px]:text-[13pt] min-[400px]:text-[10pt] text-[8pt] text-light-1 font-bold leading-none">
           Sign with the google
         </p>
 
-        <div className="h-full flex justify-center  items-center">
-          <ChevronRight className="min-[750px]:size-[28px] min-[610px]:size-[26px] min-[520px]:size-[24px] min-[460px]:size-[22px] min-[400px]:size-[24px] min-[340px]:size-[18px] min-[270px]:size-[16px] stroke-[1.8] stroke-light-1" />
+        <div className="h-full flex justify-center items-center">
+          <ChevronRight className="min-[700px]:h-[28px] min-[340px]:h-[20px] h-[16px]  stroke-[1.8] stroke-light-1" />
         </div>
       </Button>
     </Section>

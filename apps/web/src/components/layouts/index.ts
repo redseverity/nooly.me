@@ -4,3 +4,4 @@ export { Home } from "./Sections/Home";
 export { About } from "./Sections/About";
 export { Tools } from "./Sections/Tools";
 export { Contacts } from "./Sections/Contacts";
+export { Copyright } from "./Sections/Copyright";
