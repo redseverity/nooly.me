@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 
-const GridBg = ({
+export const GridBg = ({
   className,
   ...props
 }: React.ComponentPropsWithRef<"canvas">) => {
@@ -79,5 +79,3 @@ const GridBg = ({
 
   return <canvas ref={canvasRef} {...props} className={clsx("", className)} />;
 };
-
-export { GridBg };

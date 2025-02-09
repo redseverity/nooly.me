@@ -8,14 +8,17 @@ import { Navegate } from "@/components/ui";
 import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 
-const Header = ({ className, ...props }: React.ComponentProps<"header">) => {
-  const [$isClient, setClient] = useState(false);
+export const Header = ({
+  className,
+  ...props
+}: React.ComponentProps<"header">) => {
+  const [isClient, setClient] = useState(false);
 
   useEffect(() => {
     setClient(true);
   }, []);
 
-  const [$menuOpen, setMenuOpen] = useState<boolean | undefined>(undefined);
+  const [menuOpen, setMenuOpen] = useState<boolean | undefined>(undefined);
 
   return (
     <>
@@ -46,7 +49,7 @@ const Header = ({ className, ...props }: React.ComponentProps<"header">) => {
 
             <Navegate.ToTools
               text="Try for free"
-              className=" max-[400px]:hidden"
+              className="max-[400px]:hidden"
             >
               <ChevronRight className="min-[500px]:stroke-[2.3px] stroke-[2px]" />
             </Navegate.ToTools>
@@ -54,20 +57,19 @@ const Header = ({ className, ...props }: React.ComponentProps<"header">) => {
             <ThemeButton />
 
             <Menu.Root
-              onClick={() => setMenuOpen(!$menuOpen)}
-              className="bg-green-1"
+              onClick={() => setMenuOpen(!menuOpen)}
             >
-              {$menuOpen ? (
-                <Menu.Close className="min-[1000px]:hidden flex " />
+              {menuOpen ? (
+                <Menu.Close className="min-[1000px]:hidden flex" />
               ) : (
-                <Menu.Open className="min-[1000px]:hidden flex " />
+                <Menu.Open className="min-[1000px]:hidden flex" />
               )}
             </Menu.Root>
           </div>
         </nav>
       </header>
 
-      {$isClient
+      {isClient
         ? createPortal(
             <>
               <style>
@@ -79,8 +81,8 @@ const Header = ({ className, ...props }: React.ComponentProps<"header">) => {
                 className="min-[1100px]:hidden flex top-[-16rem] z-40 w-full fixed border-b-[1px] bg-light-2 border-light-8 dark:bg-dark-2 dark:border-dark-8 flex-col gap-4 py-4 items-center justify-center"
                 style={{
                   animation:
-                    $menuOpen !== undefined
-                      ? $menuOpen
+                    menuOpen !== undefined
+                      ? menuOpen
                         ? "openMenu 0.2s linear forwards"
                         : "closeMenu 0.2s linear forwards"
                       : "",
@@ -110,5 +112,3 @@ const Header = ({ className, ...props }: React.ComponentProps<"header">) => {
     </>
   );
 };
-
-export { Header };

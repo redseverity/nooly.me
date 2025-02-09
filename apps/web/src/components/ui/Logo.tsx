@@ -5,7 +5,7 @@ interface LogoProps extends React.ComponentProps<"span"> {
   classNameSmile?: string;
 }
 
-const Logo = ({ className, classNameSmile, ...props }: LogoProps) => {
+export const Logo = ({ className, classNameSmile, ...props }: LogoProps) => {
   return (
     <span
       {...props}
@@ -29,5 +29,3 @@ const Logo = ({ className, classNameSmile, ...props }: LogoProps) => {
     </span>
   );
 };
-
-export { Logo };

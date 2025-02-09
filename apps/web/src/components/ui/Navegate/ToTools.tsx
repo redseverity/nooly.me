@@ -5,7 +5,12 @@ interface ToToolsProps extends Omit<React.ComponentProps<typeof Link>, "href"> {
   text: string;
 }
 
-const ToTools = ({ text, children, className, ...props }: ToToolsProps) => {
+export const ToTools = ({
+  text,
+  children,
+  className,
+  ...props
+}: ToToolsProps) => {
   return (
     <Link
       {...props}
@@ -25,5 +30,3 @@ const ToTools = ({ text, children, className, ...props }: ToToolsProps) => {
     </Link>
   );
 };
-
-export { ToTools };

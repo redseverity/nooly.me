@@ -5,7 +5,7 @@ import { Moon, SunDim } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-const ThemeButton = ({
+export const ThemeButton = ({
   className,
   ...props
 }: React.ComponentProps<"button">) => {
@@ -22,6 +22,10 @@ const ThemeButton = ({
   return (
     <button
       {...props}
+      role="button"
+      aria-label="Change Theme button"
+      type="button"
+      title="Change theme button"
       onClick={() => {
         setTheme(theme === "light" ? "dark" : "light");
       }}
@@ -38,5 +42,3 @@ const ThemeButton = ({
     </button>
   );
 };
-
-export { ThemeButton };

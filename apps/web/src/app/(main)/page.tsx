@@ -1,9 +1,7 @@
-"use server";
-
 import { GridBg, Header, HomeSection } from "@/components/layouts";
 import { NewUsers, Section } from "@/components/ui";
 
-export default async function App() {
+export default function App() {
   return (
     <>
       <GridBg className="z-0 stroke-light-4 dark:stroke-dark-4 fixed" />

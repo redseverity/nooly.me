@@ -1,6 +1,5 @@
-const MenuRoot = ({
+export const MenuRoot = ({
   children,
-  className,
   onClick,
   ...props
 }: React.ComponentProps<"button">) => {
@@ -10,5 +9,3 @@ const MenuRoot = ({
     </button>
   );
 };
-
-export { MenuRoot };

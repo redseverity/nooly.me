@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
-const ToAccount = ({
+export const ToAccount = ({
   className,
   ...props
 }: Omit<React.ComponentProps<typeof Link>, "href">) => {
@@ -9,7 +9,7 @@ const ToAccount = ({
     <Link
       {...props}
       key="Account"
-      href="account/login"
+      href="account"
       aria-label="Navigate to the login page"
       title="Go to the login page"
       draggable="false"
@@ -22,5 +22,3 @@ const ToAccount = ({
     </Link>
   );
 };
-
-export { ToAccount };

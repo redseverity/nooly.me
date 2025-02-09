@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
-const OnPage = ({
+export const OnPage = ({
   className,
   children,
   ...props
@@ -31,5 +31,3 @@ const OnPage = ({
     </>
   );
 };
-
-export { OnPage };
