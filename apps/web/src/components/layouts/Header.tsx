@@ -33,7 +33,7 @@ export const Header = ({
           draggable="false"
           className="min-[1200px]:w-[65rem] min-[1000px]:w-[92vw] w-[90vw] flex justify-between items-center h-full"
         >
-          <Link href="/">
+          <Link href="#Home">
             <Logo
               className="max-[430px]:text-[15pt]"
               classNameSmile="max-[430px]:left-[-1px] max-[430px]:top-[-31px] max-[430px]:w-8"
@@ -49,9 +49,9 @@ export const Header = ({
 
             <Navegate.ToTools
               text="Try for free"
-              className="max-[400px]:hidden"
+              className="max-[400px]:hidden pl-3 pr-1"
             >
-              <ChevronRight className="min-[500px]:stroke-[2.3px] stroke-[2px]" />
+              <ChevronRight className="size-6" />
             </Navegate.ToTools>
 
             <ThemeButton />
@@ -87,7 +87,7 @@ export const Header = ({
                 }}
               >
                 <div className="w-[90vw] flex flex-col h-auto overflow-hidden">
-                  <Navegate.OnPage className="justify-between pl-[1.10rem] pr-[0.7rem] font-poppins font-semibold h-[2.7rem] rounded-full">
+                  <Navegate.OnPage onClick={() => setMenuOpen(false)} className="justify-between pl-[1.10rem] pr-[0.7rem] font-poppins font-semibold h-[2.7rem] rounded-full">
                     <ChevronRight className="stroke-[2px] size-5" />
                   </Navegate.OnPage>
                 </div>
@@ -98,9 +98,9 @@ export const Header = ({
 
                 <Navegate.ToTools
                   text="Try for free"
-                  className="!px-8 h-[2.5rem] min-[400px]:hidden"
+                  className="w-[88vw] h-[2.5rem] min-[400px]:hidden"
                 >
-                  <ChevronRight className="min-[500px]:stroke-[2.3px] stroke-[2px]" />
+                  <ChevronRight className="stroke-[2px]" />
                 </Navegate.ToTools>
               </aside>
             </>,

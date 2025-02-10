@@ -17,9 +17,11 @@ export default function App() {
         <Home />
         <About />
         <Tools />
+      </main>
+      <footer>
         <Contacts />
         <Copyright />
-      </main>
+      </footer>
     </>
   );
 }
