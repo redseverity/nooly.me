@@ -45,7 +45,7 @@ export const Header = ({
           </div>
 
           <div className="flex justify-center items-center min-[580px]:gap-5 gap-4">
-            <Navegate.ToAccount className="max-[580px]:hidden w-min py-2 px-6 rounded-full hover:bg-dark-5" />
+            <Navegate.ToAccount className="max-[580px]:hidden w-min py-2 px-6 rounded-full" />
 
             <Navegate.ToTools
               text="Try for free"
@@ -93,7 +93,7 @@ export const Header = ({
                 </div>
 
                 <div className="min-[580px]:hidden flex overflow-hidden bg-light-2 dark:bg-dark-2 rounded-full border-[1px] border-light-8 dark:border-dark-8 w-[90vw] h-[2.5rem]">
-                  <Navegate.ToAccount className="dark:hover:bg-dark-5 hover:bg-light-5 font-semibold" />
+                  <Navegate.ToAccount className="font-semibold" />
                 </div>
 
                 <Navegate.ToTools

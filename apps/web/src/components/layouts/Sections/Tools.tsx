@@ -20,11 +20,14 @@ export const Tools = () => {
   ];
 
   return (
-    <Section className="pt-12">
+    <Section
+      id="Tools"
+      className="min-[600px]:pt-14 min-[600px]:pb-20 pt-10 pb-16 min-[600px]:gap-6 gap-2 scroll-mt-16"
+    >
       <h2 className="font-semibold min-[800px]:text-[40pt] min-[600px]:text-[7vw] text-[7vw] text-nowrap dark:text-light-2 text-dark-2 pb-6">
         Start Now<span className="text-rose-2">!</span>
       </h2>
-      <div className="grid grid-cols-2 grid-rows-4 gap-4 min-[750px]:w-[42rem] min-[330px]:w-[88vw] w-[86vw]">
+      <div className="grid grid-cols-2 grid-rows-3 gap-4 min-[750px]:w-[42rem] min-[330px]:w-[88vw] w-[86vw]">
         {tools.map(([label, Icon], i) => {
           return (
             <Card

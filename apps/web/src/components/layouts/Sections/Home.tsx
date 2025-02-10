@@ -1,12 +1,11 @@
-import { Button, Section, NewUsers } from "@/components/ui";
+import { Button, Section, NewUsers, Icons } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
 
 export const Home = () => {
   return (
     <Section
       id="Home"
-      className="min-[600px]:h-[80dvh] h-[60dvh] mt-16 pb-8 min-[400px]:gap-8 gap-4 scroll-mt-16 select-none"
+      className="min-[600px]:h-[80dvh] h-[60dvh] mt-16 pb-8 min-[400px]:gap-8 gap-4 scroll-mt-16"
     >
       <NewUsers className="absolute top-[20px] right-[24px]" />
 
@@ -41,15 +40,8 @@ export const Home = () => {
         title="Sign with the Google button"
         className="min-[600px]:py-6 min-[400px]:py-5 py-4 flex justify-center items-center px-2"
       >
-        <span className="min-[600px]:size-[32px] min-[400px]:size-[26px] min-[270px]:size-[18px] size-[16px] min-[750px]:mr-[10px] min-[610px]:mr-[9px] min-[460px]:mr-[8px] min-[400px]:mr-[7px] min-[340px]:mr-[6px] min-[270px]:mr-[5px] mr-[4px] flex justify-center items-center">
-          <Image
-            draggable="false"
-            src="/assets/google-icon.svg"
-            alt="google icon"
-            width={32}
-            height={32}
-          />
-        </span>
+        <Icons.google className="min-[600px]:h-[30px] min-[400px]:h-[26px] h-[20px] ml-[1px] mr-2" />
+
         <p className="font-inter min-[600px]:text-[13pt] min-[400px]:text-[10pt] text-[8pt] text-light-1 font-bold leading-none">
           Sign with the google
         </p>

@@ -6,3 +6,4 @@ export { ThemeButton } from "./ThemeButton";
 export { NewUsers } from "./NewUsers";
 export { Menu } from "./Menu";
 export { Navegate } from "./Navegate";
+export { Icons } from "./Icons";

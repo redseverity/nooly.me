@@ -5,8 +5,7 @@ import {
   About,
   Tools,
   Contacts,
-  Copyright
-
+  Copyright,
 } from "@/components/layouts";
 
 export default function App() {
@@ -14,7 +13,7 @@ export default function App() {
     <>
       <GridBg className="z-0 stroke-light-4 dark:stroke-dark-4 fixed" />
       <Header className="z-50" />
-      <main className="flex flex-col justify-center items-center">
+      <main className="flex flex-col justify-center items-center select-none">
         <Home />
         <About />
         <Tools />
