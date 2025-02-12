@@ -59,3 +59,13 @@ To format all files, run the following command:
 ```
 pnpm format
 ```
+
+### Storybook
+
+To See component styles with Storybook,
+run the following command:
+
+```
+cd /apps/{folder}
+pnpm storybook
+```
