@@ -3,30 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --light-1: #fcfbfe;
-  --light-2: #F6F4FC;
-  --light-3: #F3F0FC;
-  --light-4: #EBE8F5;
-  --light-5: #E2DFF0;
-  --light-6: #D6D3E5;
-  --light-7: #C9C5DB;
-  --light-8: #B5AFCC;
+  --light-1: hsl(260, 100%, 99%); /*used in texts, icons and bg of buttons in light theme*/
+  --dark-1: hsl(260, 100%, 1%); /*used in texts and icons*/
 
-  --dark-1: #0d0c12;
-  --dark-2: #1B1A27;
-  --dark-3: #1D1B29;
-  --dark-4: #221f32;
-  --dark-5: #262338;
-  --dark-6: #2B2640;
-  --dark-7: #2D2942;
-  --dark-8: #342F4C;
+    /*layout background 1*/
+  --light-2: hsl(250, 60%, 98%);
+  --dark-2: hsl(250, 20%, 12%);
 
-  --rose-1: #ff0f70;
-  --rose-2: #ff0860;
-  --rose-3: #ff0050;
+  /*layout background 2*/
+  --light-3: hsl(250, 50%, 97%);
+  --dark-3: hsl(250, 20.5%, 12%);
 
-  --green-1: #16a34a;
-  --red-1: #dc2626;
+  /*grid colors*/
+  --light-4: hsl(250, 40%, 93%);
+  --dark-4: hsl(250, 24%, 15.5%);
+  
+  /*layout background 3*/
+  --light-5: hsl(250, 30%, 90%);
+  --dark-5: hsl(250, 24%, 18%);
+
+  /*layout background 4*/
+  --light-6: hsl(250, 20%, 86%);
+  --dark-6: hsl(250, 26%, 22%);
+
+  /*layout background 5*/
+  --light-7: hsl(250, 10%, 82%);
+  --dark-7: hsl(250, 24%, 24%);
+
+  /*line colors*/
+  --light-8: hsl(250, 5%, 78%);
+  --dark-8: hsl(250, 24%, 24%);
+
+
+  --rose-1: hsl(336, 100%, 53%);
+  --rose-2: hsl(339, 96%, 52%);
+  --rose-3: hsl(341, 94%, 50%);
+
+  --green-1: hsl(142, 76%, 36%);
+  --red-1: hsl(0, 72%, 51%);
 }
 
 

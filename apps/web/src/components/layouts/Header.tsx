@@ -93,7 +93,7 @@ export const Header = ({
                 </div>
 
                 <div className="min-[580px]:hidden flex overflow-hidden bg-light-2 dark:bg-dark-2 rounded-full border-[1px] border-light-8 dark:border-dark-8 w-[90vw] h-[2.5rem]">
-                  <Navegate.ToAccount className="font-semibold" />
+                  <Navegate.ToAccount />
                 </div>
 
                 <Navegate.ToTools

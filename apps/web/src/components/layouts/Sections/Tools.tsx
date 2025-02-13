@@ -31,17 +31,23 @@ export const Tools = () => {
         {tools.map(([label, Icon], i) => {
           return (
             <Card
-              className="py-4 flex justify-center items-center bg-gradient-to-b dark:from-dark-3 dark:to-dark-2 from-light-3 to-light-2 hover:dark:from-dark-5 hover:dark:to-dark-5 hover:from-light-5 hover:to-light-5"
+              className="
+              py-4 flex justify-center items-center
+              dark:bg-dark-3 hover:dark:bg-dark-6 bg-light-3 hover:bg-dark-1
+              text-dark-2 hover:text-light-1 dark:text-light-2"
               key={i}
             >
-              <div className="flex items-center min-[600px]:gap-3 min-[250px]:gap-2 gap-1 w-[80%]">
+              <span
+                className="
+                flex items-center min-[600px]:gap-3 min-[250px]:gap-2 gap-1 w-[80%]
+                min-[700px]:text-[14pt] min-[330px]:text-[2.8vw] text-[2.4vw]
+                font-semibold text-nowrap leading-none
+                ">
                 {Icon && (
                   <Icon className="min-[700px]:size-8 size-[4vw] stroke-rose-2" />
                 )}
-                <h3 className="text-center dark:text-light-2 text-dark-2 min-[700px]:text-[14pt] min-[330px]:text-[2.8vw] text-[2.4vw] font-semibold text-nowrap leading-none">
                   {label}
-                </h3>
-              </div>
+              </span>
             </Card>
           );
         })}

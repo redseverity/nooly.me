@@ -30,7 +30,10 @@ export const ThemeButton = ({
         setTheme(theme === "light" ? "dark" : "light");
       }}
       className={clsx(
-        "w-[34px] h-[34px]  flex justify-center items-center rounded-full border-[1px] border-light-8 hover:bg-light-5 bg-light-2 dark:border-dark-8 dark:hover:bg-dark-5 dark:bg-dark-2",
+        `w-[34px] h-[34px]
+        flex justify-center items-center 
+        rounded-full border-[1px] border-light-8 
+        hover:bg-light-5 bg-light-2 dark:border-dark-8 dark:hover:bg-dark-6 dark:bg-dark-2`,
         className,
       )}
     >
