@@ -15,7 +15,7 @@
         <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=twwiter&logoColor=white"/>
       </a>
     </div>
-    <h3>Nooly is a powerful platform of tools with everything you need.</h3>
+    <h3>Nooly is a powerful platform for fast image conversion, music and video downloads, and more.</h3>
 </div>
 
 ---
