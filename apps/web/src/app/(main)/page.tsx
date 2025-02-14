@@ -18,7 +18,7 @@ export default function App() {
         <About />
         <Tools />
       </main>
-      <footer className='select-none'>
+      <footer className="select-none">
         <Contacts />
         <Copyright />
       </footer>

@@ -24,8 +24,8 @@ export const ToTools = ({
       )}
     >
       <span className="flex justify-center items-center">
-      {text}
-      {children}
+        {text}
+        {children}
       </span>
     </Link>
   );

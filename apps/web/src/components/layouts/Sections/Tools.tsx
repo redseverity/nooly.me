@@ -42,11 +42,12 @@ export const Tools = () => {
                 flex items-center min-[600px]:gap-3 min-[250px]:gap-2 gap-1 w-[80%]
                 min-[700px]:text-[14pt] min-[330px]:text-[2.8vw] text-[2.4vw]
                 font-semibold text-nowrap leading-none
-                ">
+                "
+              >
                 {Icon && (
                   <Icon className="min-[700px]:size-8 size-[4vw] stroke-rose-2" />
                 )}
-                  {label}
+                {label}
               </span>
             </Card>
           );

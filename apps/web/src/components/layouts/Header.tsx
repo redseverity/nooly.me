@@ -6,6 +6,7 @@ import { Logo, Menu, ThemeButton } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import { Navegate } from "@/components/ui";
 import { createPortal } from "react-dom";
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export const Header = ({
@@ -13,6 +14,7 @@ export const Header = ({
   ...props
 }: React.ComponentProps<"header">) => {
   const [isClient, setClient] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setClient(true);
@@ -54,7 +56,20 @@ export const Header = ({
               <ChevronRight className="size-6" />
             </Navegate.ToTools>
 
-            <ThemeButton />
+            {isClient && (
+              <ThemeButton.Root
+                onClick={() =>
+                  theme == "dark" ? setTheme("light") : setTheme("dark")
+                }
+              >
+                <ThemeButton.Moon
+                  className={clsx(theme == "dark" ? null : "hidden")}
+                />
+                <ThemeButton.Sun
+                  className={clsx(theme == "light" ? null : "hidden")}
+                />
+              </ThemeButton.Root>
+            )}
 
             <Menu.Root onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? (
@@ -87,7 +102,10 @@ export const Header = ({
                 }}
               >
                 <div className="w-[90vw] flex flex-col h-auto overflow-hidden">
-                  <Navegate.OnPage onClick={() => setMenuOpen(false)} className="justify-between pl-[1.10rem] pr-[0.7rem] font-poppins font-semibold h-[2.7rem] rounded-full">
+                  <Navegate.OnPage
+                    onClick={() => setMenuOpen(false)}
+                    className="justify-between pl-[1.10rem] pr-[0.7rem] font-poppins font-semibold h-[2.7rem] rounded-full"
+                  >
                     <ChevronRight className="stroke-[2px] size-5" />
                   </Navegate.OnPage>
                 </div>
