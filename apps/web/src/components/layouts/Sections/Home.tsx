@@ -40,15 +40,13 @@ export const Home = () => {
         title="Sign with the Google button"
         className="min-[600px]:py-6 min-[400px]:py-5 py-4 flex justify-center items-center px-2"
       >
-        <Icons.google className="min-[600px]:h-[30px] min-[400px]:h-[26px] h-[20px] ml-[1px] mr-2" />
+        <Icons.google className="min-[600px]:h-[30px] min-[400px]:h-[26px] h-[20px] ml-[2px] mr-2" />
 
-        <p className="font-inter min-[600px]:text-[13pt] min-[400px]:text-[10pt] text-[8pt] text-light-1 font-bold leading-none">
+       <span className="group-hover:translate-y-[-1px]">
           Sign with the google
-        </p>
+        </span>
 
-        <div className="h-full flex justify-center items-center">
-          <ChevronRight className="min-[700px]:h-[28px] min-[340px]:h-[20px] h-[16px]  stroke-[1.8] stroke-light-1" />
-        </div>
+          <ChevronRight className="min-[700px]:h-[28px] min-[340px]:h-[20px] h-[16px] stroke-[1.8] stroke-light-1" />
       </Button>
     </Section>
   );

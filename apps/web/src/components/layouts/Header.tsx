@@ -53,7 +53,7 @@ export const Header = ({
               text="Try for free"
               className="max-[400px]:hidden pl-3 pr-1"
             >
-              <ChevronRight className="size-6" />
+              <ChevronRight className="min-[700px]:h-[28px] min-[340px]:h-[20px] h-[16px] w-min stroke-[1.8] stroke-light-1" />
             </Navegate.ToTools>
 
             {isClient && (
@@ -116,9 +116,8 @@ export const Header = ({
 
                 <Navegate.ToTools
                   text="Try for free"
-                  className="w-[88vw] h-[2.5rem] min-[400px]:hidden"
+                  className="w-[88%] h-[2.5rem] min-[400px]:hidden"
                 >
-                  <ChevronRight className="stroke-[2px]" />
                 </Navegate.ToTools>
               </aside>
             </>,

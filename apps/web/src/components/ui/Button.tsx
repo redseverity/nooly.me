@@ -10,7 +10,7 @@ const Button = ({
       {...props}
       role="button"
       className={clsx(
-        "leading-none bg-gradient-to-b from-rose-2 h-4 to-rose-3 hover:from-rose-1 hover:to-rose-2 font-inter text-[13pt] w-min font-semibold text-dark-3 dark:text-light-3 rounded-full flex flex-row items-center text-nowrap",
+        "h-4 hover:scale-105 group gradient-button hover:gradient-button-active font-inter w-min dark:text-light-3 rounded-full flex flex-row items-center text-nowrap min-[600px]:text-[13pt] min-[400px]:text-[11pt] text-[8pt] text-light-1 font-bold leading-none",
         className,
       )}
     >

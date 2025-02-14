@@ -52,7 +52,7 @@ export const About = () => {
             {label2.map((e, i) => {
               return (
                 <Card
-                  className="min-[500px]:py-6 py-4 px-6 bg-gradient-to-b dark:from-dark-3 dark:to-dark-2 from-light-3 to-light-2"
+                  className="min-[500px]:py-6 py-4 px-6 dark:bg-dark-3 bg-light-3"
                   key={i}
                 >
                   <h3 className="text-nowrap gradient-text-rose min-[750px]:text-[22pt] min-[500px]:text-[20pt] text-[5vw] font-semibold">
