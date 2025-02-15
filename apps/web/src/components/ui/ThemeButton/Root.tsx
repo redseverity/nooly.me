@@ -13,11 +13,7 @@ export const Root = ({
       type="button"
       title="Change theme button"
       className={clsx(
-        `w-[34px] h-[34px]
-        flex justify-center items-center 
-        rounded-full border-[1px] border-light-8 hover:border-dark-1
-        hover:bg-dark-1 bg-light-2 group
-        dark:border-dark-8 dark:hover:bg-dark-6 dark:bg-dark-2`,
+        `border-light-8 hover:border-dark-1 hover:bg-dark-1 bg-light-2 dark:border-dark-8 dark:hover:bg-dark-6 dark:bg-dark-2 group flex size-8 items-center justify-center rounded-full border-[1px]`,
         className,
       )}
     >

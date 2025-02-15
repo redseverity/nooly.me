@@ -27,34 +27,36 @@ export const Header = ({
       <header
         {...props}
         className={clsx(
-          "flex justify-center fixed top-0 w-full h-16  bg-light-2 dark:bg-dark-2  border-b-[1px] border-light-8 dark:border-dark-8 select-none overflow-hidden",
+          "bg-light-2 dark:bg-dark-2 border-light-8 dark:border-dark-8 fixed top-0 flex h-14 w-full select-none justify-center overflow-hidden border-b-[1px]",
           className,
         )}
       >
         <nav
           draggable="false"
-          className="min-[1200px]:w-[65rem] min-[1000px]:w-[92vw] w-[90vw] flex justify-between items-center h-full"
+          className="flex h-full w-[90vw] items-center justify-between min-[1000px]:w-[92vw] min-[1200px]:w-[65rem]"
         >
           <Link href="#Home">
             <Logo
-              className="max-[430px]:text-[15pt]"
-              classNameSmile="max-[430px]:left-[-1px] max-[430px]:top-[-31px] max-[430px]:w-8"
+              className="h-8 text-xl"
+              classNameSmile="left-[-0.6px] top-[-30px] w-8"
             />
           </Link>
 
-          <div className="min-[1000px]:flex hidden flex-grow w-[380px] h-[38px] border border-light-8 dark:border-dark-8 rounded-full overflow-hidden min-[1100px]:ml-20 ml-10 mr-[1.10rem]">
-            <Navegate.OnPage />
+          <div className="border-light-8 dark:border-dark-8 ml-10 mr-[1.10rem] hidden h-9 flex-1 overflow-hidden rounded-full border min-[1000px]:flex min-[1100px]:ml-20">
+            <Navegate.OnPage className="flex-1 rounded-full" />
           </div>
 
-          <div className="flex justify-center items-center min-[580px]:gap-5 gap-4">
-            <Navegate.ToAccount className="max-[580px]:hidden w-min py-2 px-6 rounded-full" />
+          <div className="flex items-center justify-center gap-4 min-[580px]:gap-5">
+            <Navegate.ToAccount className="w-min rounded-full px-6 py-2 max-[600px]:hidden" />
 
-            <Navegate.ToTools
-              text="Try for free"
-              className="max-[400px]:hidden pl-3 pr-1"
-            >
-              <ChevronRight className="min-[700px]:h-[28px] min-[340px]:h-[20px] h-[16px] w-min stroke-[1.8] stroke-light-1" />
-            </Navegate.ToTools>
+            <div>
+              <Navegate.ToTools
+                text="Try for free"
+                className="pl-3 pr-1 max-[500px]:hidden"
+              >
+                <ChevronRight className="stroke-light-1 h-[16px] w-min stroke-[1.8] min-[340px]:h-[20px] min-[700px]:h-[28px]" />
+              </Navegate.ToTools>
+            </div>
 
             {isClient && (
               <ThemeButton.Root
@@ -73,9 +75,9 @@ export const Header = ({
 
             <Menu.Root onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? (
-                <Menu.Close className="min-[1000px]:hidden flex" />
+                <Menu.Close className="flex min-[1000px]:hidden" />
               ) : (
-                <Menu.Open className="min-[1000px]:hidden flex" />
+                <Menu.Open className="flex min-[1000px]:hidden" />
               )}
             </Menu.Root>
           </div>
@@ -87,11 +89,11 @@ export const Header = ({
             <>
               <style>
                 {
-                  "@keyframes openMenu { 0%{top: -16rem} 100%{top: 4rem}} @keyframes closeMenu {0% {top: 4rem} 100% {top: -16rem}}"
+                  "@keyframes openMenu { 0%{top: -17rem} 100%{top: 3.5rem}} @keyframes closeMenu {0% {top: 3.5rem} 100% {top: -17rem}}"
                 }
               </style>
               <aside
-                className="min-[1100px]:hidden flex top-[-16rem] z-40 w-full fixed border-b-[1px] bg-light-2 border-light-8 dark:bg-dark-2 dark:border-dark-8 flex-col gap-4 py-4 items-center justify-center"
+                className="bg-light-2 border-light-8 border-b-1 dark:bg-dark-2 dark:border-dark-8 fixed top-[-17rem] z-40 flex w-full flex-col items-center justify-center gap-4 py-4 min-[1100px]:hidden"
                 style={{
                   animation:
                     menuOpen !== undefined
@@ -101,24 +103,23 @@ export const Header = ({
                       : "",
                 }}
               >
-                <div className="w-[90vw] flex flex-col h-auto overflow-hidden">
+                <div className="flex h-auto w-[90vw] flex-col overflow-hidden">
                   <Navegate.OnPage
                     onClick={() => setMenuOpen(false)}
-                    className="justify-between pl-[1.10rem] pr-[0.7rem] font-poppins font-semibold h-[2.7rem] rounded-full"
+                    className="font-poppins h-[2.7rem] justify-between rounded-full pl-[1.10rem] pr-[0.7rem] font-semibold"
                   >
-                    <ChevronRight className="stroke-[2px] size-5" />
+                    <ChevronRight className="size-5 stroke-[2px]" />
                   </Navegate.OnPage>
                 </div>
 
-                <div className="min-[580px]:hidden flex overflow-hidden bg-light-2 dark:bg-dark-2 rounded-full border-[1px] border-light-8 dark:border-dark-8 w-[90vw] h-[2.5rem]">
-                  <Navegate.ToAccount />
-                </div>
+                <div className="flex w-[90vw] flex-col justify-center gap-4">
+                  <Navegate.ToAccount className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[600px]:hidden" />
 
-                <Navegate.ToTools
-                  text="Try for free"
-                  className="w-[88%] h-[2.5rem] min-[400px]:hidden"
-                >
-                </Navegate.ToTools>
+                  <Navegate.ToTools
+                    text="Try for free"
+                    className="min-[500px]:hidden"
+                  ></Navegate.ToTools>
+                </div>
               </aside>
             </>,
             document.body,

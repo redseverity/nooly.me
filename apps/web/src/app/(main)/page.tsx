@@ -11,9 +11,9 @@ import {
 export default function App() {
   return (
     <>
-      <GridBg className="z-0 stroke-light-4 dark:stroke-dark-4 fixed" />
+      <GridBg className="stroke-light-4 dark:stroke-dark-4 fixed z-0" />
       <Header className="z-50" />
-      <main className="flex flex-col justify-center items-center select-none">
+      <main className="flex select-none flex-col items-center justify-center">
         <Home />
         <About />
         <Tools />

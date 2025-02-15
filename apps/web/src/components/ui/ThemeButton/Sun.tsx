@@ -6,7 +6,7 @@ export const Sun = ({ className, ...props }: React.ComponentProps<"svg">) => {
     <SunDim
       {...props}
       className={clsx(
-        "size-[24px] stroke-dark-1 group-hover:stroke-light-1",
+        "stroke-dark-1 group-hover:stroke-light-1 size-5",
         className,
       )}
     />

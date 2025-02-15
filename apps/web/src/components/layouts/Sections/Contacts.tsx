@@ -4,19 +4,16 @@ import Link from "next/link";
 
 export const Contacts = () => {
   return (
-    <Section id="Contacts" className="py-12 border-none scroll-mt-16">
-      <h2 className="font-semibold min-[600px]:text-[40pt] min-[400px]:text-[30pt] text-[9.5vw] text-nowrap dark:text-light-2 text-dark-2 pb-6 text-center">
+    <Section id="Contacts" className="scroll-mt-16 border-none py-12">
+      <h2 className="dark:text-light-2 text-dark-2 text-nowrap pb-6 text-center text-4xl font-semibold leading-tight min-[600px]:text-5xl min-[600px]:leading-tight">
         Get Started with
         <br />
         Nooly Today
       </h2>
 
-      <div className="flex gap-2 items-center justify-center">
-        <Navegate.ToTools
-          text="Get started now"
-          className="py-5 pl-3 pr-2 min-[600px]:text-[13pt] min-[400px]:text-[11pt] text-[10pt]"
-        >
-          <ChevronRight className="min-[500px]:size-6 size-5" />
+      <div className="flex items-center justify-center gap-2">
+        <Navegate.ToTools text="Get started now" className="pl-3 pr-2">
+          <ChevronRight className="size-5 min-[500px]:size-6" />
         </Navegate.ToTools>
 
         <Link href="https://github.com/redseverity">

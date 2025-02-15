@@ -50,6 +50,10 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
       },
+
+      borderWidth: {
+        "1": "1px",
+      },
     },
   },
   plugins: [],

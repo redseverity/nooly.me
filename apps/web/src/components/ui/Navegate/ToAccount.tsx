@@ -14,10 +14,7 @@ export const ToAccount = ({
       title="Go to the login page"
       draggable="false"
       className={clsx(
-        `flex flex-1 justify-center items-center h-full
-         dark:hover:bg-dark-6 hover:bg-dark-1 rounded-full
-         text-dark-3 hover:text-light-1 dark:text-light-3 text-[11pt] 
-         font-inter text-nowrap font-semibold`,
+        "dark:hover:bg-dark-6 hover:bg-dark-1 text-dark-3 hover:text-light-1 dark:text-light-3 font-inter flex h-9 items-center justify-center text-nowrap rounded-full text-sm font-semibold",
         className,
       )}
     >

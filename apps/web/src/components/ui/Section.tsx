@@ -10,7 +10,7 @@ export const Section = ({
       {...props}
       role="group"
       className={clsx(
-        "z-10 w-full flex justify-center items-center flex-col border-b-[1px] border-light-8 dark:border-dark-8 relative",
+        "border-light-8 dark:border-dark-8 relative z-10 flex w-full flex-col items-center justify-center border-b-[1px]",
         className,
       )}
     >

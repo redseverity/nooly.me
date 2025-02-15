@@ -19,11 +19,11 @@ export const ToTools = ({
       aria-label="Navigate to the tools page"
       title="Go to the tools page"
       className={clsx(
-        "min-[500px]:gap-1 flex justify-center items-center h-[2.3rem] w-min rounded-full gradient-button hover:gradient-button-active min-[600px]:text-[13pt] min-[400px]:text-[10pt] text-[9pt] text-light-1 font-bold leading-none text-nowrap font-inter",
+        "gradient-button hover:gradient-button-active text-light-1 font-inter flex h-9 w-full items-center justify-center text-nowrap rounded-full text-sm font-bold leading-none min-[500px]:gap-1",
         className,
       )}
     >
-      <span className="flex justify-center items-center">
+      <span className="flex items-center justify-center">
         {text}
         {children}
       </span>

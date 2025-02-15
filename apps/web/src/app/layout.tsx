@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body className="antialiased font-poppins font-normal bg-light-2 dark:bg-dark-2 h-auto w-dvw">
+      <body className="font-poppins bg-light-2 dark:bg-dark-2 h-auto w-dvw font-normal antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

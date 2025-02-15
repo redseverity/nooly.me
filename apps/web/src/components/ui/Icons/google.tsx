@@ -10,7 +10,7 @@ export const google = ({
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
       className={clsx(
-        "bg-light-1 border-[1px] border-light-1 rounded-full",
+        "bg-light-1 border-light-1 rounded-full border-[1px]",
         className,
       )}
     >

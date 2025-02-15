@@ -9,7 +9,7 @@ export const MenuOpen = ({
   return (
     <MenuOpenIcon
       {...props}
-      className={clsx("stroke-dark-1 dark:stroke-light-1", className)}
+      className={clsx("stroke-dark-1 dark:stroke-light-1 size-7", className)}
     />
   );
 };

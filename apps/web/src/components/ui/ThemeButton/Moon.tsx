@@ -5,7 +5,7 @@ export const Moon = ({ className, ...props }: React.ComponentProps<"svg">) => {
   return (
     <MoonIcon
       {...props}
-      className={clsx("stroke-none fill-light-1 size-[22px]", className)}
+      className={clsx("fill-light-1 size-5 stroke-none", className)}
     />
   );
 };

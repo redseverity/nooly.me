@@ -22,30 +22,21 @@ export const Tools = () => {
   return (
     <Section
       id="Tools"
-      className="min-[600px]:pt-14 min-[600px]:pb-20 pt-10 pb-16 min-[600px]:gap-6 gap-2 scroll-mt-16"
+      className="scroll-mt-16 gap-2 pb-16 pt-10 min-[600px]:gap-6 min-[600px]:pb-20 min-[600px]:pt-14"
     >
-      <h2 className="font-semibold min-[800px]:text-[40pt] min-[600px]:text-[7vw] text-[7vw] text-nowrap dark:text-light-2 text-dark-2 pb-6">
+      <h2 className="dark:text-light-2 text-dark-2 text-nowrap pb-6 text-3xl font-semibold min-[600px]:text-5xl">
         Start Now<span className="text-rose-2">!</span>
       </h2>
-      <div className="grid grid-cols-2 grid-rows-3 gap-4 min-[750px]:w-[42rem] min-[330px]:w-[88vw] w-[86vw]">
+      <div className="grid w-[86vw] grid-cols-2 grid-rows-3 gap-4 min-[330px]:w-[88vw] min-[750px]:w-[42rem]">
         {tools.map(([label, Icon], i) => {
           return (
             <Card
-              className="
-              py-4 flex justify-center items-center
-              dark:bg-dark-3 hover:dark:bg-dark-6 bg-light-3 hover:bg-dark-1
-              text-dark-2 hover:text-light-1 dark:text-light-2"
+              className="dark:bg-dark-3 hover:dark:bg-dark-6 bg-light-3 hover:bg-dark-1 text-dark-2 hover:text-light-1 dark:text-light-2 flex items-center justify-center py-4"
               key={i}
             >
-              <span
-                className="
-                flex items-center min-[600px]:gap-3 min-[250px]:gap-2 gap-1 w-[80%]
-                min-[700px]:text-[14pt] min-[330px]:text-[2.8vw] text-[2.4vw]
-                font-semibold text-nowrap leading-none
-                "
-              >
+              <span className="flex w-[82%] items-center gap-1 text-nowrap text-xs font-semibold leading-none min-[250px]:gap-2 min-[600px]:gap-3 min-[600px]:text-xl">
                 {Icon && (
-                  <Icon className="min-[700px]:size-8 size-[4vw] stroke-rose-2" />
+                  <Icon className="stroke-rose-2 size-[4vw] min-[700px]:size-8" />
                 )}
                 {label}
               </span>

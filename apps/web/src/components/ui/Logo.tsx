@@ -12,14 +12,14 @@ export const Logo = ({ className, classNameSmile, ...props }: LogoProps) => {
       role="none"
       translate="no"
       className={clsx(
-        "text-dark-2 dark:text-light-2 text-2xl font-poppins font-bold w-min h-9 block",
+        "text-dark-2 dark:text-light-2 font-poppins block h-9 w-min text-2xl font-bold",
         className,
       )}
     >
       Nooly<span className="text-rose-2 font-poppins">.</span>me
       <svg
         className={clsx(
-          "relative left-[-2px] top-[-36px] w-10 fill-dark-2 dark:fill-light-2",
+          "fill-dark-2 dark:fill-light-2 relative left-[-2px] top-[-36px] w-10",
           classNameSmile,
         )}
         viewBox="0 0 40 40"

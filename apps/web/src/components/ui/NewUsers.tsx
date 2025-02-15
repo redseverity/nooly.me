@@ -11,7 +11,7 @@ export const NewUsers = ({
       {...props}
       role="figure"
       className={clsx(
-        "flex justify-center items-center font-bold gap-2 font-poppins dark:text-light-1 text-dark-1 min-[750px]:text-[10pt] min-[520px]:text-[9pt] text-[8pt]",
+        "font-poppins dark:text-light-1 text-dark-1 flex items-center justify-center gap-2 text-xs font-bold",
         className,
       )}
     >
