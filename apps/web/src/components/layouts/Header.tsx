@@ -54,7 +54,7 @@ export const Header = ({
                 text="Try for free"
                 className="pl-3 pr-1 max-[500px]:hidden"
               >
-                <ChevronRight className="stroke-light-1 h-[16px] w-min stroke-[1.8] min-[340px]:h-[20px] min-[700px]:h-[28px]" />
+                <ChevronRight className="stroke-light-1 w-min stroke-[1.8] h-[20px] min-[700px]:h-[28px]" />
               </Navegate.ToTools>
             </div>
 
