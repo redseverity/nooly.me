@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <Section
       id="Home"
-      className="mt-16 h-[60dvh] scroll-mt-16 gap-4 pb-8 min-[400px]:gap-8 min-[600px]:h-[80dvh]"
+      className="scroll-mt-14 mt-14 gap-6 pt-20 pb-10"
     >
       <NewUsers className="absolute right-[24px] top-[20px]" />
 
@@ -36,6 +36,7 @@ export const Home = () => {
         </p>
       </div>
 
+
       <Button
         title="Sign with the Google button"
         className="flex items-center justify-center px-2"
@@ -44,6 +45,7 @@ export const Home = () => {
         Sign with the google
         <ChevronRight className="stroke-light-1 h-[16px] stroke-[1.8] min-[340px]:h-[20px] min-[700px]:h-[28px]" />
       </Button>
+
     </Section>
   );
 };

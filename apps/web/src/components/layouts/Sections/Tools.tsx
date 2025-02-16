@@ -22,9 +22,9 @@ export const Tools = () => {
   return (
     <Section
       id="Tools"
-      className="scroll-mt-16 gap-2 pb-16 pt-10 min-[600px]:gap-6 min-[600px]:pb-20 min-[600px]:pt-14"
+      className="scroll-mt-16 gap-2 pb-10 pt-10 min-[600px]:gap-6"
     >
-      <h2 className="dark:text-light-2 text-dark-2 text-nowrap pb-6 text-3xl font-semibold min-[600px]:text-5xl">
+      <h2 className="dark:text-light-2 text-dark-2 text-nowrap pb-8 text-3xl font-semibold min-[600px]:text-5xl">
         Start Now<span className="text-rose-2">!</span>
       </h2>
       <div className="grid w-[86vw] grid-cols-2 grid-rows-3 gap-4 min-[330px]:w-[88vw] min-[750px]:w-[42rem]">

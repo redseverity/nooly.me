@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Contacts = () => {
   return (
-    <Section id="Contacts" className="scroll-mt-16 border-none py-12">
+    <Section id="Contacts" className="scroll-mt-14 border-none py-12">
       <h2 className="dark:text-light-2 text-dark-2 text-nowrap pb-6 text-center text-4xl font-semibold leading-tight min-[600px]:text-5xl min-[600px]:leading-tight">
         Get Started with
         <br />

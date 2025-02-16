@@ -22,7 +22,7 @@ export const About = () => {
   return (
     <Section
       id="About"
-      className="flex scroll-mt-16 items-center justify-center gap-4 pb-16 pt-10 min-[600px]:gap-6 min-[600px]:pb-20 min-[600px]:pt-14"
+      className="flex scroll-mt-14 items-center justify-center gap-4 pb-4 pt-10 min-[600px]:gap-6"
     >
       <h2 className="dark:text-light-2 text-dark-2 text-nowrap pb-6 text-[7vw] font-semibold min-[600px]:text-[7vw] min-[800px]:text-[40pt]">
         Making a Difference<span className="text-rose-2">+</span>
