@@ -3,10 +3,7 @@ import { ChevronRight } from "lucide-react";
 
 export const Home = () => {
   return (
-    <Section
-      id="Home"
-      className="scroll-mt-14 mt-14 gap-6 pt-20 pb-10"
-    >
+    <Section id="Home" className="mt-14 scroll-mt-14 gap-6 pb-10 pt-20">
       <NewUsers className="absolute right-[24px] top-[20px]" />
 
       <div className="flex w-[80%] flex-col items-center justify-center gap-4 text-center min-[700px]:w-[38rem]">
@@ -36,7 +33,6 @@ export const Home = () => {
         </p>
       </div>
 
-
       <Button
         title="Sign with the Google button"
         className="flex items-center justify-center px-2"
@@ -45,7 +41,6 @@ export const Home = () => {
         Sign with the google
         <ChevronRight className="stroke-light-1 h-[16px] stroke-[1.8] min-[340px]:h-[20px] min-[700px]:h-[28px]" />
       </Button>
-
     </Section>
   );
 };

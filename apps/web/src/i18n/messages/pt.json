@@ -1,0 +1,14 @@
+{
+    "texts": {
+        "hello": "olá mundo",
+        "Home": {
+            "h1": [
+                "Explore",
+                "a",
+                "Simplicidade",
+                "Experimente",
+                "a facilidade"
+            ]
+        }
+    }
+}
