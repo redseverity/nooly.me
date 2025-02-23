@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { Logo, Menu, ThemeButton } from "@/components/ui";
+import { LangButton, Logo, Menu, ThemeButton } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import { Navegate } from "@/components/ui";
 import { createPortal } from "react-dom";
@@ -27,7 +27,7 @@ export const Header = ({
       <header
         {...props}
         className={clsx(
-          "bg-light-2 dark:bg-dark-2 border-light-8 dark:border-dark-8 fixed top-0 flex h-14 w-full select-none justify-center overflow-hidden border-b-[1px]",
+          "bg-light-2 dark:bg-dark-2 border-light-8 dark:border-dark-8 fixed top-0 flex h-14 w-full select-none justify-center border-b-[1px]",
           className,
         )}
       >
@@ -72,6 +72,8 @@ export const Header = ({
                 />
               </ThemeButton.Root>
             )}
+
+            <LangButton />
 
             <Menu.Root onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? (

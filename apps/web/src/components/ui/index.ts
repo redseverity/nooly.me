@@ -3,6 +3,7 @@ export { Card } from "./Card";
 export { Logo } from "./Logo";
 export { Section } from "./Section";
 export { NewUsers } from "./NewUsers";
+export { LangButton } from "./LangButton";
 export { Menu } from "./Menu";
 export { Navegate } from "./Navegate";
 export { ThemeButton } from "./ThemeButton/";
