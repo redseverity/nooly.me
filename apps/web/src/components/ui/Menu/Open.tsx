@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Menu as MenuOpenIcon } from "lucide-react";
 import React from "react";
 
-export const MenuOpen = ({
+export const Open = ({
   className,
   ...props
 }: React.ComponentProps<typeof MenuOpenIcon>) => {

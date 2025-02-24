@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { X as MenuCloseIcon } from "lucide-react";
 
-export const MenuClose = ({
+export const Close = ({
   className,
   ...props
 }: React.ComponentProps<typeof MenuCloseIcon>) => {

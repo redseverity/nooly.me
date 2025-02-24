@@ -1,9 +1,9 @@
-import { MenuOpen } from "./MenuOpen";
-import { MenuClose } from "./MenuClose";
-import { MenuRoot } from "./MenuRoot";
+import { Open } from "./Open";
+import { Close } from "./Close";
+import { Root } from "./Root";
 
 export const Menu = {
-  Root: MenuRoot,
-  Open: MenuOpen,
-  Close: MenuClose,
+  Root: Root,
+  Open: Open,
+  Close: Close,
 };

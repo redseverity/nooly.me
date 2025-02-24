@@ -1,4 +1,4 @@
-export const MenuRoot = ({
+export const Root = ({
   children,
   onClick,
   ...props
