@@ -1,9 +1,13 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { languages, routes } from "@/constants";
+import { routes } from "@/constants";
 import { routing } from "./i18n/routing";
+import createMiddleware from "next-intl/middleware";
 
-export default async function middleware(req: NextRequest) {
+// language middleware
+const middleware = createMiddleware(routing);
+
+export default async function handle(req: NextRequest) {
   const path = req.nextUrl.pathname;
   const { defaultLocale } = routing;
 
@@ -12,12 +16,8 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.rewrite(new URL(defaultLocale, req.url).toString());
   }
 
-  // returns 404 not-found page
+  // returns verify pages
   else if (
-    !languages.find((lang) => lang === path.split("/").filter(Boolean)[0])
-  ) {
-    return NextResponse.error();
-  } else if (
     !routes.find(
       (route) =>
         route === `/${path.split("/").filter(Boolean).slice(1).join("/")}`,
@@ -26,7 +26,7 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.error();
   }
 
-  return NextResponse.next();
+  return middleware(req);
 }
 
 export const config = {

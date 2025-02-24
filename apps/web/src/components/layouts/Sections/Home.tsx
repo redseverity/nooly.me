@@ -1,9 +1,15 @@
 import { Button, Section, NewUsers, Icons } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export const Home = () => {
+  const t = useTranslations("Navegate");
+
   return (
-    <Section id="Home" className="mt-14 scroll-mt-14 gap-6 pb-10 pt-20">
+    <Section
+      id={t.raw("OnPage")[0]}
+      className="mt-14 scroll-mt-14 gap-6 pb-10 pt-20"
+    >
       <NewUsers className="absolute right-[24px] top-[20px]" />
 
       <div className="flex w-[80%] flex-col items-center justify-center gap-4 text-center min-[700px]:w-[38rem]">

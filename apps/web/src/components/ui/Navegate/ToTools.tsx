@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 interface ToToolsProps extends Omit<React.ComponentProps<typeof Link>, "href"> {
@@ -11,13 +12,15 @@ export const ToTools = ({
   className,
   ...props
 }: ToToolsProps) => {
+  const t = useTranslations();
+
   return (
     <Link
       {...props}
       href="/tools"
       draggable="false"
-      aria-label="Navigate to the tools page"
-      title="Go to the tools page"
+      aria-label={t("ButtonTitles.Page", { page: "tools" })}
+      title={t("ButtonTitles.Page", { page: "tools" })}
       className={clsx(
         "gradient-button hover:gradient-button-active text-light-1 font-inter flex h-9 w-full items-center justify-center text-nowrap rounded-full text-sm font-bold leading-none min-[500px]:gap-1",
         className,

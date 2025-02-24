@@ -7,5 +7,5 @@ export const Icons = {
   twitter: X,
   github: github,
   google: google,
-  logo: logo
+  logo: logo,
 };

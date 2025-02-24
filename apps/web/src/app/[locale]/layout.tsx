@@ -25,11 +25,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      className="scroll-smooth"
-    >
+    <html lang={locale} suppressHydrationWarning className="scroll-smooth">
       <body className="font-poppins bg-light-2 dark:bg-dark-2 h-auto w-dvw font-normal antialiased">
         <ThemeProvider
           attribute="class"

@@ -1,14 +1,30 @@
 {
-    "texts": {
-        "hello": "hello world",
-        "Home": {
-            "h1": [
-                "Explore",
-                "the",
-                "Simplicity",
-                "Experience",
-                "the Ease"
-            ]
-        }
+    "Languages": {
+        "en": "English",
+        "pt": "Portuguese"
+    },
+
+    "Navegate": {
+        "ToAccount": "Account",
+        "ToTools": ["Try for Free", "Get started now"],
+        "OnPage": ["Home", "About", "Tools", "Contacts"]
+    },
+
+    "ButtonTitles": {
+        "Page": "Navigate to the {page} page",
+        "Section": "Navigate to the {section} Section",
+        "Theme": "Change theme",
+        "Language": "Change language"
+    },
+
+    "Home": {
+        "h1": [
+            "Explore",
+            "the",
+            "Simplicity",
+            "Experience",
+            "the Ease"
+        ]
     }
+    
 }

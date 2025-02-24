@@ -9,6 +9,7 @@ import { Navegate } from "@/components/ui";
 import { createPortal } from "react-dom";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export const Header = ({
   className,
@@ -22,6 +23,8 @@ export const Header = ({
   }, []);
 
   const [menuOpen, setMenuOpen] = useState<boolean | undefined>(undefined);
+
+  const t = useTranslations("Navegate");
 
   return (
     <>
@@ -37,7 +40,7 @@ export const Header = ({
           className="flex h-full w-[90vw] items-center justify-between min-[1000px]:w-[92vw] min-[1200px]:w-[65rem]"
         >
           <Link href="/">
-            <Icons.logo className="h-8"/>
+            <Icons.logo className="h-8" />
           </Link>
 
           <div className="border-light-8 dark:border-dark-8 ml-10 mr-[1.10rem] hidden h-9 flex-1 overflow-hidden rounded-full border min-[1000px]:flex min-[1100px]:ml-20">
@@ -45,12 +48,12 @@ export const Header = ({
           </div>
 
           <div className="flex items-center justify-center gap-4 min-[580px]:gap-5">
-            <Navegate.ToAccount className="w-min rounded-full px-6 py-2 max-[600px]:hidden" />
+            <Navegate.ToAccount className="w-min rounded-full px-6 py-2 max-[700px]:hidden" />
 
             <div>
               <Navegate.ToTools
-                text="Try for free"
-                className="pl-3 pr-1 max-[500px]:hidden"
+                text={t.raw("ToTools")[0]}
+                className="pl-3 pr-1 max-[600px]:hidden"
               >
                 <ChevronRight className="stroke-light-1 h-[20px] w-min stroke-[1.8] min-[700px]:h-[28px]" />
               </Navegate.ToTools>
@@ -113,11 +116,11 @@ export const Header = ({
                 </div>
 
                 <div className="flex w-[90vw] flex-col justify-center gap-4">
-                  <Navegate.ToAccount className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[600px]:hidden" />
+                  <Navegate.ToAccount className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
 
                   <Navegate.ToTools
-                    text="Try for free"
-                    className="min-[500px]:hidden"
+                    text={t.raw("ToTools")[0]}
+                    className="min-[600px]:hidden"
                   ></Navegate.ToTools>
                 </div>
               </aside>

@@ -1,14 +1,17 @@
+import { Link } from "@/i18n/routing";
 import clsx from "clsx";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const OnPage = ({
   className,
   children,
   ...props
 }: Omit<React.ComponentProps<typeof Link>, "href">) => {
+  const t = useTranslations();
+
   return (
     <>
-      {["Home", "About", "Tools", "Contacts"].map((e, i) => {
+      {t.raw("Navegate.OnPage").map((e: string, i: number) => {
         return (
           <Link
             {...props}
@@ -16,8 +19,8 @@ export const OnPage = ({
             key={i}
             role="link"
             draggable="false"
-            aria-label={clsx("Navigate to the", e, "section")}
-            title={clsx("Go to the", e, "section")}
+            aria-label={t("ButtonTitles.Section", { section: e })}
+            title={t("ButtonTitles.Section", { section: e })}
             className={clsx(
               "hover:bg-dark-1 dark:hover:bg-dark-6 hover:text-light-1 text-dark-3 dark:text-light-3 font-inter flex items-center justify-center text-nowrap text-sm font-semibold",
               className,

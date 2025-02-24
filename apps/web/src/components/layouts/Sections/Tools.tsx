@@ -8,6 +8,7 @@ import {
   FileText,
   LucideIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export const Tools = () => {
   const tools: Array<[string, LucideIcon?]> = [
@@ -19,9 +20,11 @@ export const Tools = () => {
     ["Remove metadate", FileText],
   ];
 
+  const t = useTranslations("Navegate");
+
   return (
     <Section
-      id="Tools"
+      id={t.raw("OnPage")[2]}
       className="scroll-mt-16 gap-2 pb-10 pt-10 min-[600px]:gap-6"
     >
       <h2 className="dark:text-light-2 text-dark-2 text-nowrap pb-8 text-3xl font-semibold min-[600px]:text-5xl">

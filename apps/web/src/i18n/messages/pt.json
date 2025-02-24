@@ -1,14 +1,29 @@
 {
-    "texts": {
-        "hello": "olá mundo",
-        "Home": {
-            "h1": [
-                "Explore",
-                "a",
-                "Simplicidade",
-                "Experimente",
-                "a facilidade"
-            ]
-        }
+    "Languages": {
+        "en": "Inglês",
+        "pt": "Português"
+    },
+
+    "Navegate": {
+        "ToAccount": "Conta",
+        "ToTools": ["Experimente grátis", "Comece agora"],
+        "OnPage": ["Início", "Sobre", "Ferramentas", "Contatos"]
+    },
+
+    "ButtonTitles": {
+        "Page": "Navegar para a página {page}",
+        "Section": "Navegar para a seção {section}",
+        "Theme": "Mudar o tema",
+        "Language": "Mudar o idioma"
+    },
+
+    "Home": {
+        "h1": [
+            "Explore",
+            "a",
+            "Simplicidade",
+            "Experimente",
+            "a facilidade"
+        ]
     }
 }
