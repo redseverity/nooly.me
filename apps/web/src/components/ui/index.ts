@@ -1,6 +1,5 @@
 export { Button } from "./Button";
 export { Card } from "./Card";
-export { Logo } from "./Logo";
 export { Section } from "./Section";
 export { NewUsers } from "./NewUsers";
 export { LangButton } from "./LangButton";

@@ -2,7 +2,8 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { LangButton, Logo, Menu, ThemeButton } from "@/components/ui";
+import { LangButton, Menu, ThemeButton } from "@/components/ui";
+import { Icons } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import { Navegate } from "@/components/ui";
 import { createPortal } from "react-dom";
@@ -35,11 +36,8 @@ export const Header = ({
           draggable="false"
           className="flex h-full w-[90vw] items-center justify-between min-[1000px]:w-[92vw] min-[1200px]:w-[65rem]"
         >
-          <Link href="#Home">
-            <Logo
-              className="h-8 text-xl"
-              classNameSmile="left-[-0.6px] top-[-30px] w-8"
-            />
+          <Link href="/">
+            <Icons.logo className="h-8"/>
           </Link>
 
           <div className="border-light-8 dark:border-dark-8 ml-10 mr-[1.10rem] hidden h-9 flex-1 overflow-hidden rounded-full border min-[1000px]:flex min-[1100px]:ml-20">
