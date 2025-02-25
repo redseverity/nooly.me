@@ -1,10 +1,12 @@
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 
 export const NewUsers = ({
   className,
   ...props
 }: React.ComponentProps<"header">) => {
-  const users = 1;
+
+  const t = useTranslations();
 
   return (
     <span
@@ -17,7 +19,7 @@ export const NewUsers = ({
     >
       <p>
         <span className="text-rose-2">+</span>&nbsp;
-        {users.toLocaleString("en-US") + "M"} Users
+        {t("NewUsers")}
       </p>
     </span>
   );

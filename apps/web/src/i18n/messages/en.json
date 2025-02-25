@@ -4,6 +4,8 @@
         "pt": "Portuguese"
     },
 
+    "NewUsers": "1M Users",
+
     "Navegate": {
         "ToAccount": "Account",
         "ToTools": ["Try for Free", "Get started now"],
@@ -14,7 +16,8 @@
         "Page": "Navigate to the {page} page",
         "Section": "Navigate to the {section} Section",
         "Theme": "Change theme",
-        "Language": "Change language"
+        "Language": "Change language",
+        "Sign-google": "Sign with the google"
     },
 
     "Home": {
@@ -24,7 +27,8 @@
             "Simplicity",
             "Experience",
             "the Ease"
-        ]
+        ],
+        "p": "Nooly is a powerful platform for fast image conversion, music and video downloads, and more."
     }
     
 }
