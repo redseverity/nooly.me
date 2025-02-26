@@ -2,11 +2,11 @@ import { Button, Section, NewUsers, Icons } from "@/components/ui";
 import clsx from "clsx";
 import { ChevronRight } from "lucide-react";
 import { useTranslations } from "next-intl";
-import {useLocale} from "next-intl"
+import { useLocale } from "next-intl";
 
 export const Home = () => {
   const t = useTranslations();
-  const locale = useLocale()
+  const locale = useLocale();
 
   return (
     <Section
@@ -23,14 +23,19 @@ export const Home = () => {
           />
           <h1
             draggable="false"
-            className={clsx("font-poppins text-dark-1 dark:text-light-1 text-nowrap font-bold leading-tight min-[700px]:text-[40pt]", locale == "en" ? "text-[7vw]" : "text-[6.4vw]")}
+            className={clsx(
+              "font-poppins text-dark-1 dark:text-light-1 text-nowrap font-bold leading-tight min-[700px]:text-[40pt]",
+              locale == "en" ? "text-[7vw]" : "text-[6.4vw]",
+            )}
           >
             <span>{t.raw("Home.h1")[0]}</span>
             <span>&nbsp;{t.raw("Home.h1")[1]}&nbsp;</span>
             <span className="gradient-text-rose">{t.raw("Home.h1")[2]}</span>
             <span translate="no">.</span>
             <br />
-            <span className="gradient-text-rose">{t.raw("Home.h1")[3]}&nbsp;</span>
+            <span className="gradient-text-rose">
+              {t.raw("Home.h1")[3]}&nbsp;
+            </span>
             <span>{t.raw("Home.h1")[4]}</span>
             <span translate="no">.</span>
           </h1>

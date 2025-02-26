@@ -4,8 +4,6 @@
         "pt": "Portuguese"
     },
 
-    "NewUsers": "1M Users",
-
     "Navegate": {
         "ToAccount": "Account",
         "ToTools": ["Try for Free", "Get started now"],
@@ -29,6 +27,27 @@
             "the Ease"
         ],
         "p": "Nooly is a powerful platform for fast image conversion, music and video downloads, and more."
+    },
+
+    "NewUsers": "1M Users",
+
+    "About": {
+        "h1": "Making a Difference",
+        "SmallCardTexts": [
+            ["+1M Users", "of users globally."],
+            ["No Hassle", "results without complexity."],
+            ["Up to 25x speed", "seen by Nooly users*"],
+            ["Trusted by Millions", "reliable online tools."]
+        ],
+        "LargeCardTexts": [
+            [
+              "5 years experience",
+              "providing the best tools that save time, increase productivity and make online tasks easier for everyone."
+            ],
+            [
+              "For all users",
+              "The number #1 platform for video music, and image with easy and fast tools to help you transform your ideas."
+            ]
+        ]
     }
-    
 }

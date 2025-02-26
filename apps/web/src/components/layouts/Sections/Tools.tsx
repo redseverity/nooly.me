@@ -25,7 +25,7 @@ export const Tools = () => {
   return (
     <Section
       id={t.raw("OnPage")[2]}
-      className="scroll-mt-16 gap-2 pb-10 pt-10 min-[600px]:gap-6"
+      className="scroll-mt-16 gap-2 pb-4 pt-10 min-[600px]:gap-6"
     >
       <h2 className="dark:text-light-2 text-dark-2 text-nowrap pb-8 text-3xl font-semibold min-[600px]:text-5xl">
         Start Now<span className="text-rose-2">!</span>

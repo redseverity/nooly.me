@@ -5,7 +5,6 @@ export const NewUsers = ({
   className,
   ...props
 }: React.ComponentProps<"header">) => {
-
   const t = useTranslations();
 
   return (

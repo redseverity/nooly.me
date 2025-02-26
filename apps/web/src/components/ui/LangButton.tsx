@@ -47,16 +47,18 @@ export const LangButton = ({
         <Globe className="stroke-dark-1 dark:stroke-light-1 group-hover:stroke-light-1 size-4" />
       </button>
       {isOpen && (
-        <span
-          className="border-light-8 dark:border-dark-8 bg-light-2 dark:bg-dark-2 absolute top-11 translate-x-[-37%] rounded-lg border py-2"
-        >
+        <span className="border-light-8 dark:border-dark-8 bg-light-2 dark:bg-dark-2 absolute top-11 translate-x-[-37%] rounded-lg border py-2">
           <nav>
             <ul className="font-inter [&>li:hover]:bg-dark-1 [&>li:hover]:dark:bg-dark-6 [&>li:hover]:text-light-2 flex flex-col justify-center px-2 [&_*]:rounded-md [&_*]:p-1 [&_*]:text-center">
               <li>
-                <Link href={path} locale="pt">{t("Languages.pt")}</Link>
+                <Link href={path} locale="pt">
+                  {t("Languages.pt")}
+                </Link>
               </li>
               <li>
-                <Link href={path} locale="en">{t("Languages.en")}</Link>
+                <Link href={path} locale="en">
+                  {t("Languages.en")}
+                </Link>
               </li>
             </ul>
           </nav>
