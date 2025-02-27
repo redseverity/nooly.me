@@ -61,5 +61,9 @@
             ["Gerador de QR Code"],
             ["Remover Metadados"]
         ]
+    },
+
+    "Contacts": {
+        "h2": ["Comece com", "Nooly hoje"]
     }
 }

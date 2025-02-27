@@ -61,5 +61,9 @@
             ["QR Code Generator"],
             ["Remove metadate"]
         ]
+    },
+
+    "Contacts": {
+        "h2": ["Get Started with", "Nooly Today"]
     }
 }
