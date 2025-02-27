@@ -32,7 +32,7 @@
     "NewUsers": "1M Users",
 
     "About": {
-        "h1": "Making a Difference",
+        "h2": "Making a Difference",
         "SmallCardTexts": [
             ["+1M Users", "of users globally."],
             ["No Hassle", "results without complexity."],
@@ -48,6 +48,18 @@
               "For all users",
               "The number #1 platform for video music, and image with easy and fast tools to help you transform your ideas."
             ]
+        ]
+    },
+
+    "Tools": {
+        "h2": "Start Now",
+        "SmallCardTexts":[
+            ["Dowload Video"],
+            ["Dowload Music"],
+            ["Image Converter"],
+            ["Resize Image"],
+            ["QR Code Generator"],
+            ["Remove metadate"]
         ]
     }
 }
