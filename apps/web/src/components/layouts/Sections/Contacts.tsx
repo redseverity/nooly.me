@@ -26,10 +26,7 @@ export const Contacts = () => {
       </h2>
 
       <div className="flex items-center justify-center gap-2">
-        <Navegate.ToTools
-          text={t.raw("Navegate.ToTools")[1]}
-          className="pl-3 pr-2"
-        >
+        <Navegate.ToTools text={t("Navegate.ToTools")} className="pl-3 pr-2">
           <ChevronRight className="size-5 min-[500px]:size-6" />
         </Navegate.ToTools>
 
