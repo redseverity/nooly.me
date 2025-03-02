@@ -1,1 +1,3 @@
-export const routes = ["/", "/account"];
+// all application rotes
+
+export const routes = ["/", "/signup"];

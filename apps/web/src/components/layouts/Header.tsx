@@ -48,7 +48,7 @@ export const Header = ({
           </div>
 
           <div className="flex items-center justify-center gap-4 min-[580px]:gap-5">
-            <Navegate.ToAccount className="w-min rounded-full px-6 py-2 max-[700px]:hidden" />
+            <Navegate.ToSignup className="w-min rounded-full px-6 py-2 max-[700px]:hidden" />
 
             <div>
               <Navegate.ToTools
@@ -116,7 +116,7 @@ export const Header = ({
                 </div>
 
                 <div className="flex w-[90vw] flex-col justify-center gap-4">
-                  <Navegate.ToAccount className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
+                  <Navegate.ToSignup className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
 
                   <Navegate.ToTools
                     text={t("ToTools")}

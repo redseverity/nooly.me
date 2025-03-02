@@ -5,7 +5,7 @@
     },
 
     "Navegate": {
-        "ToAccount": "Conta",
+        "ToSignup": "Registrar",
         "ToTools": "Comece agora",
         "OnPage": ["Início", "Sobre", "Ferramentas", "Contatos"]
     },

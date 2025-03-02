@@ -5,7 +5,7 @@
     },
 
     "Navegate": {
-        "ToAccount": "Account",
+        "ToSignup": "signup",
         "ToTools": "Get started now",
         "OnPage": ["Home", "About", "Tools", "Contacts"]
     },

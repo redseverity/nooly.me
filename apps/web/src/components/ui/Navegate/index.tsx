@@ -1,9 +1,9 @@
-import { ToAccount } from "./ToAccount";
+import { ToSignup } from "./ToSignup";
 import { OnPage } from "./OnPage";
 import { ToTools } from "./ToTools";
 
 export const Navegate = {
-  ToAccount: ToAccount,
+  ToSignup: ToSignup,
   ToTools: ToTools,
   OnPage: OnPage,
 };

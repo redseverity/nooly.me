@@ -1,4 +1,4 @@
-import { Card, Section } from "@/components/ui";
+import { Button, Card, Section } from "@/components/ui";
 import {
   FileVideo,
   FileMusic,
@@ -39,12 +39,12 @@ export const Tools = () => {
               className="dark:bg-dark-3 bg-light-3 btn-outline text-dark-2 dark:text-light-2 flex items-center justify-center py-4"
               key={index}
             >
-              <span className="flex w-[88%] items-center gap-1 text-nowrap text-sm font-semibold leading-none min-[250px]:gap-2 min-[600px]:gap-3 min-[600px]:text-lg">
+              <Button className="flex w-[88%] items-center gap-1 text-nowrap text-sm font-semibold leading-none min-[250px]:gap-2 min-[600px]:gap-3 min-[600px]:text-lg">
                 {Icon && (
                   <Icon className="stroke-rose-2 size-4 min-[600px]:size-6" />
                 )}
                 {label}
-              </span>
+              </Button>
             </Card>
           );
         })}
