@@ -6,7 +6,7 @@
 
     "Navegate": {
         "ToAccount": "Conta",
-        "ToTools": ["Experimente grátis", "Comece agora"],
+        "ToTools": "Comece agora",
         "OnPage": ["Início", "Sobre", "Ferramentas", "Contatos"]
     },
 

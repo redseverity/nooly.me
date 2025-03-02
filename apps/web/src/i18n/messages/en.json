@@ -6,7 +6,7 @@
 
     "Navegate": {
         "ToAccount": "Account",
-        "ToTools": ["Try for Free", "Get started now"],
+        "ToTools": "Get started now",
         "OnPage": ["Home", "About", "Tools", "Contacts"]
     },
 

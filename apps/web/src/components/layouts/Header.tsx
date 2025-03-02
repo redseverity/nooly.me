@@ -52,7 +52,7 @@ export const Header = ({
 
             <div>
               <Navegate.ToTools
-                text={t.raw("ToTools")[0]}
+                text={t("ToTools")}
                 className="pl-3 pr-1 max-[600px]:hidden"
               >
                 <ChevronRight className="stroke-light-1 h-[20px] w-min stroke-[1.8] min-[700px]:h-[28px]" />
@@ -119,7 +119,7 @@ export const Header = ({
                   <Navegate.ToAccount className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
 
                   <Navegate.ToTools
-                    text={t.raw("ToTools")[0]}
+                    text={t("ToTools")}
                     className="min-[600px]:hidden"
                   ></Navegate.ToTools>
                 </div>
