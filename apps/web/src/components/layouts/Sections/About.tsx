@@ -23,7 +23,7 @@ export const About = () => {
                   className="dark:bg-dark-3 bg-light-3 text-nowrap px-6 py-4 min-[500px]:py-6"
                   key={i}
                 >
-                  <h3 className="gradient-text-rose text-[5vw] font-semibold min-[500px]:text-[19pt]">
+                  <h3 className="grad-text-rose text-[5vw] font-semibold min-[500px]:text-[19pt]">
                     {text[0]}
                   </h3>
                   <p className="dark:text-light-2 text-dark-2 text-[3.5vw] font-semibold min-[600px]:text-[13pt]">
@@ -41,7 +41,7 @@ export const About = () => {
                   className="dark:bg-dark-3 bg-light-3 px-6 py-4 min-[500px]:py-6"
                   key={i}
                 >
-                  <h3 className="gradient-text-rose text-nowrap text-[5vw] font-semibold min-[500px]:text-[20pt] min-[750px]:text-[22pt]">
+                  <h3 className="grad-text-rose text-nowrap text-[5vw] font-semibold min-[500px]:text-[20pt] min-[750px]:text-[22pt]">
                     {e[0]}
                   </h3>
                   <p className="dark:text-light-2 text-dark-2 text-[3vw] font-semibold min-[600px]:text-[10pt] min-[700px]:text-[13pt]">

@@ -40,11 +40,11 @@ export const LangButton = ({
         title={t("ButtonTitles.Language")}
         onClick={() => setIsOpen(!isOpen)}
         className={clsx(
-          `border-light-8 hover:border-dark-1 hover:bg-dark-1 bg-light-2 dark:border-dark-8 dark:hover:bg-dark-6 dark:bg-dark-2 group flex size-8 items-center justify-center rounded-full border-[1px]`,
+          `btn-outline border-light-8 bg-light-2 dark:border-dark-8 dark:bg-dark-2 flex size-8 items-center justify-center rounded-full border-[1px]`,
           className,
         )}
       >
-        <Globe className="stroke-dark-1 dark:stroke-light-1 group-hover:stroke-light-1 size-4" />
+        <Globe className="stroke-dark-1 dark:stroke-light-1 size-4" />
       </button>
       {isOpen && (
         <span className="border-light-8 dark:border-dark-8 bg-light-2 dark:bg-dark-2 absolute top-11 translate-x-[-37%] rounded-lg border py-2">

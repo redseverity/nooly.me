@@ -22,7 +22,7 @@ export const OnPage = ({
             aria-label={t("ButtonTitles.Section", { section: e })}
             title={t("ButtonTitles.Section", { section: e })}
             className={clsx(
-              "hover:bg-dark-1 dark:hover:bg-dark-6 hover:text-light-1 text-dark-3 dark:text-light-3 font-inter flex items-center justify-center text-nowrap text-sm font-semibold",
+              "btn-outline text-dark-3 dark:text-light-3 font-inter flex items-center justify-center text-nowrap text-sm font-semibold",
               className,
             )}
           >

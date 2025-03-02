@@ -22,7 +22,7 @@ export const ToTools = ({
       aria-label={t("ButtonTitles.Page", { page: "tools" })}
       title={t("ButtonTitles.Page", { page: "tools" })}
       className={clsx(
-        "gradient-button hover:gradient-button-active text-light-1 font-inter flex h-9 w-full items-center justify-center text-nowrap rounded-full text-sm font-bold leading-none min-[500px]:gap-1",
+        "grad-button-rose hover:grad-button-rose-active text-light-1 font-inter flex h-9 w-full items-center justify-center text-nowrap rounded-full text-sm font-bold leading-none min-[500px]:gap-1",
         className,
       )}
     >

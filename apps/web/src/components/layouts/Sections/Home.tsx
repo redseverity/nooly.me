@@ -30,12 +30,10 @@ export const Home = () => {
           >
             <span>{t.raw("Home.h1")[0]}</span>
             <span>&nbsp;{t.raw("Home.h1")[1]}&nbsp;</span>
-            <span className="gradient-text-rose">{t.raw("Home.h1")[2]}</span>
+            <span className="grad-text-rose">{t.raw("Home.h1")[2]}</span>
             <span translate="no">.</span>
             <br />
-            <span className="gradient-text-rose">
-              {t.raw("Home.h1")[3]}&nbsp;
-            </span>
+            <span className="grad-text-rose">{t.raw("Home.h1")[3]}&nbsp;</span>
             <span>{t.raw("Home.h1")[4]}</span>
             <span translate="no">.</span>
           </h1>
@@ -48,7 +46,7 @@ export const Home = () => {
 
       <Button
         title={t("ButtonTitles.Sign-google")}
-        className="flex items-center justify-center px-2"
+        className="grad-button-rose hover:grad-button-rose-active flex items-center justify-center px-2"
       >
         <Icons.google className="mr-2 h-7" />
         {t("ButtonTitles.Sign-google")}

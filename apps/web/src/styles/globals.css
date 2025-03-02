@@ -46,17 +46,23 @@
 
 
 @layer components {
-  .gradient-text-rose {
+  /*gradients*/
+
+  .grad-text-rose {
     background: linear-gradient(to bottom, var(--rose-1), var(--rose-3));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .gradient-button{
+  .grad-button-rose{
     background: linear-gradient(to bottom, var(--rose-1), var(--rose-3));
   }
-  .gradient-button-active{
+  .grad-button-rose-active{
     background: linear-gradient(to bottom, var(--rose-2), var(--rose-4));
+  }
+
+  .btn-outline {
+    @apply hover:outline hover:outline-2 hover:outline-dark-1 hover:dark:outline-light-5;
   }
   
 }

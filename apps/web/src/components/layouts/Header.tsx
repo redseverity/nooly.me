@@ -43,7 +43,7 @@ export const Header = ({
             <Icons.logo className="h-8" />
           </Link>
 
-          <div className="border-light-8 dark:border-dark-8 ml-10 mr-[1.10rem] hidden h-9 flex-1 overflow-hidden rounded-full border min-[1000px]:flex min-[1100px]:ml-20">
+          <div className="border-light-8 dark:border-dark-8 ml-10 mr-[1.10rem] hidden h-9 flex-1 rounded-full border min-[1000px]:flex min-[1100px]:ml-20">
             <Navegate.OnPage className="flex-1 rounded-full" />
           </div>
 
@@ -106,7 +106,7 @@ export const Header = ({
                       : "",
                 }}
               >
-                <div className="flex h-auto w-[90vw] flex-col overflow-hidden">
+                <div className="flex h-auto w-[90vw] flex-col">
                   <Navegate.OnPage
                     onClick={() => setMenuOpen(false)}
                     className="font-poppins h-[2.7rem] justify-between rounded-full pl-[1.10rem] pr-[0.7rem] font-semibold"
