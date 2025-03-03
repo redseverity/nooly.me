@@ -62,8 +62,9 @@
   }
 
   .btn-outline {
-    @apply hover:outline hover:outline-2 hover:outline-dark-1 hover:dark:outline-light-5;
-  }
-  
+    @apply hover:ring-2 hover:ring-dark-1 hover:dark:ring-light-1 
+           focus:ring-2 focus:ring-dark-1 focus:dark:ring-light-1 focus:outline-none;
+}
+
 }
 

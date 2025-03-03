@@ -1,69 +1,129 @@
 {
-    "Languages": {
-        "en": "English",
-        "pt": "Portuguese"
-    },
-
-    "Navegate": {
-        "ToSignup": "signup",
-        "ToTools": "Get started now",
-        "OnPage": ["Home", "About", "Tools", "Contacts"]
+    "Navigate": {
+        "toAuth": {
+            "signup": {
+                "label": "Sign Up",
+                "description": "Navigate to the signup page"
+            },
+            "login": {
+                "label": "Log in",
+                "description": "Navigate to the login page"
+            }
+        },
+        "toTools": {
+            "label": "Get Started",
+            "description": "Navigate to the tools page"
+        },
+        "toPage": {
+            "labels": {
+                "Home": "Home",
+                "About": "About",
+                "Tools": "Tools",
+                "Contacts": "Contacts"
+            },
+            "description": "Navigate to the {section} section"
+        }
     },
 
     "ButtonTitles": {
-        "Page": "Navigate to the {page} page",
-        "Section": "Navigate to the {section} Section",
-        "Theme": "Change theme",
-        "Language": "Change language",
-        "Sign-google": "Sign with the google"
+        "Sign-google": "Sign in with Google"
     },
 
-    "Home": {
-        "h1": [
-            "Explore",
-            "the",
-            "Simplicity",
-            "Experience",
-            "the Ease"
-        ],
-        "p": "Nooly is a powerful platform for fast image conversion, music and video downloads, and more."
+    "ui": {
+        "NewUsers": {
+            "label": "1M Users"
+        },
+
+        "ThemeToggle": {
+            "description": "Change Theme"
+        },
+        "LanguageSwitcher": {
+            "description": "Change Language",
+            "languages": {
+                "en": "English",
+                "pt": "Portuguese"
+            }
+        }
     },
 
-    "NewUsers": "1M Users",
-
-    "About": {
-        "h2": "Making a Difference",
-        "SmallCardTexts": [
-            ["+1M Users", "of users globally."],
-            ["No Hassle", "results without complexity."],
-            ["Up to 25x speed", "seen by Nooly users*"],
-            ["Trusted by Millions", "reliable online tools."]
-        ],
-        "LargeCardTexts": [
-            [
-              "5 years experience",
-              "providing the best tools that save time, increase productivity and make online tasks easier for everyone."
+    "Sections": {
+        "Home": {
+            "id": "Home",
+            "signGoogle": "Sign in with Google",
+            "h1": [
+                "Explore",
+                "the",
+                "Simplicity",
+                "Experience",
+                "the ease"
             ],
-            [
-              "For all users",
-              "The number #1 platform for video music, and image with easy and fast tools to help you transform your ideas."
-            ]
-        ]
+            "p": "Nooly is a powerful platform for fast image conversion, music and video downloads, and much more."
+        },
+
+        "About": {
+            "id": "About",
+            "h2": "Making a Difference",
+            "smallCard": {
+                "labels": [
+                    ["+1M Users", "users globally."],
+                    ["No Hassle", "results without complexity."],
+                    ["Up to 25x Faster", "as seen by Nooly users*"],
+                    ["Trusted by Millions", "reliable online tools."]
+                ]
+            },
+            "largeCard": {
+                "labels": [
+                    [
+                        "5 Years of Experience",
+                        "providing the best tools that save time, boost productivity, and make online tasks easier for everyone."
+                    ],
+                    [
+                        "For All Users",
+                        "The #1 platform for video, music, and image, with easy and fast tools to help you transform your ideas."
+                    ]
+                ]
+            }
+        },
+
+        "Tools": {
+            "id": "Tools",
+            "h2": "Get Started",
+            "cards": {
+                "labels": [
+                    "Video Download",
+                    "Music Download",
+                    "Image Converter",
+                    "Resize Image",
+                    "QR Code Generator",
+                    "Remove Metadata"
+                ]
+            }
+        },
+
+        "Contacts": {
+            "id": "Contacts",
+            "h2": ["Get Started with", "Nooly Today"]
+        }
     },
 
-    "Tools": {
-        "h2": "Start Now",
-        "SmallCardTexts":[
-            ["Dowload Video"],
-            ["Dowload Music"],
-            ["Image Converter"],
-            ["Resize Image"],
-            ["QR Code Generator"],
-            ["Remove metadate"]
-        ]
-    },
-
-    "Contacts": {
-        "h2": ["Get Started with", "Nooly Today"]
+    "Account": {
+        "signup": {
+            "h1": "Create Your Account",
+            "label": {
+                "Google": "Sign up with Google",
+                "X": "Sign up with X",
+                "Email": "Sign up with Email"
+            },
+            "link": ["Already have an account?", "Log in here"]
+        },
+        "login": {
+            "h1": "Welcome Back",
+            "label": {
+                "Google": "Sign in with Google",
+                "X": "Sign in with X",
+                "Email": "Sign in with Email"
+            },
+            "link": ["Don't have an account?", "Sign up here"]
+        }
     }
 }

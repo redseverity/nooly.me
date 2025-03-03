@@ -1,69 +1,126 @@
 {
-    "Languages": {
-        "en": "Inglês",
-        "pt": "Português"
+    "Navigate": {
+        "toAuth": {
+            "signup": {
+                "label": "Registrar",
+                "description": "Navegar para a página de registro"
+            },
+            "login": {
+                "label": "Entrar",
+                "description": "Navegar para a página de login"
+            }
+        },
+        "toTools": {
+            "label": "Comece agora",
+            "description": "Navegar para a página de ferramentas"
+        },
+        "toPage": {
+            "labels": {
+                "Home": "Início",
+                "About": "Sobre",
+                "Tools": "Ferramentas",
+                "Contacts": "Contatos"
+            },
+            "description": "Navegar para a seção {section}"
+        }
     },
 
-    "Navegate": {
-        "ToSignup": "Registrar",
-        "ToTools": "Comece agora",
-        "OnPage": ["Início", "Sobre", "Ferramentas", "Contatos"]
+    "ui": {
+        "NewUsers": {
+            "label": "1M Usuários"
+        },
+
+        "ThemeToggle": {
+            "description": "Mudar o tema"
+        },
+        "LanguageSwitcher": {
+            "description": "Mudar o idioma",
+            "languages": {
+                "en": "Inglês",
+                "pt": "Português"
+            }
+        }
     },
 
-    "ButtonTitles": {
-        "Page": "Navegar para a página {page}",
-        "Section": "Navegar para a seção {section}",
-        "Theme": "Mudar o tema",
-        "Language": "Mudar o idioma",
-        "Sign-google": "Entrar com o google"
-    },
-
-    "Home": {
-        "h1": [
-            "Explore",
-            "a",
-            "Simplicidade",
-            "Experimente",
-            "a facilidade"
-        ],
-        "p": "Nooly é uma plataforma poderosa para conversão rápida de imagens, downloads de músicas e vídeos e muito mais."
-    },
-
-    "NewUsers": "1M Usuários",
-
-    "About": {
-        "h2": "Fazendo a Diferença",
-        "SmallCardTexts": [
-            ["+1M Usuários", "usuários globalmente."],
-            ["Sem Complicação", "resultados sem complexidade."],
-            ["Até 25x mais rápido", "visto por usuários do Nooly*"],
-            ["Confiado por Milhões", "ferramentas online confiáveis."]
-        ],
-        "LargeCardTexts": [
-            [
-              "5 anos de experiência",
-              "fornecendo as melhores ferramentas que economizam tempo, aumentam a produtividade e tornam as tarefas online mais fáceis para todos."
+    "Sections": {
+        "Home": {
+            "id": "Início",
+            "signGoogle": "Entrar com o google",
+            "h1": [
+                "Explore",
+                "a",
+                "Simplicidade",
+                "Experimente",
+                "a facilidade"
             ],
-            [
-              "Para todos os usuários",
-              "A plataforma número #1 para vídeo, música e imagem, com ferramentas fáceis e rápidas para ajudar você a transformar suas ideias."
-            ]
-        ]
-    },
+            "p": "Nooly é uma plataforma poderosa para conversão rápida de imagens, downloads de músicas e vídeos e muito mais."
+        },
+
+        "About": {
+            "id": "Sobre",
+            "h2": "Fazendo a Diferença",
+            "smallCard": {
+                "labels": [
+                    ["+1M Usuários", "usuários globalmente."],
+                    ["Sem Complicação", "resultados sem complexidade."],
+                    ["Até 25x mais rápido", "visto por usuários do Nooly*"],
+                    ["Confiado por Milhões", "ferramentas online confiáveis."]
+                ]
+            },
+            "largeCard": {
+                "labels": [
+                    [
+                        "5 anos de experiência",
+                        "fornecendo as melhores ferramentas que economizam tempo, aumentam a produtividade e tornam as tarefas online mais fáceis para todos."
+                    ],
+                    [
+                        "Para todos os usuários",
+                        "A plataforma número #1 para vídeo, música e imagem, com ferramentas fáceis e rápidas para ajudar você a transformar suas ideias."
+                    ]
+                ]
+            }
+        },
 
     "Tools": {
+        "id": "Ferramentas",
         "h2": "Comece Agora",
-        "SmallCardTexts":[
-            ["Download Vídeo"],
-            ["Download Música"],
-            ["Conversor de Imagem"],
-            ["Redimensionar Imagem"],
-            ["Gerador de QR Code"],
-            ["Remover Metadados"]
-        ]
+        "cards": {
+            "labels":[
+                "Download Vídeo",
+                "Download Música",
+                "Conversor de Imagem",
+                "Redimensionar Imagem",
+                "Gerador de QR Code",
+                "Remover Metadados"
+            ]
+        }
     },
 
     "Contacts": {
+        "id": "Contatos",
         "h2": ["Comece com", "Nooly hoje"]
+    }
+
+},
+
+    "Account": {
+        "signup": {
+            "h1": "Crie sua conta",
+            "label": {
+                "Google": "Cadastre-se com o Google",
+                "X": "Cadastre-se com o X",
+                "Email": "Cadastre-se com o e-mail"
+            },
+            "link": ["Já tem uma conta?", "Entre aqui"]
+        },
+        "login": {
+            "h1": "Bem-vindo de volta",
+            "label": {
+                "Google": "Entrar com o Google",
+                "X": "Entrar com o X",
+                "Email": "Entrar com o e-mail"
+            },
+            "link": ["Não tem uma conta?", "Cadastre-se aqui"]
+        }
     }
 }

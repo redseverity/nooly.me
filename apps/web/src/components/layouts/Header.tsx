@@ -2,14 +2,13 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { LangButton, Menu, ThemeButton } from "@/components/ui";
+import { MenuToggle, LanguageSwitcher, ThemeToggle } from "@/components/ui";
 import { Icons } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
-import { Navegate } from "@/components/ui";
+import { Navigate } from "@/components/ui";
 import { createPortal } from "react-dom";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
 
 export const Header = ({
   className,
@@ -23,8 +22,6 @@ export const Header = ({
   }, []);
 
   const [menuOpen, setMenuOpen] = useState<boolean | undefined>(undefined);
-
-  const t = useTranslations("Navegate");
 
   return (
     <>
@@ -44,45 +41,36 @@ export const Header = ({
           </Link>
 
           <div className="border-light-8 dark:border-dark-8 ml-10 mr-[1.10rem] hidden h-9 flex-1 rounded-full border min-[1000px]:flex min-[1100px]:ml-20">
-            <Navegate.OnPage className="flex-1 rounded-full" />
+            <Navigate.ToPage className="flex-1 rounded-full" />
           </div>
 
           <div className="flex items-center justify-center gap-4 min-[580px]:gap-5">
-            <Navegate.ToSignup className="w-min rounded-full px-6 py-2 max-[700px]:hidden" />
+            <Navigate.ToAuth className="w-min rounded-full px-6 py-2 max-[700px]:hidden" />
 
             <div>
-              <Navegate.ToTools
-                text={t("ToTools")}
-                className="pl-3 pr-1 max-[600px]:hidden"
-              >
+              <Navigate.ToTools className="pl-3 pr-1 max-[600px]:hidden">
                 <ChevronRight className="stroke-light-1 h-[20px] w-min stroke-[1.8] min-[700px]:h-[28px]" />
-              </Navegate.ToTools>
+              </Navigate.ToTools>
             </div>
 
             {isClient && (
-              <ThemeButton.Root
+              <ThemeToggle.Root
                 onClick={() =>
                   theme == "dark" ? setTheme("light") : setTheme("dark")
                 }
               >
-                <ThemeButton.Moon
-                  className={clsx(theme == "dark" ? null : "hidden")}
-                />
-                <ThemeButton.Sun
-                  className={clsx(theme == "light" ? null : "hidden")}
-                />
-              </ThemeButton.Root>
+                {theme == "dark" ? <ThemeToggle.Moon /> : <ThemeToggle.Sun />}
+              </ThemeToggle.Root>
             )}
 
-            <LangButton />
+            <LanguageSwitcher />
 
-            <Menu.Root onClick={() => setMenuOpen(!menuOpen)}>
-              {menuOpen ? (
-                <Menu.Close className="flex min-[1000px]:hidden" />
-              ) : (
-                <Menu.Open className="flex min-[1000px]:hidden" />
-              )}
-            </Menu.Root>
+            <MenuToggle.Root
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="min-[1000px]:hidden [&_*]:flex"
+            >
+              {menuOpen ? <MenuToggle.Close /> : <MenuToggle.Open />}
+            </MenuToggle.Root>
           </div>
         </nav>
       </header>
@@ -107,21 +95,18 @@ export const Header = ({
                 }}
               >
                 <div className="flex h-auto w-[90vw] flex-col">
-                  <Navegate.OnPage
+                  <Navigate.ToPage
                     onClick={() => setMenuOpen(false)}
                     className="font-poppins h-[2.7rem] justify-between rounded-full pl-[1.10rem] pr-[0.7rem] font-semibold"
                   >
                     <ChevronRight className="size-5 stroke-[2px]" />
-                  </Navegate.OnPage>
+                  </Navigate.ToPage>
                 </div>
 
                 <div className="flex w-[90vw] flex-col justify-center gap-4">
-                  <Navegate.ToSignup className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
+                  <Navigate.ToAuth className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
 
-                  <Navegate.ToTools
-                    text={t("ToTools")}
-                    className="min-[600px]:hidden"
-                  ></Navegate.ToTools>
+                  <Navigate.ToTools className="min-[600px]:hidden"/>
                 </div>
               </aside>
             </>,

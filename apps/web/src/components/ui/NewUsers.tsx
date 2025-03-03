@@ -5,12 +5,12 @@ export const NewUsers = ({
   className,
   ...props
 }: React.ComponentProps<"header">) => {
-  const t = useTranslations();
+  const t = useTranslations("ui.NewUsers");
 
   return (
     <span
       {...props}
-      role="figure"
+      role="note"
       className={clsx(
         "font-poppins dark:text-light-1 text-dark-1 flex items-center justify-center gap-2 text-xs font-bold",
         className,
@@ -18,7 +18,7 @@ export const NewUsers = ({
     >
       <p>
         <span className="text-rose-2">+</span>&nbsp;
-        {t("NewUsers")}
+        {t("label")}
       </p>
     </span>
   );

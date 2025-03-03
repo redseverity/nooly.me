@@ -1,3 +1,3 @@
 // all application rotes
 
-export const routes = ["/", "/signup"];
+export const routes = ["/", "/signup", "/login"];

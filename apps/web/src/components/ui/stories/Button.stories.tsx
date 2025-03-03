@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Menu } from "@/components/ui";
+import { MenuToggle } from "@/components/ui";
 
 const Component = ({ isOpen: defaultOpen }: { isOpen: boolean }) => {
   let isOpen = defaultOpen;
   return (
-    <Menu.Root>
+    <MenuToggle.Root>
       {isOpen ? (
-        <Menu.Close onClick={() => (isOpen = false)} />
+        <MenuToggle.Close onClick={() => (isOpen = false)} />
       ) : (
-        <Menu.Open onClick={() => (isOpen = true)} />
+        <MenuToggle.Open onClick={() => (isOpen = true)} />
       )}
-    </Menu.Root>
+    </MenuToggle.Root>
   );
 };
 
