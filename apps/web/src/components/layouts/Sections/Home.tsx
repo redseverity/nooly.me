@@ -22,7 +22,7 @@ export const Home = () => {
             draggable="false"
             className={clsx(
               "font-poppins text-dark-1 dark:text-light-1 text-nowrap font-bold leading-tight min-[700px]:text-[40pt]",
-              locale == "en" ? "text-[7vw]" : "text-[6.4vw]",
+              locale === "en" ? "text-[7vw]" : "text-[6.4vw]",
             )}
           >
             <span>{t.raw("h1")[0]}</span>

@@ -29,7 +29,9 @@ export const LanguageSwitcher = ({
     };
 
     handleScrollRef.current = () => {
-      setMenuOpen(false);
+      if(menuOpen === true){
+        setMenuOpen(false);
+      }
     }
   },[menuOpen])
 

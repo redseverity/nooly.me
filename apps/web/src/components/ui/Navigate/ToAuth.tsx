@@ -12,7 +12,7 @@ export const ToAuth = ({
   const path = usePathname().split("/")[2];
 
   const method =
-    ["signup", "login"].find((method) => method == path) == "signup"
+    ["signup", "login"].find((method) => method === path) === "signup"
       ? "login"
       : "signup";
 

@@ -40,10 +40,10 @@ export const GridBg = ({
       const strokeClass = canvas.classList.value
         .split(" ")
         .filter((e) =>
-          theme == "dark" ? e.includes("dark:stroke") : e.includes("stroke"),
+          theme === "dark" ? e.includes("dark:stroke") : e.includes("stroke"),
         )
         .filter((e) =>
-          theme == "dark" ? e.includes("dark:") : !e.includes("dark:"),
+          theme === "dark" ? e.includes("dark:") : !e.includes("dark:"),
         )
         .toString()
         .replace("dark:", "")

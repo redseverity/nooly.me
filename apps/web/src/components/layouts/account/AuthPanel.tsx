@@ -22,7 +22,7 @@ export const AuthPanel = ({
 }: React.ComponentProps<"div">) => {
   const path = usePathname().split("/")[2];
 
-  const method = AuthMethods.find((method) => method == path);
+  const method = AuthMethods.find((method) => method === path);
 
   const t = useTranslations(`Account.${method}`);
 
@@ -50,13 +50,13 @@ export const AuthPanel = ({
                   <Icon
                     className={clsx(
                       "mr-4 w-5",
-                      index == 2 ? "stroke-dark-2 dark:stroke-light-2" : null,
+                      index === 2 ? "stroke-dark-2 dark:stroke-light-2" : null,
                     )}
                   />
                   {label}
                 </span>
               </Button>
-              {index == 0 ? (
+              {index === 0 ? (
                 <span className="flex w-full items-center">
                   <span className="dark:bg-dark-8 bg-light-8 h-[1px] w-full"></span>
                   <p className="text-dark-3 dark:text-light-3 mx-2">or</p>

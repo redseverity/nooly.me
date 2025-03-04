@@ -37,7 +37,9 @@ export const Header = ({
     };
   
     handleScrollRef.current = () => {
-      setMenuOpen(false);
+      if(menuOpen === true){
+        setMenuOpen(false);
+      }
     };
   }, [menuOpen]);
   
@@ -88,10 +90,10 @@ export const Header = ({
             {isClient && (
               <ThemeToggle.Root
                 onClick={() =>
-                  theme == "dark" ? setTheme("light") : setTheme("dark")
+                  theme === "dark" ? setTheme("light") : setTheme("dark")
                 }
               >
-                {theme == "dark" ? <ThemeToggle.Moon /> : <ThemeToggle.Sun />}
+                {theme === "dark" ? <ThemeToggle.Moon /> : <ThemeToggle.Sun />}
               </ThemeToggle.Root>
             )}
 
