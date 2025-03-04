@@ -8,21 +8,53 @@ import { ChevronRight } from "lucide-react";
 import { Navigate } from "@/components/ui";
 import { createPortal } from "react-dom";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Header = ({
   className,
   ...props
 }: React.ComponentProps<"header">) => {
-  const [isClient, setClient] = useState(false);
-  const { theme, setTheme } = useTheme();
 
+  const { theme, setTheme } = useTheme();
+  const [isClient, setClient] = useState(false);
+  
   useEffect(() => {
     setClient(true);
   }, []);
 
+  // Close menu when clicking outiside
   const [menuOpen, setMenuOpen] = useState<boolean | undefined>(undefined);
+  const menuRef = useRef<HTMLDivElement>(null)
+  const handleClickOutsideRef = useRef<(event: MouseEvent) => void>(null);
+  const handleScrollRef = useRef<() => void>(null);
 
+  // update only logic without recreating event listeners
+  useEffect(() => {
+    handleClickOutsideRef.current = (event: MouseEvent) => {
+      if (menuOpen === true && menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+  
+    handleScrollRef.current = () => {
+      setMenuOpen(false);
+    };
+  }, [menuOpen]);
+  
+  // initialize event listeners only once
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => handleClickOutsideRef.current?.(event);
+    const handleScroll = () => handleScrollRef.current?.();
+  
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
   return (
     <>
       <header
@@ -83,7 +115,8 @@ export const Header = ({
                   "@keyframes openMenu { 0%{top: -17rem} 100%{top: 3.5rem}} @keyframes closeMenu {0% {top: 3.5rem} 100% {top: -17rem}}"
                 }
               </style>
-              <aside
+              <div
+                ref={menuRef}
                 className="bg-light-2 border-light-8 border-b-1 dark:bg-dark-2 dark:border-dark-8 fixed top-[-17rem] z-40 flex w-full flex-col items-center justify-center gap-4 py-4 min-[1100px]:hidden"
                 style={{
                   animation:
@@ -108,7 +141,7 @@ export const Header = ({
 
                   <Navigate.ToTools className="min-[600px]:hidden"/>
                 </div>
-              </aside>
+              </div>
             </>,
             document.body,
           )
