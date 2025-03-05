@@ -17,38 +17,42 @@ export const LanguageSwitcher = ({
   // Close menu when clicking outiside
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const handleClickOutsideRef = useRef<(event: MouseEvent) => void>(null)
+  const handleClickOutsideRef = useRef<(event: MouseEvent) => void>(null);
   const handleScrollRef = useRef<() => void>(null);
 
   // update only logic without recreating event listeners
   useEffect(() => {
     handleClickOutsideRef.current = (event: MouseEvent) => {
-      if (menuOpen === true && menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      if (
+        menuOpen === true &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
         setMenuOpen(false);
       }
     };
 
     handleScrollRef.current = () => {
-      if(menuOpen === true){
+      if (menuOpen === true) {
         setMenuOpen(false);
       }
-    }
-  },[menuOpen])
+    };
+  }, [menuOpen]);
 
   // initialize event listeners only once
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => handleClickOutsideRef.current?.(event)
-    const handleScroll = () => handleScrollRef.current?.()
+    const handleClickOutside = (event: MouseEvent) =>
+      handleClickOutsideRef.current?.(event);
+    const handleScroll = () => handleScrollRef.current?.();
 
-    document.addEventListener("mousedown", handleClickOutside)
-    document.addEventListener("scroll", handleScroll)
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-      document.removeEventListener("scroll", handleScroll)
-    }
-  },[])
-
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="relative" ref={menuRef}>

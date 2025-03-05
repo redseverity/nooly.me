@@ -59,7 +59,6 @@
             ],
             "p": "Nooly is a powerful platform for fast image conversion, music and video downloads, and much more."
         },
-
         "About": {
             "id": "About",
             "h2": "Making a Difference",
@@ -84,7 +83,6 @@
                 ]
             }
         },
-
         "Tools": {
             "id": "Tools",
             "h2": "Get Started",
@@ -99,31 +97,63 @@
                 ]
             }
         },
-
         "Contacts": {
             "id": "Contacts",
             "h2": ["Get Started with", "Nooly Today"]
         }
     },
 
-    "Account": {
-        "signup": {
-            "h1": "Create Your Account",
-            "label": {
-                "Google": "Sign up with Google",
-                "X": "Sign up with X",
-                "Email": "Sign up with Email"
+    "Auth": {
+        "AuthPanel": {
+            "signup": {
+                "h1": "Create Your Account",
+                "label": {
+                    "Google": "Sign up with Google",
+                    "Twitter": "Sign up with Twitter",
+                    "Email": "Sign up with Email"
+                },
+                "division": "or",
+                "link": ["Already have an account?", "Log in here"]
             },
-            "link": ["Already have an account?", "Log in here"]
+            "login": {
+                "h1": "Welcome Back",
+                "label": {
+                    "Google": "Sign in with Google",
+                    "Twitter": "Sign in with Twitter",
+                    "Email": "Sign in with Email"
+                },
+                "division": "or",
+                "link": ["Don't have an account?", "Sign up here"]
+            }
         },
-        "login": {
-            "h1": "Welcome Back",
-            "label": {
-                "Google": "Sign in with Google",
-                "X": "Sign in with X",
-                "Email": "Sign in with Email"
+        "LoginWithEmail": {
+            "h1": "Access Your Account",
+            "email": {
+                "placeholder": "Email*"
             },
-            "link": ["Don't have an account?", "Sign up here"]
+            "password": {
+                "placeholder": "Password*"
+            },
+            "goBack": "Go Back"
+        },
+        "SignupWithEmail": {
+            "email": {
+                "h1": "Sign in with your email",
+                "continue": "Continue",
+                "placeholder": "Email*"
+            },
+            "code": {
+                "h1": "Enter the verification code",
+                "verify": "Verify",
+                "p": "We sent a code to your email. Enter it below to continue.",
+                "placeholder": "Enter code"
+            },
+            "password": {
+                "h1": "Sign in with your password",
+                "continue": "Continue",
+                "placeholder": "Password*"
+            },
+            "goBack": "Go Back"
         }
     }
 }

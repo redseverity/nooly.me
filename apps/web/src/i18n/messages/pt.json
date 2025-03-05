@@ -29,7 +29,6 @@
         "NewUsers": {
             "label": "1M Usuários"
         },
-
         "ThemeToggle": {
             "description": "Mudar o tema"
         },
@@ -41,7 +40,6 @@
             }
         }
     },
-
     "Sections": {
         "Home": {
             "id": "Início",
@@ -55,7 +53,6 @@
             ],
             "p": "Nooly é uma plataforma poderosa para conversão rápida de imagens, downloads de músicas e vídeos e muito mais."
         },
-
         "About": {
             "id": "Sobre",
             "h2": "Fazendo a Diferença",
@@ -80,47 +77,77 @@
                 ]
             }
         },
-
-    "Tools": {
-        "id": "Ferramentas",
-        "h2": "Comece Agora",
-        "cards": {
-            "labels":[
-                "Download Vídeo",
-                "Download Música",
-                "Conversor de Imagem",
-                "Redimensionar Imagem",
-                "Gerador de QR Code",
-                "Remover Metadados"
-            ]
+        "Tools": {
+            "id": "Ferramentas",
+            "h2": "Comece Agora",
+            "cards": {
+                "labels":[
+                    "Download Vídeo",
+                    "Download Música",
+                    "Conversor de Imagem",
+                    "Redimensionar Imagem",
+                    "Gerador de QR Code",
+                    "Remover Metadados"
+                ]
+            }
+        },
+        "Contacts": {
+            "id": "Contatos",
+            "h2": ["Comece com", "Nooly hoje"]
         }
     },
 
-    "Contacts": {
-        "id": "Contatos",
-        "h2": ["Comece com", "Nooly hoje"]
-    }
-
-},
-
-    "Account": {
-        "signup": {
-            "h1": "Crie sua conta",
-            "label": {
-                "Google": "Cadastre-se com o Google",
-                "X": "Cadastre-se com o X",
-                "Email": "Cadastre-se com o e-mail"
+    "Auth": {
+        "AuthPanel": {
+            "signup": {
+                "h1": "Crie sua conta",
+                "label": {
+                    "Google": "Cadastre-se com o Google",
+                    "Twitter": "Cadastre-se com o Twitter",
+                    "Email": "Cadastre-se com o E-mail"
+                },
+                "division": "ou",
+                "link": ["Já tem uma conta?", "Entre aqui"]
             },
-            "link": ["Já tem uma conta?", "Entre aqui"]
+            "login": {
+                "h1": "Bem-vindo de volta",
+                "label": {
+                    "Google": "Entrar com o Google",
+                    "Twitter": "Entrar com o Twitter",
+                    "Email": "Entrar com o E-mail"
+                },
+                "division": "ou",
+                "link": ["Não tem uma conta?", "Cadastre-se aqui"]
+            }
         },
-        "login": {
-            "h1": "Bem-vindo de volta",
-            "label": {
-                "Google": "Entrar com o Google",
-                "X": "Entrar com o X",
-                "Email": "Entrar com o e-mail"
+        "LoginWithEmail": {
+            "h1": "Acesse sua conta",
+            "email": {
+                "placeholder": "E-mail*"
             },
-            "link": ["Não tem uma conta?", "Cadastre-se aqui"]
+            "password": {
+                "placeholder": "Senha*"
+            },
+              "goBack": "Voltar"
+        },
+        "SignupWithEmail": {
+            "email": {
+                "h1": "Entrar com seu e-mail",
+                "continue": "Continuar",
+                "placeholder": "E-mail*"
+            },
+            "code": {
+                "h1": "Digite o código de verificação",
+                "verify": "Verificar",
+                "p": "Enviamos um código para o seu e-mail. Digite-o abaixo para continuar.",
+                "placeholder": "Digite o código"
+            },
+            "password": {
+                "h1": "Entrar com sua senha",
+                "continue": "Continuar",
+                "placeholder": "Senha*"
+            },
+              "goBack": "Voltar"
         }
     }
 }

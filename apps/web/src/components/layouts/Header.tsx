@@ -14,49 +14,53 @@ export const Header = ({
   className,
   ...props
 }: React.ComponentProps<"header">) => {
-
   const { theme, setTheme } = useTheme();
   const [isClient, setClient] = useState(false);
-  
+
   useEffect(() => {
     setClient(true);
   }, []);
 
   // Close menu when clicking outiside
   const [menuOpen, setMenuOpen] = useState<boolean | undefined>(undefined);
-  const menuRef = useRef<HTMLDivElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null);
   const handleClickOutsideRef = useRef<(event: MouseEvent) => void>(null);
   const handleScrollRef = useRef<() => void>(null);
 
   // update only logic without recreating event listeners
   useEffect(() => {
     handleClickOutsideRef.current = (event: MouseEvent) => {
-      if (menuOpen === true && menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      if (
+        menuOpen === true &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
         setMenuOpen(false);
       }
     };
-  
+
     handleScrollRef.current = () => {
-      if(menuOpen === true){
+      if (menuOpen === true) {
         setMenuOpen(false);
       }
     };
   }, [menuOpen]);
-  
+
   // initialize event listeners only once
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => handleClickOutsideRef.current?.(event);
+    const handleClickOutside = (event: MouseEvent) =>
+      handleClickOutsideRef.current?.(event);
     const handleScroll = () => handleScrollRef.current?.();
-  
+
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   return (
     <>
       <header
@@ -141,7 +145,7 @@ export const Header = ({
                 <div className="flex w-[90vw] flex-col justify-center gap-4">
                   <Navigate.ToAuth className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
 
-                  <Navigate.ToTools className="min-[600px]:hidden"/>
+                  <Navigate.ToTools className="min-[600px]:hidden" />
                 </div>
               </div>
             </>,
