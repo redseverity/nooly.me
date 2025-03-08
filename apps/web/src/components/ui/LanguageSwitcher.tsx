@@ -5,12 +5,15 @@ import clsx from "clsx";
 import { Globe } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { languages } from "@/constants/languages";
+import React from "react";
 
 export const LanguageSwitcher = ({
   className,
   ...props
 }: React.ComponentProps<"button">) => {
+  const locale = useLocale();
   const path = `/${usePathname().split("/").filter(Boolean).slice(1)}`;
   const t = useTranslations("ui.LanguageSwitcher");
 
@@ -73,18 +76,27 @@ export const LanguageSwitcher = ({
       {menuOpen && (
         <div className="border-light-8 dark:border-dark-8 bg-light-2 dark:bg-dark-2 absolute top-11 translate-x-[-37%] rounded-lg border py-2">
           <nav>
-            <ul className="font-inter [&>li:hover]:bg-dark-1 [&>li:hover]:dark:bg-dark-6 [&>li:hover]:text-light-2 flex flex-col justify-center gap-2 px-2 [&>li]:rounded-md [&>li]:px-2 [&>li]:py-1 [&>li]:text-center">
-              <li>
-                <Link href={path} locale="pt">
-                  {t("languages.pt")}
-                </Link>
-              </li>
-              <span className="bg-light-8 dark:bg-dark-8 h-[1px] w-full" />
-              <li>
-                <Link href={path} locale="en">
-                  {t("languages.en")}
-                </Link>
-              </li>
+            <ul className="font-inter flex flex-col justify-center gap-2 px-2">
+              {/* check if already contains location, to economize requests*/}
+              {languages.map((lang: string, index: number) => {
+                return (
+                  <React.Fragment key={lang}>
+                    <li  className={clsx("flex flex-row items-center justify-center gap-2 rounded-md px-2 py-1", locale === lang && "bg-dark-1 dark:bg-dark-6")}>
+                      {locale === lang ? (
+                        <span className="text-light-1">{t(`languages.${lang}`)}</span>
+                      ) : (
+                        <Link href={path} locale={lang}>
+                          {t(`languages.${lang}`)}
+                        </Link>
+                      )}
+                    </li>
+                    {
+                      (index + 1) < languages.length &&
+                      <span className="bg-light-8 dark:bg-dark-8 h-[1px] w-full" />
+                    }
+                  </React.Fragment>
+                );
+              })}
             </ul>
           </nav>
         </div>

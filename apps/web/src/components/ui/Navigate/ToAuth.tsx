@@ -10,8 +10,8 @@ export const ToAuth = ({
   ...props
 }: Omit<React.ComponentProps<typeof Link>, "href">) => {
   const path = usePathname().split("/")[2];
-  const locale = useLocale()
-  
+  const locale = useLocale();
+
   const method =
     ["signup", "login"].find((method) => method === path) === "signup"
       ? "login"

@@ -8,9 +8,8 @@ import { useSearchParams, useRouter } from "next/navigation";
 import React from "react";
 
 export const SignupWithEmail = () => {
-  
   const t = useTranslations("Auth.SignupWithEmail");
-  const locale = useLocale()
+  const locale = useLocale();
   const router = useRouter();
   const urlParams = useSearchParams();
   return (
@@ -41,7 +40,11 @@ export const SignupWithEmail = () => {
               {t("email.continue")}
             </Button>
           </form>
-          <Link locale={locale} href="/signup" className="mt-1 text-sm leading-none">
+          <Link
+            locale={locale}
+            href="/signup"
+            className="mt-1 text-sm leading-none"
+          >
             <span className="text-rose-2 hover:text-rose-1 font-semibold">
               {t("goBack")}
             </span>

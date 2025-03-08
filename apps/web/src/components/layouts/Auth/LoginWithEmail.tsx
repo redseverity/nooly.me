@@ -12,7 +12,7 @@ const providersIcons = {
 };
 
 export const LoginWithEmail = () => {
-  const locale = useLocale()
+  const locale = useLocale();
   const t = useTranslations(`Auth.LoginWithEmail`);
 
   const formProviders = [

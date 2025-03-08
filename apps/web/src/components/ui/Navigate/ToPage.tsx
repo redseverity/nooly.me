@@ -16,7 +16,7 @@ export const ToPage = ({
 }: Omit<React.ComponentProps<typeof Link>, "href">) => {
   const t = useTranslations("Navigate.toPage");
   const labels: Labels = t.raw("labels") as Labels;
-  const locale = useLocale()
+  const locale = useLocale();
 
   return (
     <>

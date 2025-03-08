@@ -22,8 +22,7 @@ export const AuthPanel = ({
   className,
   ...props
 }: React.ComponentProps<"div">) => {
-
-  const locale = useLocale()
+  const locale = useLocale();
   const path = usePathname().split("/")[2];
   const method = AuthMethods.find((method) => method === path);
   const t = useTranslations(`Auth.AuthPanel.${method}`);

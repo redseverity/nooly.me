@@ -15,7 +15,7 @@ export const Header = ({
   className,
   ...props
 }: React.ComponentProps<"header">) => {
-  const locale = useLocale()
+  const locale = useLocale();
   const { theme, setTheme } = useTheme();
   const [isClient, setClient] = useState(false);
 

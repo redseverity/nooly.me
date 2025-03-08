@@ -8,7 +8,7 @@ export const ToTools = ({
   ...props
 }: Omit<React.ComponentProps<typeof Link>, "href">) => {
   const t = useTranslations("Navigate.toTools");
-  const locale = useLocale()
+  const locale = useLocale();
 
   return (
     <Link
