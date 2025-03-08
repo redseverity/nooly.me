@@ -1,9 +1,9 @@
 import { Navigate, Section, Icons } from "@/components/ui";
+import { Link } from "@/i18n/routing";
 import clsx from "clsx";
 import { ChevronRight, AtSign } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import Link from "next/link";
 
 export const Contacts = () => {
   const t = useTranslations("Sections.Contacts");
@@ -27,13 +27,13 @@ export const Contacts = () => {
           <ChevronRight className="size-5 min-[500px]:size-6" />
         </Navigate.ToTools>
 
-        <Link href="https://github.com/redseverity">
+        <Link href="https://github.com/redseverity" locale={locale}>
           <Icons.github />
         </Link>
-        <Link href="https://x.com/redseverity">
+        <Link href="https://x.com/redseverity" locale={locale}>
           <Icons.twitter />
         </Link>
-        <Link href='mailto:red.severity723@passfwd.com"'>
+        <Link href="mailto:red.severity723@passfwd.com" locale={locale}>
           <AtSign className="size-[1.7rem]" />
         </Link>
       </div>

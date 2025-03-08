@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export const ToTools = ({
   children,
@@ -8,10 +8,12 @@ export const ToTools = ({
   ...props
 }: Omit<React.ComponentProps<typeof Link>, "href">) => {
   const t = useTranslations("Navigate.toTools");
+  const locale = useLocale()
 
   return (
     <Link
       {...props}
+      locale={locale}
       href="/tools"
       draggable="false"
       aria-label={t("description", { page: "tools" })}

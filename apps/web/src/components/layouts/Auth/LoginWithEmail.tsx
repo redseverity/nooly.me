@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui";
+import { Link } from "@/i18n/routing";
 import { Lock, AtSign } from "lucide-react";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import React from "react";
 
 const providersIcons = {
@@ -12,6 +12,7 @@ const providersIcons = {
 };
 
 export const LoginWithEmail = () => {
+  const locale = useLocale()
   const t = useTranslations(`Auth.LoginWithEmail`);
 
   const formProviders = [
@@ -62,7 +63,7 @@ export const LoginWithEmail = () => {
         </Button>
       </form>
 
-      <Link href="/login" className="pt-1 text-sm leading-none">
+      <Link locale={locale} href="/login" className="pt-1 text-sm leading-none">
         <span className="text-rose-2 hover:text-rose-1 font-semibold">
           {"Go back"}
         </span>

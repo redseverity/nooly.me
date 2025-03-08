@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/routing";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 interface Labels {
   Home: string;
@@ -15,8 +15,8 @@ export const ToPage = ({
   ...props
 }: Omit<React.ComponentProps<typeof Link>, "href">) => {
   const t = useTranslations("Navigate.toPage");
-
   const labels: Labels = t.raw("labels") as Labels;
+  const locale = useLocale()
 
   return (
     <>
@@ -24,6 +24,7 @@ export const ToPage = ({
         return (
           <Link
             {...props}
+            locale={locale}
             href={`/#${label}`}
             key={key}
             role="link"

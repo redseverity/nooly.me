@@ -1,15 +1,16 @@
 "use client";
 
 import { Button } from "@/components/ui";
+import { Link } from "@/i18n/routing";
 import { Lock, AtSign } from "lucide-react";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams, useRouter } from "next/navigation";
 import React from "react";
 
 export const SignupWithEmail = () => {
+  
   const t = useTranslations("Auth.SignupWithEmail");
-
+  const locale = useLocale()
   const router = useRouter();
   const urlParams = useSearchParams();
   return (
@@ -40,7 +41,7 @@ export const SignupWithEmail = () => {
               {t("email.continue")}
             </Button>
           </form>
-          <Link href="/signup" className="mt-1 text-sm leading-none">
+          <Link locale={locale} href="/signup" className="mt-1 text-sm leading-none">
             <span className="text-rose-2 hover:text-rose-1 font-semibold">
               {t("goBack")}
             </span>
@@ -84,6 +85,7 @@ export const SignupWithEmail = () => {
               </Button>
 
               <Link
+                locale={locale}
                 href="/signup?via=email&step=1"
                 className="mt-1 text-sm leading-none"
               >
@@ -119,6 +121,7 @@ export const SignupWithEmail = () => {
             </Button>
           </form>
           <Link
+            locale={locale}
             href="/signup?via=email&step=2"
             className="mt-1 text-sm leading-none"
           >

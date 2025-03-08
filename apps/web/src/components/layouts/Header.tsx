@@ -1,7 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 import { MenuToggle, LanguageSwitcher, ThemeToggle } from "@/components/ui";
 import { Icons } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
@@ -14,6 +15,7 @@ export const Header = ({
   className,
   ...props
 }: React.ComponentProps<"header">) => {
+  const locale = useLocale()
   const { theme, setTheme } = useTheme();
   const [isClient, setClient] = useState(false);
 
@@ -74,7 +76,7 @@ export const Header = ({
           draggable="false"
           className="flex h-full w-[90vw] items-center justify-between min-[1000px]:w-[92vw] min-[1200px]:w-[65rem]"
         >
-          <Link href="/">
+          <Link href="/" locale={locale}>
             <Icons.logo className="h-8" />
           </Link>
 

@@ -3,12 +3,12 @@
 import { Button, Card, Icons } from "@/components/ui";
 import clsx from "clsx";
 import { Mail } from "lucide-react";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import React from "react";
 import { LoginWithEmail } from "./LoginWithEmail";
 import { SignupWithEmail } from "./SignupWithEmail";
+import { Link } from "@/i18n/routing";
 
 const providersIcons = {
   Google: Icons.google,
@@ -22,6 +22,8 @@ export const AuthPanel = ({
   className,
   ...props
 }: React.ComponentProps<"div">) => {
+
+  const locale = useLocale()
   const path = usePathname().split("/")[2];
   const method = AuthMethods.find((method) => method === path);
   const t = useTranslations(`Auth.AuthPanel.${method}`);
@@ -86,6 +88,7 @@ export const AuthPanel = ({
               ))}
             </div>
             <Link
+              locale={locale}
               href={method === "signup" ? "/login" : "/signup"}
               className="pt-1 text-sm leading-none"
             >

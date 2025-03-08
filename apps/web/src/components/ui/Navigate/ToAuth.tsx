@@ -1,8 +1,8 @@
 "use client";
 
+import { Link } from "@/i18n/routing";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
 export const ToAuth = ({
@@ -10,7 +10,8 @@ export const ToAuth = ({
   ...props
 }: Omit<React.ComponentProps<typeof Link>, "href">) => {
   const path = usePathname().split("/")[2];
-
+  const locale = useLocale()
+  
   const method =
     ["signup", "login"].find((method) => method === path) === "signup"
       ? "login"
@@ -21,6 +22,7 @@ export const ToAuth = ({
   return (
     <Link
       {...props}
+      locale={locale}
       href={method}
       aria-label={t("description")}
       title={t("description")}
