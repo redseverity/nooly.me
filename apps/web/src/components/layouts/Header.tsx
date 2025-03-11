@@ -7,7 +7,6 @@ import { MenuToggle, LanguageSwitcher, ThemeToggle } from "@/components/ui";
 import { Icons } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
 import { Navigate } from "@/components/ui";
-import { createPortal } from "react-dom";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 
@@ -115,45 +114,41 @@ export const Header = ({
         </nav>
       </header>
 
-      {isClient
-        ? createPortal(
-            <>
-              <style>
-                {
-                  "@keyframes openMenu { 0%{top: -17rem} 100%{top: 3.5rem}} @keyframes closeMenu {0% {top: 3.5rem} 100% {top: -17rem}}"
-                }
-              </style>
-              <div
-                ref={menuRef}
-                className="bg-light-2 border-light-8 border-b-1 dark:bg-dark-2 dark:border-dark-8 fixed top-[-17rem] z-40 flex w-full flex-col items-center justify-center gap-4 py-4 min-[1100px]:hidden"
-                style={{
-                  animation:
-                    menuOpen !== undefined
-                      ? menuOpen
-                        ? "openMenu 0.2s linear forwards"
-                        : "closeMenu 0.2s linear forwards"
-                      : "",
-                }}
-              >
-                <div className="flex h-auto w-[90vw] flex-col">
-                  <Navigate.ToPage
-                    onClick={() => setMenuOpen(false)}
-                    className="font-poppins h-[2.7rem] justify-between rounded-full pl-[1.10rem] pr-[0.7rem] font-semibold"
-                  >
-                    <ChevronRight className="size-5 stroke-[2px]" />
-                  </Navigate.ToPage>
-                </div>
+      {isClient && (
+        <div
+          ref={menuRef}
+          className="bg-light-2 border-light-8 border-b-1 dark:bg-dark-2 dark:border-dark-8 fixed top-[-17rem] z-40 flex w-full flex-col items-center justify-center gap-4 py-4 min-[1100px]:hidden"
+          style={{
+            animation:
+              menuOpen !== undefined
+                ? menuOpen
+                  ? "openMenu 0.2s linear forwards"
+                  : "closeMenu 0.2s linear forwards"
+                : "",
+          }}
+        >
+          <style>
+            {
+              "@keyframes openMenu { 0%{top: -17rem} 100%{top: 3.5rem}} @keyframes closeMenu {0% {top: 3.5rem} 100% {top: -17rem}}"
+            }
+          </style>
 
-                <div className="flex w-[90vw] flex-col justify-center gap-4">
-                  <Navigate.ToAuth className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
+          <div className="flex h-auto w-[90vw] flex-col">
+            <Navigate.ToPage
+              onClick={() => setMenuOpen(false)}
+              className="font-poppins h-[2.7rem] justify-between rounded-full pl-[1.10rem] pr-[0.7rem] font-semibold"
+            >
+              <ChevronRight className="size-5 stroke-[2px]" />
+            </Navigate.ToPage>
+          </div>
 
-                  <Navigate.ToTools className="min-[600px]:hidden" />
-                </div>
-              </div>
-            </>,
-            document.body,
-          )
-        : null}
+          <div className="flex w-[90vw] flex-col justify-center gap-4">
+            <Navigate.ToAuth className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
+
+            <Navigate.ToTools className="min-[600px]:hidden" />
+          </div>
+        </div>
+      )}
     </>
   );
 };

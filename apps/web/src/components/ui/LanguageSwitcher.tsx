@@ -58,7 +58,7 @@ export const LanguageSwitcher = ({
   }, []);
 
   return (
-    <div className="relative" ref={menuRef}>
+    <div className="relative">
       <button
         {...props}
         role="button"
@@ -74,26 +74,32 @@ export const LanguageSwitcher = ({
         <Globe className="stroke-dark-1 dark:stroke-light-1 size-4" />
       </button>
       {menuOpen && (
-        <div className="border-light-8 dark:border-dark-8 bg-light-2 dark:bg-dark-2 absolute top-11 translate-x-[-37%] rounded-lg border py-2">
+        <div ref={menuRef} className="border-light-8 dark:border-dark-8 bg-light-2 dark:bg-dark-2 absolute top-11 translate-x-[-37%] rounded-lg border py-2">
           <nav>
             <ul className="font-inter flex flex-col justify-center gap-2 px-2">
               {/* check if already contains location, to economize requests*/}
               {languages.map((lang: string, index: number) => {
                 return (
                   <React.Fragment key={lang}>
-                    <li  className={clsx("flex flex-row items-center justify-center gap-2 rounded-md px-2 py-1", locale === lang && "bg-dark-1 dark:bg-dark-6")}>
+                    <li
+                      className={clsx(
+                        "flex flex-row items-center justify-center gap-2 rounded-md px-2 py-1",
+                        locale === lang && "bg-dark-1 dark:bg-dark-6",
+                      )}
+                    >
                       {locale === lang ? (
-                        <span className="text-light-1">{t(`languages.${lang}`)}</span>
+                        <span className="text-light-1">
+                          {t(`languages.${lang}`)}
+                        </span>
                       ) : (
                         <Link href={path} locale={lang}>
                           {t(`languages.${lang}`)}
                         </Link>
                       )}
                     </li>
-                    {
-                      (index + 1) < languages.length &&
+                    {index + 1 < languages.length && (
                       <span className="bg-light-8 dark:bg-dark-8 h-[1px] w-full" />
-                    }
+                    )}
                   </React.Fragment>
                 );
               })}
