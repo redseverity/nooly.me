@@ -84,12 +84,10 @@ export const Header = ({
           </div>
 
           <div className="flex items-center justify-center gap-4 min-[580px]:gap-5">
-            <Navigate.ToAuth className="w-min rounded-full px-6 py-2 max-[700px]:hidden" />
+            {/*<Navigate.ToAuth className="w-min rounded-full px-6 py-2 max-[700px]:hidden" /> */}
 
             <div>
-              <Navigate.ToTools className="pl-3 pr-1 max-[600px]:hidden">
-                <ChevronRight className="stroke-light-1 h-[20px] w-min stroke-[1.8] min-[700px]:h-[28px]" />
-              </Navigate.ToTools>
+              <Navigate.ToTools className="px-4 max-[600px]:hidden"/>
             </div>
 
             {isClient && (
@@ -142,10 +140,9 @@ export const Header = ({
             </Navigate.ToPage>
           </div>
 
-          <div className="flex w-[90vw] flex-col justify-center gap-4">
-            <Navigate.ToAuth className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" />
-
-            <Navigate.ToTools className="min-[600px]:hidden" />
+          <div className="flex w-[90vw] flex-col justify-center gap-4 min-[600px]:hidden">
+            {/* <Navigate.ToAuth className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" /> */}
+            <Navigate.ToTools />
           </div>
         </div>
       )}

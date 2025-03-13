@@ -1,3 +1,5 @@
 // all application rotes
 
-export const routes = ["/", "/signup", "/login"];
+export const routes = ["/"];
+
+// commented urls:  "/signup", "/login"

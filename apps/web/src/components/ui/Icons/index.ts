@@ -1,11 +1,13 @@
-import { X } from "./x";
+import { twitter } from "./twitter";
 import { github } from "./github";
 import { google } from "./google";
 import { logo } from "./logo";
+import { email } from "./email";
 
 export const Icons = {
-  twitter: X,
-  github: github,
-  google: google,
-  logo: logo,
+  twitter,
+  github,
+  google,
+  logo,
+  email,
 };

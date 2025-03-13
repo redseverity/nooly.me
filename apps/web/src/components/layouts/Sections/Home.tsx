@@ -1,6 +1,5 @@
-import { Button, Section, NewUsers, Icons } from "@/components/ui";
+import { Section, NewUsers, Navigate } from "@/components/ui";
 import clsx from "clsx";
-import { ChevronRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 
@@ -41,6 +40,9 @@ export const Home = () => {
         </p>
       </div>
 
+      <Navigate.ToTools className="w-min px-4" />
+
+      {/*
       <Button
         title={t("signGoogle")}
         className="grad-button-rose hover:grad-button-rose-active text-light-3 flex items-center justify-center px-2"
@@ -49,6 +51,7 @@ export const Home = () => {
         {t("signGoogle")}
         <ChevronRight className="stroke-light-1 h-[16px] stroke-[1.8] min-[340px]:h-[20px] min-[700px]:h-[28px]" />
       </Button>
+      */}
     </Section>
   );
 };
