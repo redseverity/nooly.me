@@ -11,7 +11,7 @@
             }
         },
         "toTools": {
-            "label": "Comece agora",
+            "label": ["Comece agora", "Experimentar"],
             "description": "Navegar para a página de ferramentas"
         },
         "toPage": {

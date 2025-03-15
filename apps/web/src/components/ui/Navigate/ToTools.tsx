@@ -5,8 +5,9 @@ import { Link } from "@/i18n/routing";
 export const ToTools = ({
   children,
   className,
+  label,
   ...props
-}: Omit<React.ComponentProps<typeof Link>, "href">) => {
+}: Omit<React.ComponentProps<typeof Link>, "href"> & {label: string}) => {
   const t = useTranslations("Navigate.toTools");
   const locale = useLocale();
 
@@ -24,7 +25,7 @@ export const ToTools = ({
       )}
     >
       <span className="flex items-center justify-center">
-        {t("label")}
+        {label}
         {children}
       </span>
     </Link>

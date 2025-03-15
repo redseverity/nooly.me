@@ -11,7 +11,7 @@ const providersIcons = {
 };
 
 export const Contacts = () => {
-  const t = useTranslations("Sections.Contacts");
+  const t = useTranslations("");
   const locale = useLocale();
 
   const providers = [
@@ -34,7 +34,7 @@ export const Contacts = () => {
 
   return (
     <Section
-      id={t("id")}
+      id={t("Sections.Contacts.id")}
       className="flex scroll-mt-14 flex-col gap-5 border-none py-12"
     >
       <h2
@@ -43,13 +43,13 @@ export const Contacts = () => {
           locale === "pt" ? "text-[2.5rem]" : "text-4xl",
         )}
       >
-        {t.raw("h2")[0]}
+        {t.raw("Sections.Contacts.h2")[0]}
         <br />
-        {t.raw("h2")[1]}
+        {t.raw("Sections.Contacts.h2")[1]}
       </h2>
 
       <div className="flex items-center justify-center">
-        <Navigate.ToTools className="w-min px-4" />
+        <Navigate.ToTools label={t.raw("Navigate.toTools.label")[0]} className="w-min px-4" />
 
         {/*
         <Navigate.ToTools className="pl-3 pr-2">

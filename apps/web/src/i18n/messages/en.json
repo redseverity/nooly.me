@@ -11,7 +11,7 @@
             }
         },
         "toTools": {
-            "label": "Get Started",
+            "label": ["Get Started", "Try the Tools"],
             "description": "Navigate to the tools page"
         },
         "toPage": {

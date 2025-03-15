@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { Link } from "@/i18n/routing";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { MenuToggle, LanguageSwitcher, ThemeToggle } from "@/components/ui";
 import { Icons } from "@/components/ui";
 import { ChevronRight } from "lucide-react";
@@ -17,6 +17,7 @@ export const Header = ({
   const locale = useLocale();
   const { theme, setTheme } = useTheme();
   const [isClient, setClient] = useState(false);
+  const t = useTranslations("Navigate.toTools");
 
   useEffect(() => {
     setClient(true);
@@ -87,7 +88,7 @@ export const Header = ({
             {/*<Navigate.ToAuth className="w-min rounded-full px-6 py-2 max-[700px]:hidden" /> */}
 
             <div>
-              <Navigate.ToTools className="px-4 max-[600px]:hidden"/>
+              <Navigate.ToTools label={t.raw("label")[0]} className="px-4 max-[600px]:hidden"/>
             </div>
 
             {isClient && (
@@ -142,7 +143,7 @@ export const Header = ({
 
           <div className="flex w-[90vw] flex-col justify-center gap-4 min-[600px]:hidden">
             {/* <Navigate.ToAuth className="dark:bg-dark-2 border-light-8 dark:border-dark-8 rounded-full border-[1px] min-[700px]:hidden" /> */}
-            <Navigate.ToTools />
+            <Navigate.ToTools label={t.raw("label")[0]}/>
           </div>
         </div>
       )}

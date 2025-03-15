@@ -4,11 +4,11 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 
 export const Home = () => {
-  const t = useTranslations("Sections.Home");
+  const t = useTranslations("");
   const locale = useLocale();
 
   return (
-    <Section id={t("id")} className="mt-14 scroll-mt-14 gap-6 pb-10 pt-20">
+    <Section id={t("Sections.Home.id")} className="mt-14 scroll-mt-14 gap-6 pb-10 pt-20">
       <NewUsers className="absolute right-[24px] top-[20px]" />
 
       <div className="flex w-[80%] flex-col items-center justify-center gap-4 text-center min-[700px]:w-[38rem]">
@@ -24,23 +24,23 @@ export const Home = () => {
               locale === "en" ? "text-[7vw]" : "text-[6.4vw]",
             )}
           >
-            <span>{t.raw("h1")[0]}</span>
-            <span>&nbsp;{t.raw("h1")[1]}&nbsp;</span>
-            <span className="grad-text-rose">{t.raw("h1")[2]}</span>
+            <span>{t.raw("Sections.Home.h1")[0]}</span>
+            <span>&nbsp;{t.raw("Sections.Home.h1")[1]}&nbsp;</span>
+            <span className="grad-text-rose">{t.raw("Sections.Home.h1")[2]}</span>
             <span translate="no">.</span>
             <br />
-            <span className="grad-text-rose">{t.raw("h1")[3]}&nbsp;</span>
-            <span>{t.raw("h1")[4]}</span>
+            <span className="grad-text-rose">{t.raw("Sections.Home.h1")[3]}&nbsp;</span>
+            <span>{t.raw("Sections.Home.h1")[4]}</span>
             <span translate="no">.</span>
           </h1>
         </div>
 
         <p className="dark:text-light-3 text-dark-3 font-inter text-[3vw] min-[600px]:text-[13pt] min-[700px]:text-[16pt]">
-          {t("p")}
+          {t("Sections.Home.p")}
         </p>
       </div>
 
-      <Navigate.ToTools className="w-min px-4" />
+      <Navigate.ToTools label={t.raw("Navigate.toTools.label")[1]}className="w-min px-4" />
 
       {/*
       <Button
